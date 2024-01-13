@@ -1,5 +1,4 @@
 import { Col, Container, Row } from "@autrm/common/components/grid";
-import { Footer } from "@autrm/components/Footer";
 
 export function Home() {
   return (
@@ -11,7 +10,6 @@ export function Home() {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </>
   );
 }

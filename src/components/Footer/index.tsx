@@ -3,7 +3,7 @@ import { Copyright } from "./components/Copyright/Copyright";
 import { FooterMenu } from "./components/FooterMenu";
 import { FooterWidget } from "./components/FooterWidget";
 import { SocialLinks } from "./components/SocialLinks/SocialLinks";
-import { FooterBottomStyled, FooterStyled, FooterTopStyled } from "./styled";
+import { FooterBottomStyled, FooterContainerStyled, FooterStyled, FooterTopStyled } from "./styled";
 
 export function Footer() {
 
@@ -17,11 +17,11 @@ export function Footer() {
     ];
 
     return (
-        <Container>
-            <FooterStyled>
-                {/* Footer top */}
+        <FooterStyled>
+            {/* Footer top */}
+            <FooterContainerStyled>
                 <FooterTopStyled>
-                    <Row>
+                    <Row >
                         <Col lg={3}>
                             <FooterWidget title="About company">
                                 <FooterMenu links={ company_links }/>
@@ -52,7 +52,7 @@ export function Footer() {
                     <Copyright />
                     <SocialLinks />
                 </FooterBottomStyled>
-            </FooterStyled>
-        </Container>
+            </FooterContainerStyled>
+        </FooterStyled>
     );
 }

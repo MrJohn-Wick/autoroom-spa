@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
 export const FooterStyled = styled.footer`
-    color: #fff;
-    font-family: "Open Sans",sans-serif;
     background-color: hsl(231.4, 15.6%, 8.8%);
-    padding: 0.75rem 0;
     border-radius: 30px 30px 0 0;
+    color: #fff;
+`;
+
+export const FooterContainerStyled = styled.div`
+  width: 100%;
+  padding-right: .75rem;
+  padding-left: .75rem;
+  margin-right: auto;
+  margin-left: auto;
 `;
 
 export const FooterTopStyled = styled.div`
