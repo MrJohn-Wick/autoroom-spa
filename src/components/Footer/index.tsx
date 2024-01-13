@@ -21,7 +21,7 @@ export function Footer() {
             {/* Footer top */}
             <FooterContainerStyled>
                 <FooterTopStyled>
-                    <Row >
+                    <Row>
                         <Col lg={3}>
                             <FooterWidget title="About company">
                                 <FooterMenu links={ company_links }/>

@@ -24,4 +24,13 @@ export const FooterBottomStyled = styled.div`
     justify-content: space-between;
     border-top: 1px solid hsla(0,0%,100%,.05);
     padding: 17px 11%;
+
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    @media (max-width: 991px) {
+        padding: 17px 2%;
+    }
 `;
