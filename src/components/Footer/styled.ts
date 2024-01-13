@@ -24,6 +24,9 @@ export const FooterBottomStyled = styled.div`
     justify-content: space-between;
     border-top: 1px solid hsla(0,0%,100%,.05);
     padding: 17px 11%;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-open-sans);
 
     @media (max-width: 767px) {
         flex-wrap: wrap;
