@@ -7,11 +7,6 @@ export const TopBarStyled = styled.div`
   gap: 30px;
   border-bottom: 1px solid #eee;
 
-  span {
-    font-size: 24px;
-    font-weight: 700;
-  }
-
   @media (min-width: 1400px) and (max-width: 1599px) {
     padding: 15px 3%;
   }
