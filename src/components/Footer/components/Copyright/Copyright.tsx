@@ -1,5 +1,7 @@
+import { CopyrightStyled } from "./styled";
+
 export function Copyright() {
     return (
-       <div>Copyright 2023 DRIVCO | Design By Egens Lab</div>
+       <CopyrightStyled>Copyright 2023 <a href="#">DRIVCO</a> | Design By <a href="#">Egens Lab</a></CopyrightStyled>
     );
 }
