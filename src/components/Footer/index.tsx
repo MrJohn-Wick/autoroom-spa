@@ -1,9 +1,10 @@
-import { Col, Container, Row } from "@autrm/common/components/grid";
+import { Col, Row } from "@autrm/common/components/grid";
+import { Logo } from "../TopBar/components/Logo";
 import { Copyright } from "./components/Copyright/Copyright";
 import { FooterMenu } from "./components/FooterMenu";
 import { FooterWidget } from "./components/FooterWidget";
 import { SocialLinks } from "./components/SocialLinks/SocialLinks";
-import { FooterBottomStyled, FooterContainerStyled, FooterStyled, FooterTopStyled } from "./styled";
+import { FooterBottomStyled, FooterCenterStyled, FooterContainerStyled, FooterStyled, FooterTopStyled } from "./styled";
 
 export function Footer() {
 
@@ -45,8 +46,9 @@ export function Footer() {
                     </Row>
                 </FooterTopStyled>
                 {/* Footer center */}
-                <div>
-                </div>
+                <FooterCenterStyled>
+                    <Logo />
+                </FooterCenterStyled>
                 {/* Footer bottom */}
                 <FooterBottomStyled>
                     <Copyright />

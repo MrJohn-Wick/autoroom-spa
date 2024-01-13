@@ -18,6 +18,13 @@ export const FooterTopStyled = styled.div`
     padding: 90px 11%;
 `;
 
+export const FooterCenterStyled = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 11% 35px;
+`;
+
 export const FooterBottomStyled = styled.div`
     display: flex;
     align-items: center;
