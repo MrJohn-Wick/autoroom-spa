@@ -50,6 +50,88 @@ export const GlobalStyled = createGlobalStyle`
     color: '#000';
   } */
 
+  @font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Black.ttf) format("truetype");
+    font-weight: 900;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-ExtraBold.ttf) format("truetype");
+    font-weight: 800;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url(/assets/fonts/Montserrat-Bold.ttf) format("truetype");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url(/assets/fonts/Montserrat-SemiBold.ttf) format("truetype");
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url(/assets/fonts/Montserrat-Medium.ttf) format("truetype");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url(/assets/fonts/Montserrat-Regular.ttf) format("truetype");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url(/assets/fonts/Montserrat-Light.ttf) format("truetype");
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url(/assets/fonts/Montserrat-Light.ttf) format("truetype");
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Open Sans";
+    src: url(/assets/fonts/OpenSans-Light.ttf) format("truetype");
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Open Sans";
+    src: url(/assets/fonts/OpenSans-Regular.ttf) format("truetype");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Open Sans";
+    src: url(/assets/fonts/OpenSans-Medium.ttf) format("truetype");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Open Sans";
+    src: url(/assets/fonts/OpenSans-SemiBold.ttf) format("truetype");
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: "Open Sans";
+    src: url(/assets/fonts/OpenSans-Bold.ttf) format("truetype");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Open Sans";
+    src: url(/assets/fonts/OpenSans-ExtraBold.ttf) format("truetype");
+    font-weight: 800;
+  }
+
+  :root {
+    --font-montserrat: "Montserrat",sans-serif;
+    --font-open-sans: "Open Sans",sans-serif;
+    --white-color: #fff;
+    --black-color: #000;
+    --black-color2: #1d1d1d;
+    --title-color: #13141a;
+    --text-color: #5e5e5e;
+    --primary-color1: #46d993;
+  }
+
   * {
     box-sizing: border-box;
     padding: 0;
