@@ -1,3 +1,4 @@
+import { colorPrimary } from '@autrm/common/tokens/colors';
 import styled from 'styled-components';
 
 export const NavBarStyled = styled.header`
@@ -80,7 +81,7 @@ export const SubMenuStyled = styled.ul`
       position: absolute;
       bottom: -1px;
       left: 0;
-      background: linear-gradient(90deg, #fff, #db3b19, #fff);
+      background: linear-gradient(90deg, #fff, ${colorPrimary}, #fff);
       width: 100%;
       height: 1px;
       transform: scaleX(0);
