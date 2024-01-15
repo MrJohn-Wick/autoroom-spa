@@ -1,3 +1,4 @@
+import { getTextStyles } from "@autrm/common/utils/styles";
 import { styled } from "styled-components";
 
 export const ListStyled = styled.ul`
@@ -14,13 +15,13 @@ export const ListStyled = styled.ul`
     & li a {
         text-decoration: none;
         color: #b3b3b3;
-        font-size: 15px;
-        font-weight: 600;
         transition: .35s;
         display: flex;
         align-items: center;
         gap: 7px;
         transition: .35s;
+
+        ${ getTextStyles(null, 600, 15, null) }
     }
 
     & li a:hover {
