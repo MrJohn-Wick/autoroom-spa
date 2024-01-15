@@ -1,3 +1,4 @@
+import { getTextStyles } from '@autrm/common/utils/styles';
 import { styled } from 'styled-components';
 
 export const ListStyled = styled.ul`
@@ -11,19 +12,25 @@ export const ListStyled = styled.ul`
     margin-bottom: 8px;
   }
 
+  & li {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 8px;
+  }
+
   & li a {
-    text-decoration: none;
-    color: #b3b3b3;
-    font-size: 15px;
-    font-weight: 600;
-    transition: 0.35s;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    transition: 0.35s;
+      text-decoration: none;
+      color: #b3b3b3;
+      transition: .35s;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: .35s;
+
+      ${ getTextStyles(null, 600, 15, null) }
   }
 
   & li a:hover {
-    color: #fff;
+      color: #fff;
   }
 `;
