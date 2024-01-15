@@ -7,12 +7,6 @@ export const ListStyled = styled.ul`
   padding: 0;
 
   & li {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 8px;
-  }
-
-  & li {
       margin: 0;
       padding: 0;
       margin-bottom: 8px;
