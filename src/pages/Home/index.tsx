@@ -1,15 +1,11 @@
-import { Col, Container, Row } from '@autrm/common/components/grid';
+import { HowItWork } from "@autrm/components/HowItWork";
+
 
 export function Home() {
   return (
     <>
-      <Container>
-        <Row>
-          <Col lg={12}>
-            #Home
-          </Col>
-        </Row>
-      </Container>
+      #Home
+      <HowItWork />
     </>
   );
 }
