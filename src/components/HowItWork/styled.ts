@@ -15,6 +15,7 @@ export const HeaderStyled = styled.div`
   justify-content: space-between;
   align-items: end;
   margin-bottom: 50px;
+  flex-wrap: wrap;
 `;
 
 export const TitleStyled = styled.h2`
@@ -55,4 +56,5 @@ export const PilotStyled = styled.div`
   flex-wrap: wrap;
   gap: 10px;
   padding-top: 30px;
+  text-align: center;
 `;

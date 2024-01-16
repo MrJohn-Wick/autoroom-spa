@@ -22,7 +22,7 @@ export function HowItWork() {
         </Row>
         <RowStyled>
           { works.map((item, i) => 
-            <Col key={i} lg={3} sm={2}>
+            <Col key={i} lg={3} md={4} sm={4}>
               <Work step={i+1} {...item} />
             </Col>
           ) }
