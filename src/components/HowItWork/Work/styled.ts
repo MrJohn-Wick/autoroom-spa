@@ -1,3 +1,4 @@
+import { colorPrimary, colorText, colorTitle, colorWhite } from '@autrm/common/tokens/colors';
 import { getTextStyles } from '@autrm/common/utils/styles';
 import { styled } from 'styled-components';
 
@@ -28,9 +29,9 @@ export const StepStyled = styled.div`
     width: 26px;
     height: 26px;
     border-radius: 50%;
-    color: var(--title-color);
+    color: ${colorTitle};
     ${ getTextStyles(null, 600, 15, null) }
-    background-color: var(--primary-color1);
+    background-color: ${colorPrimary};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +43,7 @@ export const IconStyled = styled.div`
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  background-color: var(--white-color);
+  background-color: ${colorWhite};
   border: 1px solid #eee;
   display: flex;
   align-items: center;
@@ -52,14 +53,14 @@ export const IconStyled = styled.div`
 `;
 
 export const TitleStyled = styled.h6`
-  color: var(--title-color);
+  color: ${colorTitle};
   ${ getTextStyles(null, 700, 18, null) }
   margin-bottom: 8px;
   text-align: center;
 `;
 
 export const ContentStyled = styled.p`
-  color: var(--text-color);
+  color: ${colorText};
   ${ getTextStyles("OpenSans", 400, 16, 26) }
   margin-bottom: 0;
   text-align: center;

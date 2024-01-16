@@ -1,4 +1,5 @@
 import { Row } from '@autrm/common/components/grid';
+import { colorTitle } from '@autrm/common/tokens/colors';
 import { getTextStyles } from '@autrm/common/utils/styles';
 import { styled } from 'styled-components';
 
@@ -17,7 +18,7 @@ export const HeaderStyled = styled.div`
 `;
 
 export const TitleStyled = styled.h2`
-  color: var(--title-color);
+  color: ${colorTitle};
   margin-bottom: 5px;
 
   ${ getTextStyles(null, 700, 40, null) }

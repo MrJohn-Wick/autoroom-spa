@@ -15,7 +15,7 @@ export function HowItWork() {
                 <SubtitleStyled>Here are some of the featured cars in different categories</SubtitleStyled>
               </div>
               <div>
-                <a className="video-popup"><i className="bi bi-play-circle"></i> Watch video</a>
+                <a href="/#"><i className="bi bi-play-circle"></i> Watch video</a>
               </div>
             </HeaderStyled>
           </Col>
@@ -32,7 +32,7 @@ export function HowItWork() {
             <PilotStyled>
               <strong>Excellent!</strong>
               <img src="assets/img/home1/icon/trustpilot-star2.svg" alt="" />
-              <p>5.0 Rating out of <strong>5.0</strong> based on <a href="#"><strong>&nbsp;245354&nbsp;</strong>reviews</a></p>
+              <p>5.0 Rating out of <strong>5.0</strong> based on <a href="/#"><strong>&nbsp;245354&nbsp;</strong>reviews</a></p>
               <img src="assets/img/home1/icon/trustpilot-logo.svg" alt="" />
             </PilotStyled>
           </Col>

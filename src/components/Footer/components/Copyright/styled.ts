@@ -1,7 +1,8 @@
+import { colorPrimary } from '@autrm/common/tokens/colors';
 import { styled } from 'styled-components';
 
 export const CopyrightStyled = styled.div`
     & a {
-        color: var(--primary-color1);
+        color: ${colorPrimary};
     }
 `;
