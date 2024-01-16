@@ -1,4 +1,4 @@
-import { HowItWork } from "@autrm/components/HowItWork";
+import { HowItWork } from '@autrm/components/HowItWork';
 
 export function Home() {
   return (
