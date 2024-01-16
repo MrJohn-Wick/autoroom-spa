@@ -1,5 +1,6 @@
 import { Col, Row } from "@autrm/common/components/grid";
-import { Logo } from "../TopBar/components/Logo";
+import { Logo } from "../Logo";
+import DarkLogo from '@autrm/assets/dark-logo.svg';
 import { Copyright } from "./components/Copyright/Copyright";
 import { FooterMenu } from "./components/FooterMenu";
 import { FooterWidget } from "./components/FooterWidget";
@@ -47,7 +48,7 @@ export function Footer() {
                 </FooterTopStyled>
                 {/* Footer center */}
                 <FooterCenterStyled>
-                    <Logo />
+                    <Logo type={DarkLogo} />
                 </FooterCenterStyled>
                 {/* Footer bottom */}
                 <FooterBottomStyled>
