@@ -1,5 +1,5 @@
-import { ContentStyled, IconStyled, StepStyled, TitleStyled, WorkStyled } from "./styled";
-import { WorkProps } from "./tyles";
+import { ContentStyled, IconStyled, StepStyled, TitleStyled, WorkStyled } from './styled';
+import { WorkProps } from './tyles';
 
 export function Work(props: WorkProps) {
   return (

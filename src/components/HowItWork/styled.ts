@@ -1,6 +1,6 @@
-import { Row } from "@autrm/common/components/grid";
-import { getTextStyles } from "@autrm/common/utils/styles";
-import { styled } from "styled-components";
+import { Row } from '@autrm/common/components/grid';
+import { getTextStyles } from '@autrm/common/utils/styles';
+import { styled } from 'styled-components';
 
 export const SectionStyled = styled.section`
   border-radius: 30px;

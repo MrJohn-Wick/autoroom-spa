@@ -1,5 +1,5 @@
-import { getTextStyles } from "@autrm/common/utils/styles";
-import { styled } from "styled-components";
+import { getTextStyles } from '@autrm/common/utils/styles';
+import { styled } from 'styled-components';
 
 export const WorkStyled = styled.div`
   display: flex;

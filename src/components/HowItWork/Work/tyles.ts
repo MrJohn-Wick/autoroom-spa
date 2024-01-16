@@ -1,5 +1,3 @@
-import { PropsWithChildren } from "react";
-
 export type WorkProps = {
   step: number;
   icon: string | undefined;

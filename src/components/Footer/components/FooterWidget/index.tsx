@@ -1,5 +1,5 @@
-import { TitleStyled } from "./styled";
-import { FooterWidgetProps } from "./types";
+import { TitleStyled } from './styled';
+import { FooterWidgetProps } from './types';
 
 export function FooterWidget(props: FooterWidgetProps) {
   return (

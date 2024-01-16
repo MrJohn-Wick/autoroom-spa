@@ -1,7 +1,7 @@
-import { Col, Container, Row } from "@autrm/common/components/grid";
-import { HeaderStyled, PilotStyled, RowStyled, SectionStyled, SubtitleStyled, TitleStyled } from "./styled";
+import { Col, Container, Row } from '@autrm/common/components/grid';
+import { HeaderStyled, PilotStyled, RowStyled, SectionStyled, SubtitleStyled, TitleStyled } from './styled';
 import works from '@autrm/datas/works.json';
-import { Work } from "./Work";
+import { Work } from './Work';
 
 export function HowItWork() {
   return (
