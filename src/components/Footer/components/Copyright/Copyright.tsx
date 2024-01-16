@@ -1,7 +1,8 @@
-import { CopyrightStyled } from "./styled";
+import { Link } from 'react-router-dom';
+import { CopyrightStyled } from './styled';
 
 export function Copyright() {
-    return (
-       <CopyrightStyled>Copyright 2023 <a href="#">DRIVCO</a> | Design By <a href="#">Egens Lab</a></CopyrightStyled>
-    );
+  return (
+    <CopyrightStyled>Copyright 2023 <Link to="#">DRIVCO</Link> | Design By <Link to="#">Egens Lab</Link></CopyrightStyled>
+  );
 }

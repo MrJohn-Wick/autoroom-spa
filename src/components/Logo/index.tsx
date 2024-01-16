@@ -1,11 +1,10 @@
 import { Image } from '@autrm/common/components/image';
-import LogoImage from '@autrm/assets/logo.jpg'
 import { LogoStyled } from './styled';
 
-export function Logo() {
+export function Logo({ type }: { type: string }) {
   return (
     <LogoStyled>
-      <Image src={LogoImage} height={50} width={50} />
+      <Image src={type} height={50} width={50} />
       <span>AutoRoom</span>
     </LogoStyled>
   );

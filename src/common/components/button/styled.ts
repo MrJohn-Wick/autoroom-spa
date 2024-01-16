@@ -1,8 +1,9 @@
+import { colorPrimary } from '@autrm/common/tokens/colors';
 import styled from 'styled-components';
 
 export const ButtonStyled = styled.button`
   border-radius: 5px;
-  background-color: #db3b19;
+  background-color: ${colorPrimary};
   font-weight: 600;
   font-size: 13px;
   color: #fff;

@@ -1,5 +1,4 @@
-import { Col, Container, Row } from "@autrm/common/components/grid";
-import { HowItWork } from "@autrm/components/HowItWork";
+import { Col, Container, Row } from '@autrm/common/components/grid';
 
 export function Home() {
   return (
