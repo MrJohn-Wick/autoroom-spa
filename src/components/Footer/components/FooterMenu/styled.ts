@@ -11,10 +11,10 @@ export const ListStyled = styled.ul`
     padding: 0;
     margin-bottom: 8px;
   }
+
   & li a {
     text-decoration: none;
     color: #b3b3b3;
-    transition: 0.35s;
     display: flex;
     align-items: center;
     gap: 7px;
@@ -23,7 +23,17 @@ export const ListStyled = styled.ul`
     ${getTextStyles(null, 600, 15, null)}
   }
 
+  & a svg {
+    opacity: 0;
+    transition: 0.35s;
+    fill: var(--primary-color1);
+  }
+
   & li a:hover {
     color: #fff;
+  }
+
+  & li a:hover svg {
+    opacity: 1;
   }
 `;
