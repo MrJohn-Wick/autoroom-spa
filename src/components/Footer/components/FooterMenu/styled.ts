@@ -1,3 +1,4 @@
+import { colorPrimary } from '@autrm/common/tokens/colors';
 import { getTextStyles } from '@autrm/common/utils/styles';
 import { styled } from 'styled-components';
 
@@ -26,7 +27,7 @@ export const ListStyled = styled.ul`
   & a svg {
     opacity: 0;
     transition: 0.35s;
-    fill: var(--primary-color1);
+    fill: ${colorPrimary};
   }
 
   & li a:hover {
