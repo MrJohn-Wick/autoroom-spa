@@ -1,11 +1,11 @@
-import { Col, Row } from "@autrm/common/components/grid";
-import { Logo } from "../Logo";
+import { Col, Row } from '@autrm/common/components/grid';
+import { Logo } from '../Logo';
 import DarkLogo from '@autrm/assets/dark-logo.svg';
-import { Copyright } from "./components/Copyright/Copyright";
-import { FooterMenu } from "./components/FooterMenu";
-import { FooterWidget } from "./components/FooterWidget";
-import { SocialLinks } from "./components/SocialLinks/SocialLinks";
-import { FooterBottomStyled, FooterCenterStyled, FooterContainerStyled, FooterStyled, FooterTopStyled } from "./styled";
+import { Copyright } from './components/Copyright/Copyright';
+import { FooterMenu } from './components/FooterMenu';
+import { FooterWidget } from './components/FooterWidget';
+import { SocialLinks } from './components/SocialLinks/SocialLinks';
+import { FooterBottomStyled, FooterCenterStyled, FooterContainerStyled, FooterStyled, FooterTopStyled } from './styled';
 
 export function Footer() {
 

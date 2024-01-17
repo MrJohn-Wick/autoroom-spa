@@ -1,5 +1,5 @@
-import { ListStyled } from "./styled";
-import { FooterMenuProps } from "./types";
+import { ListStyled } from './styled';
+import { FooterMenuProps } from './types';
 
 export function FooterMenu(props: FooterMenuProps) {
   return (

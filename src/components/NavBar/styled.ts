@@ -1,4 +1,4 @@
-import { colorPrimary } from '@autrm/common/tokens/colors';
+import { colorPrimary, colorText } from '@autrm/common/tokens/colors';
 import styled from 'styled-components';
 
 export const NavBarStyled = styled.header`
@@ -98,7 +98,7 @@ export const SubMenuStyled = styled.ul`
   a {
     display: block;
     padding: 15px 15px;
-    color: var(--text-color1);
+    color: ${colorText};
     font-weight: 600;
     text-transform: uppercase;
     font-size: 12px;

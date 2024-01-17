@@ -1,3 +1,4 @@
+import { colorPrimary } from '@autrm/common/tokens/colors';
 import { styled } from "styled-components";
 
 export const SocialLinksStyled = styled.div`
@@ -30,7 +31,7 @@ export const IconsListStyled = styled.ul`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-color1);
+    color: ${colorPrimary};
     transition: .35s;
   }
 `;
