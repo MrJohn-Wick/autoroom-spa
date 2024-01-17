@@ -7,24 +7,24 @@ export const ListStyled = styled.ul`
   padding: 0;
 
   & li {
-      margin: 0;
-      padding: 0;
-      margin-bottom: 8px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
   }
 
   & li a {
-      text-decoration: none;
-      color: #b3b3b3;
-      transition: .35s;
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      transition: .35s;
+    text-decoration: none;
+    color: #b3b3b3;
+    transition: 0.35s;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: 0.35s;
 
-      ${ getTextStyles(null, 600, 15, null) }
+    ${getTextStyles(null, 600, 15, null)}
   }
 
   & li a:hover {
-      color: #fff;
+    color: #fff;
   }
 `;
