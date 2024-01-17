@@ -1,18 +1,22 @@
 import DarkLogo from '@autrm/assets/dark-logo.svg';
-import { Col, Row } from '@autrm/common/components/grid';
 
 import { Logo } from '../Logo';
 
 import { Copyright } from './components/Copyright/Copyright';
 import { FooterMenu } from './components/FooterMenu';
 import { FooterWidget } from './components/FooterWidget';
+import { Hotline } from './components/Hotline';
 import { SocialLinks } from './components/SocialLinks/SocialLinks';
 import {
+  BottomMenuStyled,
+  ColStyled,
+  ContactsStyled,
   FooterBottomStyled,
   FooterCenterStyled,
   FooterContainerStyled,
   FooterStyled,
   FooterTopStyled,
+  RowStyled,
 } from './styled';
 
 export function Footer() {
@@ -48,32 +52,60 @@ export function Footer() {
       {/* Footer top */}
       <FooterContainerStyled>
         <FooterTopStyled>
-          <Row>
-            <Col lg={3}>
+          <RowStyled>
+            <ColStyled>
               <FooterWidget title="About company">
                 <FooterMenu links={company_links} />
               </FooterWidget>
-            </Col>
-            <Col lg={3}>
+            </ColStyled>
+            <ColStyled>
               <FooterWidget title="Search & Explore">
                 <FooterMenu links={company_links} />
               </FooterWidget>
-            </Col>
-            <Col lg={3}>
+            </ColStyled>
+            <ColStyled>
               <FooterWidget title="Car By Brands">
                 <FooterMenu links={company_links} />
               </FooterWidget>
-            </Col>
-            <Col lg={3}>
+            </ColStyled>
+            <ColStyled>
               <FooterWidget title="Car By Location">
                 <FooterMenu links={company_links} />
               </FooterWidget>
-            </Col>
-          </Row>
+            </ColStyled>
+            <ColStyled>
+              <FooterWidget title="Download App">
+                <span>App</span>
+              </FooterWidget>
+            </ColStyled>
+          </RowStyled>
         </FooterTopStyled>
         {/* Footer center */}
         <FooterCenterStyled>
-          <Logo type={DarkLogo} />
+          <div>
+            <Logo type={DarkLogo} />
+          </div>
+          <ContactsStyled>
+            <Hotline
+              icon="i"
+              title="Позвонить"
+              href="tel:+375291524415"
+              link="+375 (29) 152-44-15"
+            />
+            <Hotline
+              icon="i"
+              title="Написать"
+              href="mailto:"
+              link="info@gmail.com"
+            />
+          </ContactsStyled>
+          <div>
+            <BottomMenuStyled>
+              <li>
+                <a href="#">Our Sitemap</a>
+              </li>
+            </BottomMenuStyled>
+          </div>
         </FooterCenterStyled>
         {/* Footer bottom */}
         <FooterBottomStyled>
