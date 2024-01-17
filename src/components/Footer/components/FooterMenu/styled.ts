@@ -11,7 +11,6 @@ export const ListStyled = styled.ul`
     padding: 0;
     margin-bottom: 8px;
   }
-
   & li a {
     text-decoration: none;
     color: #b3b3b3;
