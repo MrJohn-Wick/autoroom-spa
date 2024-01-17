@@ -4,7 +4,7 @@ import { ADAPTIVE, BREAKPOINT } from '../../tokens/screen';
 
 import { Col } from './Col';
 import { Row } from './Row';
-import { ContainerProps } from './types';
+import type { ContainerProps } from './types';
 
 const ResetIndentStyled = css`
   margin-left: 0;

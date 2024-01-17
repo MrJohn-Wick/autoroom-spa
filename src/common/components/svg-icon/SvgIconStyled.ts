@@ -2,19 +2,21 @@ import styled, { css } from 'styled-components';
 
 import { CORNER_RADIUS } from '../../tokens/cornerRadius';
 
-import { TSvgIconProps } from './types';
+import type { SvgIconProps } from './types';
 
-export const SVGIconStyled = styled.span<TSvgIconProps>`
+export const SVGIconStyled = styled.span<SvgIconProps>`
   display: flex;
 
   ${({ order }) => order && `order: ${order};`}
   ${({ iconRotate }) => iconRotate && `transform: rotate(${iconRotate}deg);`};
   ${({ isButton }) => isButton && 'cursor: pointer;'}
 
-  ${({ sizes }) => sizes && css`
-    width: ${sizes.w};
-    height: ${sizes.h};
-  `}
+  ${({ sizes }) =>
+    sizes &&
+    css`
+      width: ${sizes.w};
+      height: ${sizes.h};
+    `}
 
   & path {
     ${({ pathFill }) => pathFill && `fill: ${pathFill};`}

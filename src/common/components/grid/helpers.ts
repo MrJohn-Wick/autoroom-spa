@@ -1,6 +1,6 @@
-import { Indent } from '../../tokens/sizes';
+import type { Indent } from '../../tokens/sizes';
 
-import { GridSizes, GridInfoShape } from './types';
+import type { GridSizes, GridInfoShape } from './types';
 
 /**
  * Get size between gap

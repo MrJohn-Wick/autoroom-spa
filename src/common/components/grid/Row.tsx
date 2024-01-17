@@ -4,7 +4,7 @@ import { ADAPTIVE } from '../../tokens/screen';
 
 import { GRID_INFO } from './constants';
 import { getSizeOutsideGap } from './helpers';
-import { RowProps } from './types';
+import type { RowProps } from './types';
 
 /**
  * @param justifyContent options: flex-start | center | flex-end | space-between | space-around | space-evenly

@@ -1,7 +1,8 @@
+import { styled } from 'styled-components';
+
 import { Row } from '@autrm/common/components/grid';
 import { colorTitle } from '@autrm/common/tokens/colors';
 import { getTextStyles } from '@autrm/common/utils/styles';
-import { styled } from 'styled-components';
 
 export const SectionStyled = styled.section`
   border-radius: 30px;
@@ -22,23 +23,23 @@ export const TitleStyled = styled.h2`
   color: ${colorTitle};
   margin-bottom: 5px;
 
-  ${ getTextStyles(null, 700, 40, null) }
+  ${getTextStyles(null, 700, 40, null)}
   line-height: 1.3;
 `;
 
 export const SubtitleStyled = styled.p`
   color: #5e5e5e;
   margin-bottom: 0;
-  ${ getTextStyles("OpenSans", 400, 16, 26) }
+  ${getTextStyles('OpenSans', 400, 16, 26)}
 `;
 
 export const RowStyled = styled(Row)`
-  position: relative; 
+  position: relative;
   border-bottom: 1px solid #eee;
   padding-bottom: 40px;
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     height: 1px;
     width: 100%;

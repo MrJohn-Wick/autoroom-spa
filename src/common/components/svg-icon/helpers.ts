@@ -1,7 +1,7 @@
 import { ICON_SIZE } from './constants';
-import { SizeType, IconSizes, TSizeProps, TCorrectSizeProps } from './types';
+import type { SizeType, IconSizes, SizeProps, CorrectSizeProps } from './types';
 
-export const getCorrectSize = (size: TSizeProps): TCorrectSizeProps => {
+export const getCorrectSize = (size: SizeProps): CorrectSizeProps => {
   if (typeof size === 'object' && Object.keys(size).length > 0) {
     return {
       correctSize: undefined,

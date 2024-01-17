@@ -3,4 +3,4 @@ export type WorkProps = {
   icon: string | undefined;
   title: string | null;
   content: string | null;
-}
+};

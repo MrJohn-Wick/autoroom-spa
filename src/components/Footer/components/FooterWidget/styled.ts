@@ -1,5 +1,6 @@
-import { colorWhite } from '@autrm/common/tokens/colors';
 import styled from 'styled-components';
+
+import { colorWhite } from '@autrm/common/tokens/colors';
 
 export const TitleStyled = styled.h5`
   margin-bottom: 0;

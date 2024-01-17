@@ -1,6 +1,7 @@
+import styled from 'styled-components';
+
 import { colorText } from '@autrm/common/tokens/colors';
 import { getTextStyles } from '@autrm/common/utils/styles';
-import styled from 'styled-components';
 
 export const LeftMenuStyled = styled.div`
   ul {
@@ -18,7 +19,7 @@ export const LeftMenuStyled = styled.div`
 
   a {
     color: ${colorText};
-    ${getTextStyles("OpenSans", 600, 13, null)}
+    ${getTextStyles('OpenSans', 600, 13, null)}
     transition: .35s;
   }
 `;

@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 import { ADAPTIVE } from '../tokens/screen';
 
-import { Font, Weight } from './types';
+import type { Font, Weight } from './types';
 
 /**
  * @param font - font family - 'Roboto'
