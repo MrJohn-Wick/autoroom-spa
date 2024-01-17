@@ -1,5 +1,6 @@
-import { colorPrimary, colorText } from '@autrm/common/tokens/colors';
 import styled from 'styled-components';
+
+import { colorPrimary, colorText } from '@autrm/common/tokens/colors';
 
 export const NavBarStyled = styled.header`
   width: 100%;
@@ -77,7 +78,7 @@ export const SubMenuStyled = styled.ul`
     position: relative;
 
     a::before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -1px;
       left: 0;
@@ -108,11 +109,11 @@ export const SubMenuStyled = styled.ul`
     border-bottom: 1px solid rgba(233, 228, 228, 0.5);
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -1px;
       left: 0;
-      background: linear-gradient(90deg, #fff, #06D889, #fff);
+      background: linear-gradient(90deg, #fff, #06d889, #fff);
       width: 100%;
       height: 1px;
       transform: scaleX(0);

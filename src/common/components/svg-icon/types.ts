@@ -1,7 +1,7 @@
-import { ReactNode, KeyboardEvent, SyntheticEvent } from 'react';
+import type { ReactNode, KeyboardEvent, SyntheticEvent } from 'react';
 
-import { ADAPTIVE } from '../../tokens/screen';
-import { Noop } from '../../utils/common';
+import type { ADAPTIVE } from '../../tokens/screen';
+import type { Noop } from '../../utils/common';
 
 export type SizeType = 4 | 6 | 16 | 20 | 24 | 32 | 36 | 40 | 48 | 56 | 66 | 82 | 96 | 120;
 
@@ -26,7 +26,7 @@ export type Breakpoint = keyof typeof ADAPTIVE.minWidth;
 // eslint-disable-next-line no-unused-vars
 export type IconSizes<T> = { [K in Breakpoint]?: T };
 
-export type TIconProps = {
+export type IconProps = {
   type?: ReactNode;
   fill?: string;
   pathFill?: string;
@@ -49,7 +49,7 @@ export type TIconProps = {
   onClick?: (e: SyntheticEvent) => void;
 };
 
-export type TSvgIconProps = {
+export type SvgIconProps = {
   className?: string;
   order?: number;
   size?: SizeType;
@@ -64,9 +64,9 @@ export type TSvgIconProps = {
 };
 
 // For helpers file
-export type TSizeProps = SizeType | IconSizes<SizeType>;
+export type SizeProps = SizeType | IconSizes<SizeType>;
 
-export type TCorrectSizeProps = {
+export type CorrectSizeProps = {
   correctSize?: SizeType;
   correctSizes?: IconSizes<SizeType>;
 };

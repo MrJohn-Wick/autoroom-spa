@@ -1,10 +1,11 @@
+import { styled } from 'styled-components';
+
 import { colorPrimary } from '@autrm/common/tokens/colors';
-import { styled } from "styled-components";
 
 export const SocialLinksStyled = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 `;
 
 export const SocialListksTitleStyled = styled.div`
@@ -27,11 +28,11 @@ export const IconsListStyled = styled.ul`
     height: 26px;
     border-radius: 50%;
     border-radius: 15px;
-    border: 1px solid hsla(0,0%,100%,.2);
+    border: 1px solid hsla(0, 0%, 100%, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     color: ${colorPrimary};
-    transition: .35s;
+    transition: 0.35s;
   }
 `;

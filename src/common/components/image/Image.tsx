@@ -1,5 +1,5 @@
 import { ImageStyled, ImageStyledWrapper } from './styled';
-import { ImageAtomComponentProps } from './types';
+import type { ImageAtomComponentProps } from './types';
 
 /**
  * @param src - string

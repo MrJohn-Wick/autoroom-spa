@@ -1,30 +1,29 @@
 import { styled } from 'styled-components';
 
 export const ListStyled = styled.ul`
-    list-style: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & li {
     margin: 0;
     padding: 0;
+    margin-bottom: 8px;
+  }
 
-    & li {
-        margin: 0;
-        padding: 0;
-        margin-bottom: 8px;
-    }
+  & li a {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.35s;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: 0.35s;
+  }
 
-    & li a {
-        text-decoration: none;
-        color: #b3b3b3;
-        font-size: 15px;
-        font-weight: 600;
-        transition: .35s;
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        transition: .35s;
-    }
-
-    & li a:hover {
-        color: #fff;
-    }
-
+  & li a:hover {
+    color: #fff;
+  }
 `;

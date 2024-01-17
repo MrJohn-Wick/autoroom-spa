@@ -1,7 +1,6 @@
 import uniqueId from 'lodash/uniqueId';
 
 import { DESKTOP, MOBILE } from './constants';
-
 import { regExpAnyCharacters, regExpMobileDevices, regExpSpaces } from './regEx';
 
 export type Noop = (...args: unknown[]) => void;

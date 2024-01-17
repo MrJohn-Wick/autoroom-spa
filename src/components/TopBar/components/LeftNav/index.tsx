@@ -6,19 +6,13 @@ export function LeftNav() {
     <LeftMenuStyled>
       <ul>
         <li>
-          <a href="#">
-            Последнее
-          </a>
+          <a href="#">Последнее</a>
         </li>
         <li>
-          <a href="#">
-            Партнерам
-          </a>
+          <a href="#">Партнерам</a>
         </li>
         <li>
-          <a href="#">
-            Предложения
-          </a>
+          <a href="#">Предложения</a>
         </li>
       </ul>
     </LeftMenuStyled>

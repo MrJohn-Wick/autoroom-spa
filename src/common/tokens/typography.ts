@@ -1,12 +1,12 @@
-import { MouseEvent } from 'react';
+import type { MouseEvent } from 'react';
 
 import styled, { css } from 'styled-components';
 
+import { ellipsisEndingLine, getTextStyles } from '../utils/styles';
+import type { GetTypography, WeightRegularTexOptions } from '../utils/types';
+
 import { elevationBottomLvl4, typographyTextShadow } from './elevations';
 import { ADAPTIVE } from './screen';
-import { ellipsisEndingLine, getTextStyles } from '../utils/styles';
-import { GetTypography, WeightRegularTexOptions } from '../utils/types';
-
 
 // Heading styles
 export const HeadingStylesCommon = css<{ color?: string }>`
@@ -161,7 +161,6 @@ export const RegularTextStylesCommon = css<RegularTextProps>`
   ${({ isUserSelectDisabled }) => isUserSelectDisabled && 'user-select: none;'}
 
   ${({ gap }) => gap && `gap: ${gap};`}
-
 `;
 
 // Regular text | paragraph (p) | Body 24

@@ -1,8 +1,4 @@
-import {
-  SocialLinksStyled,
-  SocialListksTitleStyled,
-  IconsListStyled,
-} from './styled';
+import { SocialLinksStyled, SocialListksTitleStyled, IconsListStyled } from './styled';
 
 export function SocialLinks() {
   return (
@@ -16,17 +12,17 @@ export function SocialLinks() {
         </li>
         <li>
           <a href="https://twitter.com/">
-            <i className="bx bxl-twitter"></i>
+            <i className="bx bxl-twitter" />
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/">
-            <i className="bx bxl-linkedin"></i>
+            <i className="bx bxl-linkedin" />
           </a>
         </li>
         <li>
           <a href="https://www.instagram.com/">
-            <i className="bx bxl-instagram-alt"></i>
+            <i className="bx bxl-instagram-alt" />
           </a>
         </li>
       </IconsListStyled>

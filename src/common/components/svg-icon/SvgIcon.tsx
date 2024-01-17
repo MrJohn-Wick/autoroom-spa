@@ -1,10 +1,11 @@
-import React, { SyntheticEvent, useCallback } from 'react';
+import type { SyntheticEvent } from 'react';
+import { useCallback } from 'react';
 
 import { noop } from '../../utils/common';
 
 import { SVGIconStyled } from './SvgIconStyled';
 import { SVG } from './svgInline';
-import { TIconProps } from './types';
+import type { IconProps } from './types';
 
 /**
  * SVG Component
@@ -18,7 +19,7 @@ import { TIconProps } from './types';
  *
  * @returns JSX.Element
  */
-export function SVGIcon(props: TIconProps): JSX.Element {
+export function SVGIcon(props: IconProps): JSX.Element {
   const {
     type,
     fill = 'none',
@@ -85,9 +86,7 @@ export function SVGIcon(props: TIconProps): JSX.Element {
           {children && <span>{children}</span>}
         </>
       ) : (
-        <SVGIconStyled
-          sizes={sizes}
-        />
+        <SVGIconStyled sizes={sizes} />
       )}
     </SVGIconStyled>
   );

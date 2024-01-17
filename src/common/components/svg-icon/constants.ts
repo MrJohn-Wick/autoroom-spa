@@ -1,4 +1,4 @@
-import { IconSize, SizeType } from './types';
+import type { IconSize, SizeType } from './types';
 
 export const ICON_SIZE: Record<IconSize, SizeType> = {
   xxxxs: 4,

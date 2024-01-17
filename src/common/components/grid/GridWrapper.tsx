@@ -1,9 +1,10 @@
-import React, { ReactElement, ReactNode } from 'react';
+import type { ReactElement, ReactNode } from 'react';
+import React from 'react';
 
 import { Col } from './Col';
 import { Container } from './Container';
 import { Row } from './Row';
-import { ColumnsProps, ContainerProps, RowProps } from './types';
+import type { ColumnsProps, ContainerProps, RowProps } from './types';
 
 /**
  * @param children - ReactNode

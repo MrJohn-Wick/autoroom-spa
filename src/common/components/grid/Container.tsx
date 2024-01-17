@@ -1,7 +1,8 @@
-import React, { ReactElement } from 'react';
+import type { ReactElement } from 'react';
+import React from 'react';
 
 import { ContainerStyled } from './styled';
-import { ContainerProps } from './types';
+import type { ContainerProps } from './types';
 
 /**
  * Container type description

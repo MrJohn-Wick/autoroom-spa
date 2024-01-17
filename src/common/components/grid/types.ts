@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
-import { Indent } from '../../tokens/sizes';
+import type { Indent } from '../../tokens/sizes';
 
 /**
  * @param sm - small | Mobile: ( >= 320px )

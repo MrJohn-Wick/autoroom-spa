@@ -28,10 +28,4 @@ export type VariantName =
   | 'textBody24'
   | 'textBody24Medium';
 
-export type GetTypography = ({
-  variant,
-  color,
-}: {
-  variant: TextVariant;
-  color?: string;
-}) => any;
+export type GetTypography = ({ variant, color }: { variant: TextVariant; color?: string }) => any;

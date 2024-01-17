@@ -41,18 +41,12 @@ module.exports = {
       'warn',
       {
         paths: [
-          {
-            name: 'styled-components',
-            message: 'Please import from styled-components/macro.',
-          },
-          // todo: maybe just install babel-plugin-lodash ?
           // https://www.npmjs.com/package/babel-plugin-lodash
           {
             name: 'lodash',
             message: 'Please import from lodash/some_module',
           },
         ],
-        patterns: ['!styled-components/macro', '!lodash/*'],
       },
     ],
     'import/newline-after-import': ['error'],

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ImageStyledProps, ImageStyledWrapperProps } from './types';
+import type { ImageStyledProps, ImageStyledWrapperProps } from './types';
 
 export const ImageStyledWrapper = styled.div<ImageStyledWrapperProps>`
   height: ${({ isFullHeight }) => (isFullHeight ? '100%' : 'auto')};

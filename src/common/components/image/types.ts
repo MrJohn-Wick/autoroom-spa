@@ -1,7 +1,7 @@
-import { HTMLAttributes } from 'react';
+import type { HTMLAttributes } from 'react';
 
 import type { ImageComponentProps } from '../../types/images';
-import { AspectRatio } from '../../utils/constants';
+import type { AspectRatio } from '../../utils/constants';
 
 export interface ImageAtomComponentProps
   extends HTMLAttributes<HTMLImageElement>,

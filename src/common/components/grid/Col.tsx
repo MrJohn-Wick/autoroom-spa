@@ -5,7 +5,7 @@ import { INDENT } from '../../tokens/sizes';
 
 import { GRID_INFO, GRID_INFO_FLEXIBLE } from './constants';
 import { getSizeBetweenGap, getWidthColumn } from './helpers';
-import { ColumnsProps, SideColumnsProps } from './types';
+import type { ColumnsProps, SideColumnsProps } from './types';
 
 export const CommonColStyled = styled.div<ColumnsProps>`
   box-sizing: border-box;

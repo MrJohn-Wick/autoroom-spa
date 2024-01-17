@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 export type FooterWidgetProps = {
-    title: string;
-    children?: ReactNode;
-}
+  title: string;
+  children?: ReactNode;
+};

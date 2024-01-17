@@ -1,6 +1,7 @@
-import { INDENT, Indent } from '../../tokens/sizes';
+import type { Indent } from '../../tokens/sizes';
+import { INDENT } from '../../tokens/sizes';
 
-import { GridInfoShape, GridInfoBreakpoints, GridSizes } from './types';
+import type { GridInfoShape, GridInfoBreakpoints, GridSizes } from './types';
 
 export const COLUMN: Record<GridInfoBreakpoints, GridSizes> = {
   sm: 4,
