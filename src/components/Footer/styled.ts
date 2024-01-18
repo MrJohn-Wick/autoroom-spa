@@ -1,4 +1,5 @@
 import { colorWhite, colorGrey200 } from '@autrm/common/tokens/colors';
+import { ADAPTIVE } from '@autrm/common/tokens/screen';
 import { getTextStyles } from '@autrm/common/utils/styles';
 import styled from 'styled-components';
 
@@ -27,36 +28,42 @@ export const FooterTopStyled = styled.div`
 export const RowStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center !important;
-
-  & > * {
-    flex: 0 0 auto;
-    width: 20%;
-    margin-top: 24px;
-  }
-
-  @media (min-width: 992px) {
-  & > * {
-    flex: 0 0 auto;
-    width: 25%;
-  }
-
+  justify-content: center;
 `;
 
 export const ColStyled = styled.div`
   display: flex !important;
   justify-content: flex-center !important;
   padding: 0 12px;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
 
-  &:first-child {
-    justify-content: flex-start !important;
-    padding-left: 0;
+  ${ADAPTIVE.minWidth.mobile} {
+    width: 100%;
+    &:last-child {
+      justify-content: flex-center !important;
+      padding-right: 0;
+    }
   }
 
-  &:last-child {
-    justify-content: flex-end !important;
-    padding-right: 0;
-  }
+  ${ADAPTIVE.minWidth.tablet} {
+    width: 25%;
+    &:nth-child(4) {
+      justify-content: flex-end !important;
+      padding-right: 0;
+    }
+  } 
+
+  ${ADAPTIVE.minWidth.desktop} {
+    width: 20%;
+    &:first-child {
+      justify-content: flex-start !important;
+      padding-left: 0;
+    }
+    &:last-child {
+      justify-content: flex-end;
+      padding-right: 0;
+    }
 `;
 
 export const FooterCenterStyled = styled.div`
@@ -65,7 +72,7 @@ export const FooterCenterStyled = styled.div`
   justify-content: space-between;
   padding: 0 8% 35px;
 
-  @media (max-width: 991px) {
+  ${ADAPTIVE.maxWidth.tablet} {
     padding: 0 3% 35px;
     flex-direction: column;
     gap: 40px;
@@ -78,11 +85,11 @@ export const ContactsStyled = styled.div`
   justify-content: space-between;
   gap: 70px;
 
-  @media (max-width: 1199px) {
+  ${ADAPTIVE.maxWidth.desktop} {
     gap: 40px;
   }
 
-  @media (max-width: 767px) {
+  ${ADAPTIVE.maxWidth.mobile} {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -118,12 +125,12 @@ export const FooterBottomStyled = styled.div`
   font-weight: 400;
   font-family: var(--font-open-sans);
 
-  @media (max-width: 767px) {
+  ${ADAPTIVE.maxWidth.mobile} {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
   }
-  @media (max-width: 991px) {
+  ${ADAPTIVE.maxWidth.tablet} {
     padding: 17px 2%;
   }
 `;
