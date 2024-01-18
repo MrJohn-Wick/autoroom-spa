@@ -1,6 +1,6 @@
 export type WeightRegularTexOptions = 400 | 500 | 600 | 700;
 
-export type Font = 'Roboto' | 'OpenSans' | 'Montserrat';
+export type Font = 'Roboto' | 'Open Sans' | 'Montserrat';
 export type Weight = WeightRegularTexOptions | 700;
 
 export type Target = '_self' | '_blank' | '_top' | '_parent';

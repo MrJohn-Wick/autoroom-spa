@@ -33,7 +33,7 @@ export type IconProps = {
   rectFill?: string;
   stroke?: string;
   size?: SizeType;
-  sizes: { w: number; h: number };
+  sizes: { w: string; h: string };
   loader?: ReactNode;
   viewBox?: string;
   dataIconType?: string;
@@ -53,7 +53,7 @@ export type SvgIconProps = {
   className?: string;
   order?: number;
   size?: SizeType;
-  sizes?: { w: number; h: number }; // IconSizes<SizeType>;
+  sizes?: { w: string; h: string }; // IconSizes<SizeType>;
   iconRotate?: number;
   pathFill?: string;
   rectFill?: string;

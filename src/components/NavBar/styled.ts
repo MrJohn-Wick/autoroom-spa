@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import { colorPrimary, colorText } from '@autrm/common/tokens/colors';
+import { colorPrimary, colorText, colorWhite } from '@autrm/common/tokens/colors';
+import { ADAPTIVE } from '@autrm/common/tokens/screen';
 
 export const NavBarStyled = styled.header`
   width: 100%;
@@ -8,11 +9,18 @@ export const NavBarStyled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 8%;
   transition: all 0.8s ease-out 0s;
   border-bottom: 1px solid transparent;
-  background-color: #fff;
+  background-color: ${colorWhite};
   position: relative;
+
+  ${ADAPTIVE.minWidth.tablet} {
+    padding: 0px 3%;
+  }
+
+  ${ADAPTIVE.minWidth.desktop} {
+    padding: 0px 8%;
+  }
 `;
 
 export const MainMenuStyled = styled.div`

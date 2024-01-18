@@ -30,7 +30,7 @@ export const TitleStyled = styled.h2`
 export const SubtitleStyled = styled.p`
   color: #5e5e5e;
   margin-bottom: 0;
-  ${getTextStyles('OpenSans', 400, 16, 26)}
+  ${getTextStyles('Open Sans', 400, 16, 26)}
 `;
 
 export const RowStyled = styled(Row)`
