@@ -10,6 +10,7 @@ export const HotlineStyled = styled.div`
 
 export const IconStyled = styled.div`
   position: relative;
+  fill: ${colorPrimary};
 
   &::after {
     content: '';
