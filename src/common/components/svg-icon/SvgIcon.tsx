@@ -30,7 +30,7 @@ export function SVGIcon(props: IconProps): JSX.Element {
     className = 'wrap-svg',
     onClick,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    viewBox, // TODO: Need adjust this property
+    viewBox,
     dataIconType,
     children,
     order,
@@ -79,11 +79,10 @@ export function SVGIcon(props: IconProps): JSX.Element {
             key={svgKey}
             src={`${type}`}
             height={sizes.h}
-            className="icon-svg"
             width={sizes.w}
             {...rest}
           />
-          {children && <span>{children}</span>}
+          {children && children}
         </>
       ) : (
         <SVGIconStyled sizes={sizes} />

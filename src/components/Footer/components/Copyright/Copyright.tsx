@@ -5,7 +5,7 @@ import { CopyrightStyled } from './styled';
 export function Copyright() {
   return (
     <CopyrightStyled>
-      Copyright 2023 <Link to="#">DRIVCO</Link> | Design By <Link to="#">Egens Lab</Link>
+      Copyright 2024 <Link to="#">AutoRoom</Link> | Design By <Link to="#">Alex</Link>
     </CopyrightStyled>
   );
 }

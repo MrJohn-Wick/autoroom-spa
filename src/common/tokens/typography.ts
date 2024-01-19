@@ -127,6 +127,10 @@ export const HeadingLevel4 = styled.h4<{ color?: string; alignSelf?: string; whi
   }
 `;
 
+export const HeadingLevel6 = styled.h6`
+  ${getTextStyles('Montserrat', 600, 16, null)}
+`;
+
 // Regular text
 
 interface RegularTextProps {

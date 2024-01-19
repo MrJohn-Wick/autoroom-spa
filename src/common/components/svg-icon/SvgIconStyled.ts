@@ -4,7 +4,7 @@ import { CORNER_RADIUS } from '../../tokens/cornerRadius';
 
 import type { SvgIconProps } from './types';
 
-export const SVGIconStyled = styled.span<SvgIconProps>`
+export const SVGIconStyled = styled.div<SvgIconProps>`
   display: flex;
 
   ${({ order }) => order && `order: ${order};`}

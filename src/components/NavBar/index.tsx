@@ -36,7 +36,7 @@ export function NavBar() {
   }, []);
 
   return (
-    <NavBarStyled className={`${state.scrollY > 10 ? 'sticky' : ''} header-area style-5`}>
+    <NavBarStyled className={`${state.scrollY > 10 ? 'sticky' : ''}`}>
       <MainMenuStyled className={`main-menu ${state.isSidebarOpen ? 'show-menu' : ''}`}>
         <MenuListStyled>
           <MenuItemHasChildrenStyled

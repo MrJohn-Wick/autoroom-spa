@@ -28,7 +28,7 @@ export const ContentStyled = styled.div`
 
   & span {
     color: ${colorGrey200};
-    ${getTextStyles('OpenSans', 600, 14, 1)}
+    ${getTextStyles('Open Sans', 600, 14, 1)}
     display: inline-block;
     margin-bottom: 10px;
   }

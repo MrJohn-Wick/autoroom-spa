@@ -107,7 +107,7 @@ export const BottomMenuStyled = styled.ul`
 
   & li a {
     color: ${colorGrey200};
-    ${getTextStyles('OpenSans', 600, 15, null)};
+    ${getTextStyles('Open Sans', 600, 15, null)};
     transition: 0.35s;
   }
   & li a:hover {
