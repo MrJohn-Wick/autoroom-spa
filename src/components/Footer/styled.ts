@@ -3,6 +3,10 @@ import { ADAPTIVE } from '@autrm/common/tokens/screen';
 import { getTextStyles } from '@autrm/common/utils/styles';
 import styled from 'styled-components';
 
+import { colorWhite, colorGrey200 } from '@autrm/common/tokens/colors';
+import { ADAPTIVE } from '@autrm/common/tokens/screen';
+import { getTextStyles } from '@autrm/common/utils/styles';
+
 export const FooterStyled = styled.footer`
   background-color: hsl(231.4, 15.6%, 8.8%);
   border-radius: 30px 30px 0 0;
