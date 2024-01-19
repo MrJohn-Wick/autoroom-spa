@@ -18,6 +18,8 @@ import {
   FooterTopStyled,
   RowStyled,
 } from './styled';
+import PhoneIcon from '@autrm/assets/icons/phone.svg';
+import EmailIcon from '@autrm/assets/icons/email.svg';
 
 export function Footer() {
   const company_links = [
@@ -87,13 +89,13 @@ export function Footer() {
           </div>
           <ContactsStyled>
             <Hotline
-              icon="i"
+              icon={PhoneIcon}
               title="Позвонить"
               href="tel:+375291524415"
               link="+375 (29) 152-44-15"
             />
             <Hotline
-              icon="i"
+              icon={EmailIcon}
               title="Написать"
               href="mailto:"
               link="info@gmail.com"

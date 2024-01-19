@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-import { colorPrimary } from '@autrm/common/tokens/colors';
+import { colorPrimary, colorTitle } from '@autrm/common/tokens/colors';
 
 export const SocialLinksStyled = styled.div`
   display: flex;
@@ -34,5 +34,17 @@ export const IconsListStyled = styled.ul`
     justify-content: center;
     color: ${colorPrimary};
     transition: 0.35s;
+  }
+
+  & li a svg {
+    fill: ${colorPrimary};
+  }
+
+  & li a:hover {
+    background-color: ${colorPrimary};
+  }
+
+  & li a:hover svg {
+    fill: ${colorTitle};
   }
 `;
