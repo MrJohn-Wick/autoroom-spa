@@ -19,7 +19,7 @@ export const LeftMenuStyled = styled.div`
 
   a {
     color: ${colorText};
-    ${getTextStyles('OpenSans', 600, 13, null)}
+    ${getTextStyles('Open Sans', 600, 13, null)}
     transition: .35s;
   }
 `;

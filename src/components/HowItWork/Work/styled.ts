@@ -62,7 +62,7 @@ export const TitleStyled = styled.h6`
 
 export const ContentStyled = styled.p`
   color: ${colorText};
-  ${getTextStyles('OpenSans', 400, 16, 26)}
+  ${getTextStyles('Open Sans', 400, 16, 26)}
   margin-bottom: 0;
   text-align: center;
 `;
