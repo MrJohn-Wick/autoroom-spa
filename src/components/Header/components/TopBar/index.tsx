@@ -1,6 +1,6 @@
 import LogoImage from '@autrm/assets/light-logo.svg';
 
-import { Logo } from '../Logo';
+import { Logo } from '../../../Logo';
 
 import { LeftNav } from './components/LeftNav';
 import { RightNav } from './components/RightNav';
