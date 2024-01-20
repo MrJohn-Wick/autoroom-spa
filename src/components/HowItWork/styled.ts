@@ -1,9 +1,8 @@
 import { styled } from 'styled-components';
 
 import { Row } from '@autrm/common/components/grid';
-import { colorTitle, colorWhite } from '@autrm/common/tokens/colors';
+import { colorTitle } from '@autrm/common/tokens/colors';
 import { getTextStyles } from '@autrm/common/utils/styles';
-import { Button } from '@autrm/common/components/button';
 
 export const SectionStyled = styled.section`
   border-radius: 30px;
@@ -59,8 +58,4 @@ export const PilotStyled = styled.div`
   gap: 10px;
   padding-top: 30px;
   text-align: center;
-`;
-
-export const ButtonStyled = styled(Button)`
-  background-color: ${colorWhite};
 `;

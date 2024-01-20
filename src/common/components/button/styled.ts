@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colorPrimary } from '@autrm/common/tokens/colors';
+import { colorBlack, colorPrimary, colorWhite } from '@autrm/common/tokens/colors';
 
 export const ButtonStyled = styled.button`
   border-radius: 5px;
@@ -17,14 +17,13 @@ export const ButtonStyled = styled.button`
   overflow: hidden;
   z-index: 1;
   white-space: nowrap;
-
   outline: none;
   border: none;
   cursor: pointer;
   text-transform: none;
 
   svg {
-    fill: #fff;
+    fill: ${colorWhite};
   }
 
   &:hover::after {
@@ -42,9 +41,26 @@ export const ButtonStyled = styled.button`
     width: 150%;
     bottom: 0;
     border-radius: 2px;
-    background-color: #0a1019;
+    background-color: ${colorBlack};
     transform: skewX(45deg) scale(0, 1);
     z-index: -1;
     transition: all 0.5s ease-out 0s;
+  }
+`;
+
+export const ButtonBlackedStyled = styled(ButtonStyled)`
+  background-color: ${colorBlack};
+  border: 1px solid ${colorBlack};
+
+  &:hover {
+    color: ${colorBlack};
+  }
+
+  &:hover svg {
+    fill: ${colorBlack};
+  }
+
+  &::after {
+    background-color: ${colorWhite};
   }
 `;

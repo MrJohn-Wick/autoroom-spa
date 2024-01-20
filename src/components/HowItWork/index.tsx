@@ -1,7 +1,6 @@
 import { Col, Container, Row } from '@autrm/common/components/grid';
 import { Work } from './Work';
 import {
-  ButtonStyled,
   HeaderStyled,
   PilotStyled,
   RowStyled,
@@ -15,6 +14,7 @@ import ShipIcon from '@autrm/assets/icons/steps/ship.svg';
 import LocationIcon from '@autrm/assets/icons/steps/location.svg';
 import { SVGIcon } from '@autrm/common/components/svg-icon';
 import PlayIcon from '@autrm/assets/icons/play.svg';
+import { Button } from '@autrm/common/components/button';
 
 export function HowItWork() {
   return (
@@ -30,7 +30,7 @@ export function HowItWork() {
                 </SubtitleStyled>
               </div>
               <div>
-                <ButtonStyled>
+                <Button type="blacked">
                   <SVGIcon
                     type={PlayIcon}
                     sizes={{
@@ -39,7 +39,7 @@ export function HowItWork() {
                     }}
                   />
                   <span>Watch video</span>
-                </ButtonStyled>
+                </Button>
               </div>
             </HeaderStyled>
           </Col>
