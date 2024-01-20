@@ -1,3 +1,4 @@
+import { SVGIcon } from '@autrm/common/components/svg-icon';
 import { ContentStyled, IconStyled, StepStyled, TitleStyled, WorkStyled } from './styled';
 import type { WorkProps } from './tyles';
 
@@ -8,7 +9,13 @@ export function Work(props: WorkProps) {
         <span>{props.step}</span>
       </StepStyled>
       <IconStyled>
-        <img src={props.icon} />
+        <SVGIcon
+          type={props.icon}
+          sizes={{
+            w: '36px',
+            h: '36px',
+          }}
+        />
       </IconStyled>
       <TitleStyled>{props.title}</TitleStyled>
       <ContentStyled>{props.content}</ContentStyled>
