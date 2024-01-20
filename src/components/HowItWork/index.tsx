@@ -1,8 +1,7 @@
 import { Col, Container, Row } from '@autrm/common/components/grid';
-import works from '@autrm/datas/works.json';
-
 import { Work } from './Work';
 import {
+  ButtonStyled,
   HeaderStyled,
   PilotStyled,
   RowStyled,
@@ -10,6 +9,12 @@ import {
   SubtitleStyled,
   TitleStyled,
 } from './styled';
+import AuctionIcon from '@autrm/assets/icons/steps/auction.svg';
+import DeliveryIcon from '@autrm/assets/icons/steps/delivery.svg';
+import ShipIcon from '@autrm/assets/icons/steps/ship.svg';
+import LocationIcon from '@autrm/assets/icons/steps/location.svg';
+import { SVGIcon } from '@autrm/common/components/svg-icon';
+import PlayIcon from '@autrm/assets/icons/play.svg';
 
 export function HowItWork() {
   return (
@@ -25,27 +30,69 @@ export function HowItWork() {
                 </SubtitleStyled>
               </div>
               <div>
-                <a href="/#">
-                  <i className="bi bi-play-circle" /> Watch video
-                </a>
+                <ButtonStyled>
+                  <SVGIcon
+                    type={PlayIcon}
+                    sizes={{
+                      w: '15px',
+                      h: '15px',
+                    }}
+                  />
+                  <span>Watch video</span>
+                </ButtonStyled>
               </div>
             </HeaderStyled>
           </Col>
         </Row>
         <RowStyled>
-          {works.map((item, i) => (
-            <Col
-              key={i}
-              lg={3}
-              md={4}
-              sm={4}
-            >
-              <Work
-                step={i + 1}
-                {...item}
-              />
-            </Col>
-          ))}
+          <Col
+            lg={3}
+            md={4}
+            sm={4}
+          >
+            <Work
+              step="01"
+              icon={AuctionIcon}
+              title="Аукцион"
+              content="Участие в аукционе по покупке автомобиля."
+            />
+          </Col>
+          <Col
+            lg={3}
+            md={4}
+            sm={4}
+          >
+            <Work
+              step="02"
+              icon={DeliveryIcon}
+              title="Доставка в порт"
+              content="Транспортировка автомобиля в порт, для погрузки на судно."
+            />
+          </Col>
+          <Col
+            lg={3}
+            md={4}
+            sm={4}
+          >
+            <Work
+              step="03"
+              icon={ShipIcon}
+              title="Доставка до Клайпеды"
+              content="Транспортировка морским контейнером до порта Клайпеды"
+            />
+          </Col>
+          <Col
+            lg={3}
+            md={4}
+            sm={4}
+          >
+            <Work
+              step="04"
+              icon={LocationIcon}
+              title="Доставка Минск/Витебск"
+              content="Оформление таможенных документов и доставка в Минск/Витебск"
+            />
+          </Col>
         </RowStyled>
         <Row>
           <Col

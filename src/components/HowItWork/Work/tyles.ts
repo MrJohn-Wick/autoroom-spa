@@ -1,5 +1,5 @@
 export type WorkProps = {
-  step: number;
+  step: string;
   icon: string | undefined;
   title: string | null;
   content: string | null;
