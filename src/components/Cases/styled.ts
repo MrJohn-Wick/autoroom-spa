@@ -11,6 +11,7 @@ export const TitleWrapperStyled = styled.div`
   justify-content: space-between;
   align-items: end;
   flex-wrap: wrap;
+  gap: 1rem;
 `;
 
 export const TitleStyled = styled.div`
