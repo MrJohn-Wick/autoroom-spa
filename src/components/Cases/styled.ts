@@ -1,3 +1,4 @@
+import { colorPrimary } from '@autrm/common/tokens/colors';
 import { getTextStyles } from '@autrm/common/utils/styles';
 import { styled } from 'styled-components';
 
@@ -40,4 +41,8 @@ export const SliderBtnStyled = styled.div`
   border: 1px solid rgba(19, 20, 26, 0.16);
   cursor: pointer;
   transition: 0.35s;
+
+  &:hover {
+    background-color: ${colorPrimary};
+  }
 `;

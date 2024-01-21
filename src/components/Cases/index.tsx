@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { Col, Container, Row } from '@autrm/common/components/grid';
 import { SVGIcon } from '@autrm/common/components/svg-icon';
 import { HeadingLevel2 } from '@autrm/common/tokens/typography';
@@ -11,8 +12,21 @@ import {
   TitleWrapperStyled,
 } from './styled';
 import { CarVertical } from '../Cars/CarVertical';
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
 
 export function Cases() {
+  const nextRef = useRef(null);
+  const prevRef = useRef(null);
+
+  function initNavigation(sw: any) {
+    sw.params.navigation.nextEl = nextRef.current;
+    sw.params.navigation.prevEl = prevRef.current;
+    sw.navigation.init();
+  }
+
   return (
     <SectionStyled>
       <Container>
@@ -24,7 +38,7 @@ export function Cases() {
                 <p>To get the most accurate and up-to-date information.</p>
               </TitleStyled>
               <SliderButtonsStyled>
-                <SliderBtnStyled>
+                <SliderBtnStyled ref={prevRef}>
                   <SVGIcon
                     type={ArrowLeft}
                     sizes={{
@@ -33,7 +47,7 @@ export function Cases() {
                     }}
                   />
                 </SliderBtnStyled>
-                <SliderBtnStyled>
+                <SliderBtnStyled ref={nextRef}>
                   <SVGIcon
                     type={ArrowRight}
                     sizes={{
@@ -48,7 +62,32 @@ export function Cases() {
         </Row>
         <Row>
           <Col lg={12}>
-            <CarVertical />
+            <Swiper
+              navigation={true}
+              spaceBetween={25}
+              slidesPerView={4}
+              onAfterInit={initNavigation}
+              modules={[Navigation]}
+            >
+              <SwiperSlide>
+                <CarVertical />
+              </SwiperSlide>
+              <SwiperSlide>
+                <CarVertical />
+              </SwiperSlide>
+              <SwiperSlide>
+                <CarVertical />
+              </SwiperSlide>
+              <SwiperSlide>
+                <CarVertical />
+              </SwiperSlide>
+              <SwiperSlide>
+                <CarVertical />
+              </SwiperSlide>
+              <SwiperSlide>
+                <CarVertical />
+              </SwiperSlide>
+            </Swiper>
           </Col>
         </Row>
       </Container>
