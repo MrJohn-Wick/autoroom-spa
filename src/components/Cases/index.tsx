@@ -20,6 +20,7 @@ import car3 from '@autrm/assets/cars/feature-car-03.png';
 import car4 from '@autrm/assets/cars/feature-car-04.png';
 
 import 'swiper/css';
+import { BREAKPOINT } from '@autrm/common/tokens/screen';
 
 export function Cases() {
   const nextRef = useRef(null);
@@ -76,6 +77,28 @@ export function Cases() {
     },
   ];
 
+  const swiperSettings = {
+    navigation: true,
+    spaceBetween: 25,
+    slidesPerView: 4,
+    onAfterInit: initNavigation,
+    modules: [Navigation],
+    breakpoints: {
+      [BREAKPOINT.sm]: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      [BREAKPOINT.md]: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      [BREAKPOINT.lg]: {
+        slidesPerView: 4,
+        spaceBetween: 25,
+      },
+    },
+  };
+
   return (
     <SectionStyled>
       <Container>
@@ -111,13 +134,7 @@ export function Cases() {
         </Row>
         <Row>
           <Col lg={12}>
-            <Swiper
-              navigation={true}
-              spaceBetween={25}
-              slidesPerView={4}
-              onAfterInit={initNavigation}
-              modules={[Navigation]}
-            >
+            <Swiper {...swiperSettings}>
               <SwiperSlide>
                 <CarVertical {...cars[0]} />
               </SwiperSlide>
