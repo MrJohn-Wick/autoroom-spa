@@ -1,0 +1,20 @@
+[
+  {
+    "value": "auto",
+    "name": "Автомобиль",
+    "delivery": 1300,
+    "scrap": 545
+  },
+  {
+    "value": "moto",
+    "name": "Мотоцикл",
+    "delivery": 690,
+    "scrap": 0
+  },
+  {
+    "value": "snow",
+    "name": "Снегоход",
+    "delivery": 1500,
+    "scrap": 545
+  }
+]
