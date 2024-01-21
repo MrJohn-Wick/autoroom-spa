@@ -1,9 +1,24 @@
 import { useRef } from 'react';
-import { Col, Container, Row } from '@autrm/common/components/grid';
-import { SVGIcon } from '@autrm/common/components/svg-icon';
+
 import { HeadingLevel2 } from '@autrm/common/tokens/typography';
+
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import car1 from '@autrm/assets/cars/feature-car-01.png';
+import car2 from '@autrm/assets/cars/feature-car-02.png';
+import car3 from '@autrm/assets/cars/feature-car-03.png';
+import car4 from '@autrm/assets/cars/feature-car-04.png';
 import ArrowLeft from '@autrm/assets/icons/slider/left.svg';
 import ArrowRight from '@autrm/assets/icons/slider/right.svg';
+import { Col, Container, Row } from '@autrm/common/components/grid';
+import { SVGIcon } from '@autrm/common/components/svg-icon';
+
+import 'swiper/css';
+import { BREAKPOINT } from '@autrm/common/tokens/screen';
+
+import { CarVertical } from '../Cars/CarVertical';
+
 import {
   SectionStyled,
   SliderBtnStyled,
@@ -11,16 +26,6 @@ import {
   TitleStyled,
   TitleWrapperStyled,
 } from './styled';
-import { CarVertical } from '../Cars/CarVertical';
-import { Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import car1 from '@autrm/assets/cars/feature-car-01.png';
-import car2 from '@autrm/assets/cars/feature-car-02.png';
-import car3 from '@autrm/assets/cars/feature-car-03.png';
-import car4 from '@autrm/assets/cars/feature-car-04.png';
-
-import 'swiper/css';
-import { BREAKPOINT } from '@autrm/common/tokens/screen';
 
 export function Cases() {
   const nextRef = useRef(null);

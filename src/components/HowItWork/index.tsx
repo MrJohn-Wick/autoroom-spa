@@ -1,4 +1,12 @@
+import PlayIcon from '@autrm/assets/icons/play.svg';
+import AuctionIcon from '@autrm/assets/icons/steps/auction.svg';
+import DeliveryIcon from '@autrm/assets/icons/steps/delivery.svg';
+import LocationIcon from '@autrm/assets/icons/steps/location.svg';
+import ShipIcon from '@autrm/assets/icons/steps/ship.svg';
+import { Button } from '@autrm/common/components/button';
 import { Col, Container, Row } from '@autrm/common/components/grid';
+import { SVGIcon } from '@autrm/common/components/svg-icon';
+
 import { Work } from './Work';
 import {
   HeaderStyled,
@@ -8,13 +16,6 @@ import {
   SubtitleStyled,
   TitleStyled,
 } from './styled';
-import AuctionIcon from '@autrm/assets/icons/steps/auction.svg';
-import DeliveryIcon from '@autrm/assets/icons/steps/delivery.svg';
-import ShipIcon from '@autrm/assets/icons/steps/ship.svg';
-import LocationIcon from '@autrm/assets/icons/steps/location.svg';
-import { SVGIcon } from '@autrm/common/components/svg-icon';
-import PlayIcon from '@autrm/assets/icons/play.svg';
-import { Button } from '@autrm/common/components/button';
 
 export function HowItWork() {
   return (

@@ -5,9 +5,9 @@ import { NavBar } from './components/NavBar';
 import { TopBar } from './components/TopBar';
 
 export function Header() {
-  const { isDesktopView } = useWindowSize();
+  const { isInfiniteDesktopView } = useWindowSize();
 
-  return isDesktopView ? (
+  return isInfiniteDesktopView ? (
     <>
       <TopBar />
       <NavBar />
