@@ -8,7 +8,6 @@ import {
 } from './styled';
 import HeartIcon from '@autrm/assets/icons/heart.svg';
 import { Image } from '@autrm/common/components/image';
-import car from '@autrm/assets/cars/feature-car-01.png';
 import miles from '@autrm/assets/icons/features/miles.svg';
 import menual from '@autrm/assets/icons/features/menual.svg';
 import fuel from '@autrm/assets/icons/features/fuel.svg';
@@ -17,13 +16,14 @@ import { Feature, Features } from '../common/Features';
 import { Location } from '../common/Location';
 import { ContentButtom } from '../common/ContentButtom';
 import { Title } from '../common/Title';
+import type { CarVerticalProps } from './types';
 
-export function CarVertical() {
+export function CarVertical(props: CarVerticalProps) {
   return (
     <CardStyled>
       <CardImgStyled>
         <CardPriceStyled>
-          <span>$7,656.00</span>
+          <span>{props.price}</span>
         </CardPriceStyled>
         <CardFavStyled
           href="#"
@@ -37,18 +37,18 @@ export function CarVertical() {
             }}
           />
         </CardFavStyled>
-        <Image src={car} />
+        <Image src={props.image} />
       </CardImgStyled>
       <CardContentStyled>
-        <Location>Panama City</Location>
-        <Title href="/car-deatils">Mercedes-Benz Class-2023</Title>
+        <Location>{props.location}</Location>
+        <Title href={props.href}>{props.title}</Title>
         <Features>
           <Feature icon={miles}>2500 miles</Feature>
           <Feature icon={menual}>Automatic</Feature>
           <Feature icon={fuel}>Petrol</Feature>
           <Feature icon={electric}>Electric</Feature>
         </Features>
-        <ContentButtom href="/car-deatils">View Details</ContentButtom>
+        <ContentButtom href={props.href}>View Details</ContentButtom>
       </CardContentStyled>
     </CardStyled>
   );
