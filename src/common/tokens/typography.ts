@@ -58,14 +58,14 @@ export const HeadingLevel2 = styled.h2<{ color?: string; width?: string; textAli
   ${({ color }) => color && `color: ${color};`}
   ${({ width }) => width && `width: ${width};`}
   ${({ textAlign }) => textAlign && `text-align: ${textAlign};`}
-  ${getTextStyles('Roboto', 700, 24, 32)}
+  ${getTextStyles('Montserrat', 700, 24, 32)}
 
   ${ADAPTIVE.minWidth.tablet} {
-    ${getTextStyles('Roboto', 700, 30, 38)}
+    ${getTextStyles('Montserrat', 700, 30, 38)}
   }
 
   ${ADAPTIVE.minWidth.desktop} {
-    ${getTextStyles('Roboto', 700, 36, 44)}
+    ${getTextStyles('Montserrat', 700, 40, 48)}
     text-shadow: ${typographyTextShadow};
   }
 `;
