@@ -14,6 +14,10 @@ import {
 import { CarVertical } from '../Cars/CarVertical';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import car1 from '@autrm/assets/cars/feature-car-01.png';
+import car2 from '@autrm/assets/cars/feature-car-02.png';
+import car3 from '@autrm/assets/cars/feature-car-03.png';
+import car4 from '@autrm/assets/cars/feature-car-04.png';
 
 import 'swiper/css';
 
@@ -26,6 +30,51 @@ export function Cases() {
     sw.params.navigation.prevEl = prevRef.current;
     sw.navigation.init();
   }
+
+  const cars = [
+    {
+      price: '$7,656.00',
+      image: car1,
+      location: 'Panama City',
+      title: 'Mercedes-Benz Class-2023',
+      href: '/car-deatils',
+    },
+    {
+      price: '$5,2346.00',
+      image: car2,
+      location: 'Panama City',
+      title: 'Nissan Altima S-2022',
+      href: '/car-deatils',
+    },
+    {
+      price: '$3,678.00',
+      image: car3,
+      location: 'Panama City',
+      title: 'Nissan Altima S-2022',
+      href: '/car-deatils',
+    },
+    {
+      price: '$9,231.00',
+      image: car4,
+      location: 'Panama City',
+      title: 'Nissan Altima S-2022',
+      href: '/car-deatils',
+    },
+    {
+      price: '$17,656.00',
+      image: car1,
+      location: 'Panama City',
+      title: 'Nissan Altima S-2022',
+      href: '/car-deatils',
+    },
+    {
+      price: '$10,456.00',
+      image: car1,
+      location: 'Panama City',
+      title: 'Nissan Altima S-2022',
+      href: '/car-deatils',
+    },
+  ];
 
   return (
     <SectionStyled>
@@ -70,22 +119,22 @@ export function Cases() {
               modules={[Navigation]}
             >
               <SwiperSlide>
-                <CarVertical />
+                <CarVertical {...cars[0]} />
               </SwiperSlide>
               <SwiperSlide>
-                <CarVertical />
+                <CarVertical {...cars[1]} />
               </SwiperSlide>
               <SwiperSlide>
-                <CarVertical />
+                <CarVertical {...cars[2]} />
               </SwiperSlide>
               <SwiperSlide>
-                <CarVertical />
+                <CarVertical {...cars[3]} />
               </SwiperSlide>
               <SwiperSlide>
-                <CarVertical />
+                <CarVertical {...cars[4]} />
               </SwiperSlide>
               <SwiperSlide>
-                <CarVertical />
+                <CarVertical {...cars[5]} />
               </SwiperSlide>
             </Swiper>
           </Col>
