@@ -74,7 +74,6 @@ export const CardStyled = styled.div`
   background: ${colorWhite};
   padding: 10px;
   transition: 0.35s;
-  width: 300px;
 
   &:hover {
     border-color: ${colorPrimary};
