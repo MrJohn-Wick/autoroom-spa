@@ -42,29 +42,17 @@ export function NavBar() {
           <MenuItemHasChildrenStyled
             className={`menu-item-has-children ${currentRoute === '/' ? 'active' : ''}`}
           >
-            <a>Главная</a>
-            <SubMenuStyled
-              className={`sub-menu ${state.activeMenu === 'home-one' ? 'd-block' : ''}`}
-            >
-              <li>
-                <Link to="/">Home 01</Link>
-              </li>
-              <li>
-                <Link to="/index2">Home 02</Link>
-              </li>
-              <li>
-                <Link to="/index3">Home 03</Link>
-              </li>
-              <li>
-                <Link to="/index4">Home 04</Link>
-              </li>
-              <li>
-                <Link to="/index5">Home 05</Link>
-              </li>
-              <li>
-                <Link to="/index6">Home 06</Link>
-              </li>
-            </SubMenuStyled>
+            <Link to="/">Главная</Link>
+          </MenuItemHasChildrenStyled>
+          <MenuItemHasChildrenStyled
+            className={`menu-item-has-children ${currentRoute === '/' ? 'active' : ''}`}
+          >
+            <Link to="/calculator">Калькулятор</Link>
+          </MenuItemHasChildrenStyled>
+          <MenuItemHasChildrenStyled
+            className={`menu-item-has-children ${currentRoute === '/' ? 'active' : ''}`}
+          >
+            <Link to="/tracking">Отслеживание</Link>
           </MenuItemHasChildrenStyled>
           <MenuItemHasChildrenStyled
             className={`menu-item-has-children ${currentRoute === '/' ? 'active' : ''}`}
@@ -74,7 +62,7 @@ export function NavBar() {
               className={`sub-menu ${state.activeMenu === 'home-one' ? 'd-block' : ''}`}
             >
               <li>
-                <Link to="/">Home 01</Link>
+                <Link to="/">Получить отчет CarFax</Link>
               </li>
               <li>
                 <Link to="/index2">Home 02</Link>

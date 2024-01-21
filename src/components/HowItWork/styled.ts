@@ -1,9 +1,9 @@
 import { styled } from 'styled-components';
 
+import { Button } from '@autrm/common/components/button';
 import { Row } from '@autrm/common/components/grid';
 import { colorTitle, colorWhite } from '@autrm/common/tokens/colors';
 import { getTextStyles } from '@autrm/common/utils/styles';
-import { Button } from '@autrm/common/components/button';
 
 export const SectionStyled = styled.section`
   border-radius: 30px;

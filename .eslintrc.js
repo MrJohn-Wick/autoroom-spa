@@ -119,12 +119,7 @@ module.exports = {
 
     // other
     'newline-before-return': ['error'],
-    'no-console': [
-      'error',
-      {
-        allow: ['warn', 'error'],
-      },
-    ],
+    'no-console': 'warn',
     'no-useless-rename': ['error'],
     'object-shorthand': ['error'],
   },
