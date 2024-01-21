@@ -1,15 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
 
 import { Footer } from './components/Footer';
-import { NavBar } from './components/NavBar';
-import { TopBar } from './components/TopBar';
+import { Header } from './components/Header';
 import { Home } from './pages/Home';
 
 function App() {
   return (
     <>
-      <TopBar />
-      <NavBar />
+      <Header />
       <section>
         <Routes>
           <Route
