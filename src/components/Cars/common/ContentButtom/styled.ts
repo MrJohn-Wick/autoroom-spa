@@ -27,5 +27,11 @@ export const ContentBottomStyled = styled.div`
 
   & a svg {
     fill: ${colorPrimary};
+    /* stroke: ${colorPrimary}; */
+  }
+
+  & a svg path:first-child {
+    fill: none;
+    stroke: ${colorPrimary};
   }
 `;
