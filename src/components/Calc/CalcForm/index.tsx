@@ -1,28 +1,45 @@
-import { useEffect, useState } from 'react';
+import { useMemo, useState } from 'react';
+import { getAuctions, getLocations } from '../utils';
+import { SelectField } from './SelectField';
+import { FormWrapperStyled } from './styled';
 
-import auctions from '@autrm/datas/auctions.json';
+type FormData = {
+  auction: string;
+  location: string;
+};
 
-export function CalcForm({ onChange }: { onChange: any }) {
-  const auctionsMap = [...new Set(auctions.map((i) => i.auction))];
-  const [auction, setAuction] = useState(auctionsMap[0]);
+export function CalcForm() {
+  const [formData, setFormData] = useState<FormData>({
+    auction: '',
+    location: '',
+  });
 
-  useEffect(() => {
-    onChange();
-  }, [auction, onChange]);
+  function handleInputChange(event: React.ChangeEvent<HTMLSelectElement>) {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  }
 
   return (
-    <form>
-      <div className="field">
-        <label htmlFor="" />
-        <select
-          value={auction}
-          onChange={(e) => setAuction(e.target.value)}
-        >
-          {auctions.map((a, i) => (
-            <option value={i}>{a.auction}</option>
-          ))}
-        </select>
-      </div>
-    </form>
+    <FormWrapperStyled>
+      <form>
+        <SelectField
+          name="auction"
+          label="Аукцион"
+          value={formData.auction}
+          options={getAuctions()}
+          onChange={handleInputChange}
+        />
+        <SelectField
+          name="location"
+          label="Площадка"
+          value={formData.location}
+          options={getLocations(formData.auction)}
+          onChange={handleInputChange}
+        />
+      </form>
+    </FormWrapperStyled>
   );
 }
