@@ -1,7 +1,6 @@
 import { Col, Container, Row } from '@autrm/common/components/grid';
 import { HeadingLevel1, RegularTextLevel2 } from '@autrm/common/tokens/typography';
-import { CalcForm } from './CalcForm';
-import { CalcResults } from './CalcResults';
+import { Calc } from '@autrm/components/Calc';
 
 export function Calculator() {
   return (
@@ -18,11 +17,8 @@ export function Calculator() {
         </Col>
       </Row>
       <Row>
-        <Col lg={6}>
-          <CalcForm />
-        </Col>
-        <Col lg={6}>
-          <CalcResults />
+        <Col lg={12}>
+          <Calc />
         </Col>
       </Row>
     </Container>

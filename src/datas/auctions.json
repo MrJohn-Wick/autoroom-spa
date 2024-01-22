@@ -1,0 +1,30 @@
+[
+  {
+    "auction": "IAAI",
+    "location": "'Abilene'",
+    "car": 375,
+    "moto": 300,
+    "snow": 300
+  },
+  {
+    "auction": "IAAI",
+    "location": "ACE-Perris",
+    "car": 275,
+    "moto": 275,
+    "snow": 275
+  },
+  {
+    "auction": "Copart",
+    "location": "Abilene-TX",
+    "car": 375,
+    "moto": 300,
+    "snow": 300
+  },
+  {
+    "auction": "Copart",
+    "location": "Adelanto - CA",
+    "car": 275,
+    "moto": 250,
+    "snow": 250
+  }
+]
