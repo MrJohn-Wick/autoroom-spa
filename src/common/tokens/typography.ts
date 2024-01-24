@@ -31,7 +31,7 @@ export const HeadingLevel1 = styled.h1<{ color?: string }>`
   white-space: normal;
   text-shadow: ${typographyTextShadow};
 
-  ${getTextStyles('Roboto', 700, 30, 38)}
+  ${getTextStyles('Montserrat', 700, 30, 38)}
 
   ${ADAPTIVE.minWidth.tablet} {
     ${getTextStyles(null, null, 36, 44)}

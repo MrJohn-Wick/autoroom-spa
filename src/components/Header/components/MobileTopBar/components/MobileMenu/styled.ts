@@ -1,3 +1,4 @@
+import { colorPrimary, colorTitle } from '@autrm/common/tokens/colors';
 import styled from 'styled-components';
 
 export const MainMenuStyled = styled.div<{ isMenuShowed: boolean }>`
@@ -24,4 +25,24 @@ export const MenuListStyled = styled.ul`
   text-align: left;
   padding: 25px 0 20px;
   list-style: none;
+
+  li {
+    padding: 10px 0;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.5s ease-out 0s;
+    position: relative;
+    cursor: pointer;
+
+    &:hover a {
+      color: ${colorPrimary};
+    }
+
+    a {
+      text-decoration: none;
+      color: ${colorTitle};
+    }
+  }
 `;
