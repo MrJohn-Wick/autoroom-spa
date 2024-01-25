@@ -1,12 +1,15 @@
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import type { SelectChangeEvent } from '@mui/material';
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import { CalcContext } from '../..';
+import { getAuctions, getLocations } from '../../utils';
 
 export function Area() {
   const calcData = useContext(CalcContext);
   const [auction, setAuction] = calcData.auction;
   const [location, setLocation] = calcData.location;
+  const auctionsOptions = getAuctions();
+  const locationsOptions = useMemo(() => getLocations(auction), [auction]);
 
   const handleChangeAuction = (event: SelectChangeEvent) => {
     setAuction(event.target.value);
@@ -26,8 +29,9 @@ export function Area() {
           value={auction}
           onChange={handleChangeAuction}
         >
-          <MenuItem value="auto">IAAI</MenuItem>
-          <MenuItem value="moto">Copat</MenuItem>
+          {auctionsOptions.map((a) => (
+            <MenuItem value={a}>{a}</MenuItem>
+          ))}
         </Select>
       </FormControl>
 
@@ -40,9 +44,9 @@ export function Area() {
           value={location}
           onChange={handleChangeLocation}
         >
-          <MenuItem value="auto">XXXXXXX</MenuItem>
-          <MenuItem value="moto">YYYYYYYY</MenuItem>
-          <MenuItem value="auto">ZZZZZZZ</MenuItem>
+          {locationsOptions.map((l) => (
+            <MenuItem value={l}>{l}</MenuItem>
+          ))}
         </Select>
       </FormControl>
     </>

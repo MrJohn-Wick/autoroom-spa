@@ -2,6 +2,8 @@ import { createContext, useState } from 'react';
 import { CalcForm } from './CalcForm';
 import { getAuctions } from './utils';
 import vehicles from '@autrm/datas/vehicles.json';
+import { CalcResults } from './CalcResults';
+import { Col, Row } from '@autrm/common/components/grid';
 
 export type CalcData = {
   vehicle: any;
@@ -25,7 +27,14 @@ export function Calc() {
 
   return (
     <CalcContext.Provider value={value}>
-      <CalcForm />
+      <Row>
+        <Col lg={6}>
+          <CalcForm />
+        </Col>
+        <Col lg={6}>
+          <CalcResults />
+        </Col>
+      </Row>
     </CalcContext.Provider>
   );
 }
