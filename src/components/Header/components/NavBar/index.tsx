@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useEffect, useReducer } from 'react';
 
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { Button } from '@autrm/common/components/button';
+import type { NavProps } from '@autrm/common/types/nav';
+import MenuItems from '@autrm/datas/mainNav.json';
 
 import { initialState, reducer } from './reducer';
 import {
@@ -25,7 +27,7 @@ export function NavBar() {
     });
   };
 
-  const currentRoute = useLocation().pathname;
+  // const currentRoute = useLocation().pathname;
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -35,54 +37,35 @@ export function NavBar() {
     };
   }, []);
 
+  const getSubMenuItems = (item: NavProps, key: number) => (
+    <MenuItemHasChildrenStyled key={key}>
+      <a href="#">{item.title}</a>
+      <SubMenuStyled>
+        {item?.subMenu?.map((props, index) => (
+          <li key={index}>
+            <Link to={props.link}>{props.title}</Link>
+          </li>
+        ))}
+      </SubMenuStyled>
+    </MenuItemHasChildrenStyled>
+  );
+
   return (
     <NavBarStyled className={`${state.scrollY > 10 ? 'sticky' : ''}`}>
       <MainMenuStyled className={`main-menu ${state.isSidebarOpen ? 'show-menu' : ''}`}>
         <MenuListStyled>
-          <MenuItemHasChildrenStyled
-            className={`menu-item-has-children ${currentRoute === '/' ? 'active' : ''}`}
-          >
-            <Link to="/">Главная</Link>
-          </MenuItemHasChildrenStyled>
-          <MenuItemHasChildrenStyled
-            className={`menu-item-has-children ${currentRoute === '/' ? 'active' : ''}`}
-          >
-            <Link to="/calculator">Калькулятор</Link>
-          </MenuItemHasChildrenStyled>
-          <MenuItemHasChildrenStyled
-            className={`menu-item-has-children ${currentRoute === '/' ? 'active' : ''}`}
-          >
-            <Link to="/tracking">Отслеживание</Link>
-          </MenuItemHasChildrenStyled>
-          <MenuItemHasChildrenStyled
-            className={`menu-item-has-children ${currentRoute === '/' ? 'active' : ''}`}
-          >
-            <a>Услуги</a>
-            <SubMenuStyled
-              className={`sub-menu ${state.activeMenu === 'home-one' ? 'd-block' : ''}`}
-            >
-              <li>
-                <Link to="/">Получить отчет CarFax</Link>
-              </li>
-              <li>
-                <Link to="/index2">Home 02</Link>
-              </li>
-              <li>
-                <Link to="/index3">Home 03</Link>
-              </li>
-              <li>
-                <Link to="/index4">Home 04</Link>
-              </li>
-              <li>
-                <Link to="/index5">Home 05</Link>
-              </li>
-              <li>
-                <Link to="/index6">Home 06</Link>
-              </li>
-            </SubMenuStyled>
-          </MenuItemHasChildrenStyled>
+          {MenuItems.map((props: NavProps, index: number) =>
+            props.subMenu ? (
+              getSubMenuItems(props, index)
+            ) : (
+              <MenuItemHasChildrenStyled key={index}>
+                <Link to={props.link}>{props.title}</Link>
+              </MenuItemHasChildrenStyled>
+            ),
+          )}
         </MenuListStyled>
       </MainMenuStyled>
+
       <div className="nav-right d-flex jsutify-content-end align-items-center">
         <Button
           data-bs-toggle="modal"

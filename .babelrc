@@ -1,0 +1,18 @@
+{
+  "presets": ["@babel/preset-react", "@babel/preset-env", "@babel/preset-typescript"],
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": false,
+        "minify": true,
+        "transpileTemplateLiterals": false,
+        "pure": false,
+        "displayName": true, // generate another classname
+        "fileName": false, // generate another classname
+        "preprocess": false
+      }
+    ],
+    "macros"
+  ]
+}

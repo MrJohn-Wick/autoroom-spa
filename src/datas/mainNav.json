@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Главная",
+    "link": "/"
+  },
+  {
+    "title": "Калькулятор",
+    "link": "/calculator"
+  },
+  {
+    "title": "Отслеживание",
+    "link": "/tracking"
+  },
+  {
+    "title": "Услуги",
+    "link": "#",
+    "subMenu": [
+      {
+        "title": "Получить отчет CarFax",
+        "link": "/"
+      }
+    ]
+  }
+]

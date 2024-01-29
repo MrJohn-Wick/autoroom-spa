@@ -90,7 +90,7 @@ export const SubMenuStyled = styled.ul`
       position: absolute;
       bottom: -1px;
       left: 0;
-      background: linear-gradient(90deg, #fff, ${colorPrimary}, #fff);
+      background: linear-gradient(90deg, ${colorWhite}, ${colorPrimary}, ${colorWhite});
       width: 100%;
       height: 1px;
       transform: scaleX(0);
@@ -121,7 +121,7 @@ export const SubMenuStyled = styled.ul`
       position: absolute;
       bottom: -1px;
       left: 0;
-      background: linear-gradient(90deg, #fff, #06d889, #fff);
+      background: linear-gradient(90deg, ${colorWhite}, #06d889, ${colorWhite});
       width: 100%;
       height: 1px;
       transform: scaleX(0);

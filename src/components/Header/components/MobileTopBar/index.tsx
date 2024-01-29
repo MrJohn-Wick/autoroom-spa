@@ -18,7 +18,10 @@ export function MobileTopBar() {
       >
         <span />
       </SidebarButtonStyled>
-      <MobileMenu isMenuShowed={isMenuShowed} />
+      <MobileMenu
+        isMenuShowed={isMenuShowed}
+        clickCb={setIsMenuShowed}
+      />
     </MobileTopBarStyled>
   );
 }
