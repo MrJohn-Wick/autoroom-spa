@@ -1,30 +1,25 @@
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
-import type { SelectChangeEvent } from '@mui/material';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
+import { Select } from 'antd';
 import { CalcContext } from '../..';
+import { getVehicles } from '../../utils';
+import { FormFieldStyled } from '../styled';
 
 export function VehicleSelect() {
   const calcData = useContext(CalcContext);
-  const [vehicle, setVehicle] = calcData.vehicle;
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setVehicle(event.target.value);
-  };
+  const [vehicleOptions] = useState<{ value: string; name: string }[]>(getVehicles());
 
   return (
-    <FormControl fullWidth>
-      <InputLabel id="vehicle-label">Тип транспорта</InputLabel>
+    <FormFieldStyled>
+      <div id="vehicle-label">Тип транспорта</div>
       <Select
-        labelId="vehicle-label"
-        id="vehicle-select"
-        label="Age"
-        value={vehicle}
-        onChange={handleChange}
+        size="large"
+        value={calcData?.vehicle}
+        onChange={calcData?.setVehicle}
       >
-        <MenuItem value="auto">Auto</MenuItem>
-        <MenuItem value="moto">Moto</MenuItem>
-        <MenuItem value="snow">Snow</MenuItem>
+        {vehicleOptions.map((item) => (
+          <Select.Option value={item.value}>{item.name}</Select.Option>
+        ))}
       </Select>
-    </FormControl>
+    </FormFieldStyled>
   );
 }

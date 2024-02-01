@@ -1,11 +1,14 @@
 [
   {
+    "value": "auto",
     "name": "Автомобиль"
   },
   {
+    "value": "moto",
     "name": "Мотоцикл"
   },
   {
+    "value": "snow",
     "name": "Снегоход"
   }
 ]

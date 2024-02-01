@@ -1,40 +1,53 @@
 import { createContext, useState } from 'react';
+import type { Dispatch, SetStateAction, PropsWithChildren } from 'react';
 import { CalcForm } from './CalcForm';
-import { getAuctions } from './utils';
-import vehicles from '@autrm/datas/vehicles.json';
 import { CalcResults } from './CalcResults';
-import { Col, Row } from '@autrm/common/components/grid';
+import { CalcWrapperStyled } from './styled';
 
-export type CalcData = {
-  vehicle: any;
-  auction: any;
-  location: any;
+export type CalcContextType = {
+  vehicle: string | undefined;
+  setVehicle: Dispatch<SetStateAction<string>>;
+  auction: string | undefined;
+  setAuction: Dispatch<SetStateAction<string>>;
+  location: string | undefined;
+  setLocation: Dispatch<SetStateAction<string>>;
+  price: number | undefined;
+  setPrice: Dispatch<SetStateAction<number>>;
 };
 
-export const CalcContext = createContext<CalcData>({
-  vehicle: [],
-  auction: [],
-  location: [],
-});
+export const CalcContext = createContext<CalcContextType | undefined>(undefined);
 
-export function Calc() {
-  const auctions = getAuctions();
-  const value = {
-    vehicle: useState(vehicles[0].name),
-    auction: useState(auctions[0]),
-    location: useState(),
-  };
+export const CalcProvider = ({ children }: PropsWithChildren<object>) => {
+  const [vehicle, setVehicle] = useState('');
+  const [auction, setAuction] = useState('');
+  const [location, setLocation] = useState('');
+  const [price, setPrice] = useState(5000);
 
   return (
-    <CalcContext.Provider value={value}>
-      <Row>
-        <Col lg={6}>
-          <CalcForm />
-        </Col>
-        <Col lg={6}>
-          <CalcResults />
-        </Col>
-      </Row>
+    <CalcContext.Provider
+      value={{
+        vehicle,
+        setVehicle,
+        auction,
+        setAuction,
+        location,
+        setLocation,
+        price,
+        setPrice,
+      }}
+    >
+      {children}
     </CalcContext.Provider>
+  );
+};
+
+export function Calc() {
+  return (
+    <CalcProvider>
+      <CalcWrapperStyled>
+        <CalcForm />
+        <CalcResults />
+      </CalcWrapperStyled>
+    </CalcProvider>
   );
 }

@@ -1,64 +1,68 @@
 import { useContext, useMemo } from 'react';
 import { CalcContext } from '..';
+import { CalcTitleStyled } from '../styled';
 import { getAuction } from '../utils';
+import { OverviewContentStyled, OverviewStyled, ResultStyled } from './styled';
 
 export function CalcResults() {
   const calcData = useContext(CalcContext);
 
   const fee = useMemo(() => {
-    const auction = getAuction(calcData.auction[0], calcData.location[0]);
+    const auction = getAuction(calcData?.auction, calcData?.location);
 
     return auction?.fee;
   }, [calcData]);
 
   return (
-    <>
-      <h3>Покупка и доставка</h3>
-      <ul>
-        <li>
-          <span>Стоимость авто</span>
-          <span>$ 0</span>
-        </li>
-        <li>
-          <span>Аукционный сбор</span>
-          <span>$ {fee}</span>
-        </li>
-        <li>
-          <span>Транспортировка в порт</span>
-          <span>$ 0</span>
-        </li>
-        <li>
-          <span>Доставка от порта до Клайпеды</span>
-          <span>$ 0</span>
-        </li>
-        <li>
-          <span>Стоимость услуг</span>
-          <span>$ 0</span>
-        </li>
-      </ul>
-      <h3>Растаможка и оформление</h3>
-      <ul>
-        <li>
-          <span>Таможенная пошлина</span>
-          <span>$ 0</span>
-        </li>
-        <li>
-          <span>Таможенный сбор</span>
-          <span>$ 0</span>
-        </li>
-        <li>
-          <span>Утилизационный сбор</span>
-          <span>$ 0</span>
-        </li>
-        <li>
-          <span>Расходы на СВХ</span>
-          <span>$ 0</span>
-        </li>
-      </ul>
-      <h3>
-        <span>Итого:</span>
-        <span>$ 0</span>
-      </h3>
-    </>
+    <div>
+      <OverviewStyled>
+        <div>
+          <CalcTitleStyled>Покупка и доставка</CalcTitleStyled>
+        </div>
+        <OverviewContentStyled>
+          <ul>
+            <li>
+              <span>Стоимость авто</span>$ 0
+            </li>
+            <li>
+              <span>Аукционный сбор</span>$ {fee}
+            </li>
+            <li>
+              <span>Транспортировка в порт</span>$ 0
+            </li>
+            <li>
+              <span>Доставка от порта до Клайпеды</span>$ 0
+            </li>
+            <li>
+              <span>Стоимость услуг</span>$ 0
+            </li>
+          </ul>
+        </OverviewContentStyled>
+      </OverviewStyled>
+      <OverviewStyled>
+        <div>
+          <CalcTitleStyled>Растаможка и оформление</CalcTitleStyled>
+        </div>
+        <OverviewContentStyled>
+          <ul>
+            <li>
+              <span>Таможенная пошлина</span>$ 0
+            </li>
+            <li>
+              <span>Таможенный сбор</span>$ {fee}
+            </li>
+            <li>
+              <span>Утилизационный сбор</span>$ 0
+            </li>
+            <li>
+              <span>Расходы на СВХ</span>$ 0
+            </li>
+          </ul>
+        </OverviewContentStyled>
+      </OverviewStyled>
+      <ResultStyled>
+        <span>Итого:</span>$ 0
+      </ResultStyled>
+    </div>
   );
 }

@@ -1,54 +1,50 @@
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
-import type { SelectChangeEvent } from '@mui/material';
-import { useContext, useMemo } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { Select } from 'antd';
 import { CalcContext } from '../..';
 import { getAuctions, getLocations } from '../../utils';
+import { FormFieldStyled } from '../styled';
 
 export function Area() {
   const calcData = useContext(CalcContext);
-  const [auction, setAuction] = calcData.auction;
-  const [location, setLocation] = calcData.location;
   const auctionsOptions = getAuctions();
-  const locationsOptions = useMemo(() => getLocations(auction), [auction]);
+  const [locationsOptions, setLocationsOptions] = useState<string[]>([]);
 
-  const handleChangeAuction = (event: SelectChangeEvent) => {
-    setAuction(event.target.value);
-  };
-  const handleChangeLocation = (event: SelectChangeEvent) => {
-    setLocation(event.target.value);
-  };
+  useEffect(() => {
+    const locations = getLocations(calcData?.auction);
+    setLocationsOptions(locations);
+  }, [calcData?.auction]);
+
+  useEffect(() => {
+    calcData?.setLocation(locationsOptions[0]);
+  }, [locationsOptions, calcData?.location, calcData]);
 
   return (
-    <>
-      <FormControl fullWidth>
-        <InputLabel id="auction-label">Аукцион</InputLabel>
+    <FormFieldStyled>
+      <FormFieldStyled>
+        <div id="auction-label">Аукцион</div>
         <Select
-          labelId="auction-label"
-          id="auction-select"
-          label="Аукцион"
-          value={auction}
-          onChange={handleChangeAuction}
+          value={calcData?.auction}
+          size="large"
+          onChange={(a) => calcData?.setAuction(a)}
         >
           {auctionsOptions.map((a) => (
-            <MenuItem value={a}>{a}</MenuItem>
+            <Select.Option value={a}>{a}</Select.Option>
           ))}
         </Select>
-      </FormControl>
+      </FormFieldStyled>
 
-      <FormControl fullWidth>
-        <InputLabel id="location-label">Площадка</InputLabel>
+      <div>
+        <div id="location-label">Площадка</div>
         <Select
-          labelId="location-label"
-          id="location-select"
-          label="Площадка"
-          value={location}
-          onChange={handleChangeLocation}
+          value={calcData?.location}
+          size="large"
+          onChange={(l) => calcData?.setLocation(l)}
         >
           {locationsOptions.map((l) => (
-            <MenuItem value={l}>{l}</MenuItem>
+            <Select.Option value={l}>{l}</Select.Option>
           ))}
         </Select>
-      </FormControl>
-    </>
+      </div>
+    </FormFieldStyled>
   );
 }
