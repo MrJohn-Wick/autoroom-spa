@@ -1,5 +1,6 @@
 import { Select } from 'antd';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { CalcContext } from '../..';
 import { FormFieldStyled } from '../styled';
 
 export function Age() {
@@ -14,17 +15,13 @@ export function Age() {
     },
     {
       value: 'a3',
-      label: 'от 5 до 7 лет',
-    },
-    {
-      value: 'a4',
-      label: 'более 7 лет',
+      label: 'старше 5 лет',
     },
   ];
-  const [age, setAge] = useState('a1');
+  const calcData = useContext(CalcContext);
 
   function onChange(value: string) {
-    setAge(value);
+    calcData?.setAge(value);
   }
 
   return (
@@ -32,7 +29,7 @@ export function Age() {
       <div>Возраст, лет</div>
       <Select
         onChange={onChange}
-        value={age}
+        value={calcData?.age}
         size="large"
       >
         {ageOptions.map((a) => (

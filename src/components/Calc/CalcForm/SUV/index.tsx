@@ -1,14 +1,15 @@
 import { Checkbox } from 'antd';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { CalcContext } from '../..';
 
 export function SUV() {
-  const [suv, setSUV] = useState(false);
+  const calcData = useContext(CalcContext);
 
   return (
     <div>
       <Checkbox
-        checked={suv}
-        onChange={(e) => setSUV(e.target.checked)}
+        checked={calcData?.suv}
+        onChange={(e) => calcData?.setSUV(e.target.checked)}
       >
         Внедорожник
       </Checkbox>

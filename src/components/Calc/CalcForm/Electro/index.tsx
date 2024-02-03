@@ -1,14 +1,15 @@
 import { Checkbox } from 'antd';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { CalcContext } from '../..';
 
 export function Electro() {
-  const [electro, setElectro] = useState(false);
+  const calcData = useContext(CalcContext);
 
   return (
     <div>
       <Checkbox
-        checked={electro}
-        onChange={(e) => setElectro(e.target.checked)}
+        checked={calcData?.electro}
+        onChange={(e) => calcData?.setElectro(e.target.checked)}
       >
         Электромобиль
       </Checkbox>

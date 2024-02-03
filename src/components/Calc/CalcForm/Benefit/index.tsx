@@ -1,14 +1,15 @@
 import { Checkbox } from 'antd';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { CalcContext } from '../..';
 
 export function Benefit() {
-  const [benefit, setBenefit] = useState(false);
+  const calcData = useContext(CalcContext);
 
   return (
     <div>
       <Checkbox
-        checked={benefit}
-        onChange={(e) => setBenefit(e.target.checked)}
+        checked={calcData?.benefit}
+        onChange={(e) => calcData?.setBenefit(e.target.checked)}
       >
         Льготная растаможка
       </Checkbox>

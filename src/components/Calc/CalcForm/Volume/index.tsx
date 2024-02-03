@@ -1,9 +1,10 @@
 import { InputNumber } from 'antd';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { CalcContext } from '../..';
 import { FormFieldStyled } from '../styled';
 
 export function Volume() {
-  const [volume, setVolume] = useState(2000);
+  const calcData = useContext(CalcContext);
 
   return (
     <FormFieldStyled>
@@ -11,8 +12,8 @@ export function Volume() {
       <InputNumber
         min={1}
         max={10000}
-        value={volume}
-        onChange={(v) => (v ? setVolume(v) : null)}
+        value={calcData?.volume}
+        onChange={(v) => (v ? calcData?.setVolume(v) : null)}
         size="large"
         step={100}
       />
