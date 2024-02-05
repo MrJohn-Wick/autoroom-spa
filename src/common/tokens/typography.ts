@@ -26,7 +26,6 @@ export const HeadingStylesCommon = css<{ color?: string }>`
  */
 export const HeadingLevel1 = styled.h1<{ color?: string }>`
   ${HeadingStylesCommon}
-  text-transform: uppercase;
   word-break: break-word;
   white-space: normal;
   text-shadow: ${typographyTextShadow};
@@ -38,7 +37,7 @@ export const HeadingLevel1 = styled.h1<{ color?: string }>`
   }
 
   ${ADAPTIVE.minWidth.desktop} {
-    ${getTextStyles(null, null, 48, 56)}
+    ${getTextStyles(null, null, 55, 64)}
   }
 `;
 
