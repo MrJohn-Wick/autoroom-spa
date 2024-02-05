@@ -1,3 +1,4 @@
+import iX from '@autrm/assets/bmw_ix.png';
 import SearchIcon from '@autrm/assets/icons/search.svg';
 import { SVGIcon } from '@autrm/common/components/svg-icon';
 
@@ -25,7 +26,7 @@ export function HeroSection() {
           />
         </button>
       </SearchStyled>
-      <img
+      {/* <img
         // @ts-ignore
         fetchpriority="high"
         decoding="async"
@@ -36,6 +37,12 @@ export function HeroSection() {
         alt=""
         srcset="https://demoapus1.com/boxcar/wp-content/uploads/2023/11/slider51.png 1166w, https://demoapus1.com/boxcar/wp-content/uploads/2023/11/slider51-300x92.png 300w, https://demoapus1.com/boxcar/wp-content/uploads/2023/11/slider51-1024x313.png 1024w, https://demoapus1.com/boxcar/wp-content/uploads/2023/11/slider51-768x234.png 768w, https://demoapus1.com/boxcar/wp-content/uploads/2023/11/slider51-600x183.png 600w"
         sizes="(max-width: 1166px) 100vw, 1166px"
+      /> */}
+      <img
+        src={iX}
+        width="1066"
+        height="336"
+        alt=""
       />
     </HeroSectionStyled>
   );
