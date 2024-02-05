@@ -10,7 +10,7 @@ export function Logo({ type }: { type: string }) {
         height={50}
         width={50}
       />
-      <span>AutoRoom</span>
+      <span>АВТОРУМ.BY</span>
     </LogoStyled>
   );
 }
