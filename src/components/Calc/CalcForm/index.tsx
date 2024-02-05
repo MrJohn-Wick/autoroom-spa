@@ -1,15 +1,15 @@
 import { colorPrimary } from '@autrm/common/tokens/colors';
 import { ConfigProvider } from 'antd';
 import { CalcTitleStyled } from '../styled';
-import { Age } from './Age';
-import { Area } from './Area';
+import { YearsRange } from './YearsRange';
+import { AuctionLocation } from './AuctionLocation';
 import { Benefit } from './Benefit';
 import { Electro } from './Electro';
 import { Price } from './Price';
-import { FormWrapperStyled, HorElStyled, HorizontalWrapperStyled } from './styled';
+import { FormWrapperStyled, HorizontalElementStyled, HorizontalWrapperStyled } from './styled';
 import { SUV } from './SUV';
 import { VehicleSelect } from './VehicleSelect';
-import { Volume } from './Volume';
+import { EngineCapacity } from './EngineCapacity';
 
 export function CalcForm() {
   return (
@@ -25,14 +25,14 @@ export function CalcForm() {
         <VehicleSelect />
         <Price />
         <HorizontalWrapperStyled>
-          <HorElStyled>
-            <Age />
-          </HorElStyled>
-          <HorElStyled>
-            <Volume />
-          </HorElStyled>
+          <HorizontalElementStyled>
+            <YearsRange />
+          </HorizontalElementStyled>
+          <HorizontalElementStyled>
+            <EngineCapacity />
+          </HorizontalElementStyled>
         </HorizontalWrapperStyled>
-        <Area />
+        <AuctionLocation />
         <Electro />
         <SUV />
         <Benefit />

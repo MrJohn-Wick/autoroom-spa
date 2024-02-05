@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { CalcContext } from '../..';
 import { FormFieldStyled } from '../styled';
 
-export function Age() {
+export function YearsRange() {
   const ageOptions = [
     {
       value: 'a1',

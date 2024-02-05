@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { CalcContext } from '../..';
 import { FormFieldStyled } from '../styled';
 
-export function Volume() {
+export function EngineCapacity() {
   const calcData = useContext(CalcContext);
 
   return (

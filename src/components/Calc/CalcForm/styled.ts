@@ -16,7 +16,7 @@ export const HorizontalWrapperStyled = styled.div`
   gap: 20px;
 `;
 
-export const HorElStyled = styled.div`
+export const HorizontalElementStyled = styled.div`
   flex-grow: 1;
 `;
 

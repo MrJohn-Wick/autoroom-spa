@@ -4,7 +4,7 @@ import { CalcContext } from '../..';
 import { getAuctions, getLocations } from '../../utils';
 import { FormFieldStyled } from '../styled';
 
-export function Area() {
+export function AuctionLocation() {
   const calcData = useContext(CalcContext);
   const auctionsOptions = getAuctions();
   const [locationsOptions, setLocationsOptions] = useState<string[]>([]);
