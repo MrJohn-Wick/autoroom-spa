@@ -89,6 +89,12 @@ export const GlobalStyled = createGlobalStyle`
     padding: 0px 6.3%;
   }
 
+  #root {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
   a {
     color: inherit;
     text-decoration: none;

@@ -1,59 +1,59 @@
 import DarkLogo from '@autrm/assets/dark-logo.svg';
+import EmailIcon from '@autrm/assets/icons/email.svg';
+import PhoneIcon from '@autrm/assets/icons/phone.svg';
 
 import { Logo } from '../Logo';
 
 import { Copyright } from './components/Copyright/Copyright';
-import { FooterMenu } from './components/FooterMenu';
-import { FooterWidget } from './components/FooterWidget';
+// import { FooterMenu } from './components/FooterMenu';
+// import { FooterWidget } from './components/FooterWidget';
 import { Hotline } from './components/Hotline';
 import { SocialLinks } from './components/SocialLinks/SocialLinks';
 import {
   BottomMenuStyled,
-  ColStyled,
+  // ColStyled,
   ContactsStyled,
   FooterBottomStyled,
   FooterCenterStyled,
   FooterContainerStyled,
   FooterStyled,
-  FooterTopStyled,
-  RowStyled,
+  // FooterTopStyled,
+  // RowStyled,
 } from './styled';
-import PhoneIcon from '@autrm/assets/icons/phone.svg';
-import EmailIcon from '@autrm/assets/icons/email.svg';
 
 export function Footer() {
-  const company_links = [
-    {
-      title: 'About us',
-      url: '#',
-    },
-    {
-      title: 'Return & exchange',
-      url: '#',
-    },
-    {
-      title: 'Refuund Plicy',
-      url: '#',
-    },
-    {
-      title: 'Reviews',
-      url: '#',
-    },
-    {
-      title: "FAQ's",
-      url: '#',
-    },
-    {
-      title: 'Contact Us',
-      url: '#',
-    },
-  ];
+  // const company_links = [
+  //   {
+  //     title: 'About us',
+  //     url: '#',
+  //   },
+  //   {
+  //     title: 'Return & exchange',
+  //     url: '#',
+  //   },
+  //   {
+  //     title: 'Refuund Plicy',
+  //     url: '#',
+  //   },
+  //   {
+  //     title: 'Reviews',
+  //     url: '#',
+  //   },
+  //   {
+  //     title: "FAQ's",
+  //     url: '#',
+  //   },
+  //   {
+  //     title: 'Contact Us',
+  //     url: '#',
+  //   },
+  // ];
 
   return (
     <FooterStyled>
       {/* Footer top */}
       <FooterContainerStyled>
-        <FooterTopStyled>
+        {/* <FooterTopStyled>
           <RowStyled>
             <ColStyled>
               <FooterWidget title="About company">
@@ -81,7 +81,7 @@ export function Footer() {
               </FooterWidget>
             </ColStyled>
           </RowStyled>
-        </FooterTopStyled>
+        </FooterTopStyled> */}
         {/* Footer center */}
         <FooterCenterStyled>
           <div>

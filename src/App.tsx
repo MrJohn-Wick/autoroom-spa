@@ -5,6 +5,7 @@ import { Header } from './components/Header';
 import { Calculator } from './pages/Calculator';
 import { Home } from './pages/Home';
 import { Tracking } from './pages/Tracking';
+import { TrackingSearch } from './pages/TrackingSearch';
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
           />
           <Route
             path="/tracking"
+            element={<TrackingSearch />}
+          />
+          <Route
+            path="/tracking/:id"
             element={<Tracking />}
           />
         </Routes>
