@@ -32,10 +32,54 @@ export const HeroSectionStyled = styled.div`
     min-height: 700px;
   }
 
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+  @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   img {
     margin-bottom: -100px;
     height: auto;
     max-width: 100%;
+
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    @-webkit-keyframes slide-top {
+      0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+    @keyframes slide-top {
+      0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
   }
 `;
 export const HeadingLevel1Styled = styled(HeadingLevel1)`

@@ -15,8 +15,8 @@ export const WorkStyled = styled.div`
 `;
 
 export const StepStyled = styled.div`
-  height: 34px;
-  width: 34px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   border: 1px solid rgba(19, 20, 26, 0.5);
   display: flex;
@@ -26,10 +26,10 @@ export const StepStyled = styled.div`
   z-index: 1;
 
   & span {
-    width: 26px;
-    height: 26px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    color: ${colorTitle};
+    color: ${colorWhite};
     ${getTextStyles(null, 600, 15, null)}
     background-color: ${colorPrimary};
     display: flex;

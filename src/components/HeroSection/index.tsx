@@ -10,16 +10,10 @@ export function HeroSection() {
       <RegularTextLevel1Styled>Подберем авто Вашей мечты</RegularTextLevel1Styled>
       <Search />
       <img
-        // @ts-ignore
-        fetchpriority="high"
-        decoding="async"
-        width="1166"
-        height="356"
         src={iX}
-        class="attachment-full size-full wp-image-5583"
+        width="1066"
+        height="336"
         alt=""
-        srcset={iX}
-        sizes="(max-width: 1166px) 100vw, 1166px"
       />
     </HeroSectionStyled>
   );

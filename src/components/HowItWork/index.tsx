@@ -25,9 +25,10 @@ export function HowItWork() {
           <Col lg={12}>
             <HeaderStyled>
               <div>
-                <TitleStyled>How Does It Work</TitleStyled>
+                <TitleStyled>Этапы покупки</TitleStyled>
                 <SubtitleStyled>
-                  Here are some of the featured cars in different categories
+                  Процесс покупки и доставки авто из Америки не быстрый, поэтому мы хотим показать
+                  весь этап.
                 </SubtitleStyled>
               </div>
               <div>
