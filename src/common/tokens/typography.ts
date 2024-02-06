@@ -168,24 +168,32 @@ export const RegularTextStylesCommon = css<RegularTextProps>`
 
 // Regular text | paragraph (p) | Body 24
 export const RegularTextLevel1 = styled.p<RegularTextProps>`
-  ${getTextStyles('Roboto', 400, 16, 24)}
+  ${getTextStyles('Montserrat', 400, 16, 24)}
 
   ${ADAPTIVE.minWidth.tablet} {
-    ${getTextStyles(null, null, 18, 28)}
+    ${getTextStyles('Montserrat', null, 18, 28)}
   }
 
   ${ADAPTIVE.minWidth.desktop} {
-    ${getTextStyles(null, null, 20, 30)}
+    ${getTextStyles('Montserrat', 700, 26, 32)}
   }
 
-  ${RegularTextStylesCommon}
+  ${({ color }) => `color: ${color}`};
 `;
 
 // Regular text | paragraph (p) | Body 18
 export const RegularTextLevel2 = styled.p<RegularTextProps>`
-  ${getTextStyles('Roboto', null, 18, 28)}
+  ${getTextStyles('Montserrat', 400, 12, 24)}
 
-  ${RegularTextStylesCommon}
+  ${ADAPTIVE.minWidth.tablet} {
+    ${getTextStyles('Montserrat', null, 14, 28)}
+  }
+
+  ${ADAPTIVE.minWidth.desktop} {
+    ${getTextStyles('Montserrat', 500, 18, 32)}
+  }
+
+  ${({ color }) => `color: ${color}`};
 `;
 
 // Regular text | paragraph (p) | Body 16

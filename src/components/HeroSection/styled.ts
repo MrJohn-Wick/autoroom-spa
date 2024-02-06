@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-import { colorBlack, colorPrimary, colorWhite } from '@autrm/common/tokens/colors';
+import { colorGrey300 } from '@autrm/common/tokens/colors';
 import { ADAPTIVE } from '@autrm/common/tokens/screen';
-import { HeadingLevel1 } from '@autrm/common/tokens/typography';
+import { HeadingLevel1, RegularTextLevel1 } from '@autrm/common/tokens/typography';
+import { getTextStyles } from '@autrm/common/utils/styles';
 
 export const HeroSectionStyled = styled.div`
   background: rgb(255, 255, 255);
@@ -80,91 +81,23 @@ export const HeroSectionStyled = styled.div`
       }
     }
   }
-
-  input {
-    width: 100%;
-    height: 65px;
-    border-radius: 50px;
-    border: 1px solid ${colorWhite};
-    margin-bottom: 65px;
-    outline: 0;
-    padding: 0 50px;
-    font-size: 24px;
-
-    &:focus {
-      outline: 0;
-    }
-  }
-
-  button {
-    position: absolute;
-    font-weight: 500;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: 14px 14px;
-    font-size: 0.9375rem;
-    border-radius: 30px;
-    transition:
-      color 0.15s ease-in-out,
-      background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out,
-      box-shadow 0.15s ease-in-out;
-    background: ${colorPrimary};
-    border-color: ${colorPrimary};
-    color: ${colorWhite};
-    top: 9px;
-    right: 12px;
-
-    svg {
-      fill: ${colorWhite};
-    }
-
-    &:hover {
-      // transform: skewX(45deg) scale(1, 1);
-      background-color: ${colorBlack};
-      border-color: ${colorBlack};
-    }
-
-    &::after {
-      /* position: absolute;
-      content: '';
-      display: block;
-      left: 15%;
-      right: -20%;
-      top: -4%;
-      height: 150%;
-      width: 150%;
-      bottom: 0;
-      border-radius: 2px;
-      background-color: #000000;
-      transform: skewX(45deg) scale(0, 1);
-      z-index: -1;
-      transition: all 0.5s ease-out 0s; */
-    }
-  }
 `;
-
-export const SearchStyled = styled.div`
-  position: relative;
-
-  ${ADAPTIVE.minWidth.tablet} {
-    width: 70%;
-  }
-
-  ${ADAPTIVE.minWidth.desktopLg} {
-    width: 40%;
-  }
-`;
-
 export const HeadingLevel1Styled = styled(HeadingLevel1)`
   margin-top: 0px;
-  margin-bottom: 45px;
 
   ${ADAPTIVE.minWidth.desktop} {
-    margin-top: 165px;
-    margin-bottom: 85px;
+    text-transform: uppercase;
+    ${getTextStyles('Montserrat', 700, 100, 94)}
+
+    background: linear-gradient(358deg, #000000 0.95%, #717171 60.41%, #434343 75.14%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.29);
   }
+`;
+
+export const RegularTextLevel1Styled = styled(RegularTextLevel1)`
+  text-transform: uppercase;
+  color: ${colorGrey300};
 `;
