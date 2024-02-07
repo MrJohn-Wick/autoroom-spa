@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
+import { SocialMenu } from './components/SocialMenu';
 import { Calculator } from './pages/Calculator';
 import { Home } from './pages/Home';
 import { Tracking } from './pages/Tracking';
@@ -27,6 +28,7 @@ function App() {
         </Routes>
       </section>
       <Footer />
+      <SocialMenu />
     </>
   );
 }

@@ -10,3 +10,5 @@ export const colorWhite = '#ffffff';
 export const colorBlack = '#000000';
 export const colorTitle = '#13141A';
 export const colorText = '#5E5E5E';
+
+export const colorInstagram = '#D6249F';
