@@ -79,9 +79,22 @@ export function CalcResults() {
 
   const scrap = useMemo(() => {
     const v = getVehicle(calcData?.vehicle);
+    if (!v) return 0;
+    let scrap = 0;
+    switch (calcData?.age) {
+      case 'a1':
+        scrap = v.scrap[0];
+        break;
+      case 'a2':
+        scrap = v.scrap[1];
+        break;
+      case 'a3':
+        scrap = v.scrap[2];
+        break;
+    }
 
-    return v ? v.scrap : 0;
-  }, [calcData?.vehicle]);
+    return scrap;
+  }, [calcData?.vehicle, calcData?.age]);
 
   const [svh] = useState(getSVH());
 
