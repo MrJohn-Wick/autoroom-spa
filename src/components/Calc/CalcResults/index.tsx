@@ -124,7 +124,7 @@ export function CalcResults() {
               <span>Стоимость авто</span>$ {calcData?.price}
             </li>
             <li>
-              <span>Аукционный сбор</span>$ {fee}
+              <span>Аукционный сбор</span>~ $ {fee}
             </li>
             <li>
               <span>Транспортировка в порт</span>$ {seasideDelivery}
@@ -157,7 +157,7 @@ export function CalcResults() {
               {scrap} BYN
             </li>
             <li>
-              <span>Расходы на СВХ</span>$ {svh}
+              <span>Расходы на СВХ</span>~ $ {svh}
             </li>
           </ul>
         </OverviewContentStyled>
