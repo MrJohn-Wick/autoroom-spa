@@ -7,12 +7,16 @@ export function Electro() {
 
   return (
     <div>
-      <Checkbox
-        checked={calcData?.electro}
-        onChange={(e) => calcData?.setElectro(e.target.checked)}
-      >
-        Электромобиль
-      </Checkbox>
+      {!calcData?.bigSuv ? (
+        <Checkbox
+          checked={calcData?.electro}
+          onChange={(e) => calcData?.setElectro(e.target.checked)}
+        >
+          Электромобиль (Гибрид)
+        </Checkbox>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

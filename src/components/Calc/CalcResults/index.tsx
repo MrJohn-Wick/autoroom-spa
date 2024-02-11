@@ -54,12 +54,19 @@ export function CalcResults() {
     if (calcData?.benefit) {
       d = d / 2;
     }
-    if (calcData?.electro) {
+    if (calcData?.electro && !calcData?.bigSuv) {
       d = 0;
     }
 
     return Math.round(d);
-  }, [calcData?.age, calcData?.volume, calcData?.price, calcData?.benefit, calcData?.electro]);
+  }, [
+    calcData?.age,
+    calcData?.volume,
+    calcData?.price,
+    calcData?.benefit,
+    calcData?.electro,
+    calcData?.bigSuv,
+  ]);
 
   const tax = useMemo(() => {
     let res = getTax();

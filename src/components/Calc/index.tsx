@@ -23,6 +23,8 @@ export type CalcContextType = {
   setElectro: Dispatch<SetStateAction<boolean>>;
   suv: boolean;
   setSUV: Dispatch<SetStateAction<boolean>>;
+  bigSuv: boolean;
+  setBigSUV: Dispatch<SetStateAction<boolean>>;
   benefit: boolean;
   setBenefit: Dispatch<SetStateAction<boolean>>;
 };
@@ -42,6 +44,7 @@ export const CalcProvider = ({ children }: PropsWithChildren<object>) => {
   const [price, setPrice] = useState(5000);
   const [electro, setElectro] = useState(false);
   const [suv, setSUV] = useState(false);
+  const [bigSuv, setBigSUV] = useState(false);
   const [benefit, setBenefit] = useState(false);
 
   return (
@@ -63,6 +66,8 @@ export const CalcProvider = ({ children }: PropsWithChildren<object>) => {
         setElectro,
         suv,
         setSUV,
+        bigSuv,
+        setBigSUV,
         benefit,
         setBenefit,
       }}
