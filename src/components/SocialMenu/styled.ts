@@ -7,6 +7,7 @@ export const SocialMenuStyled = styled.div`
   position: fixed;
   bottom: 50px;
   right: 70px;
+  z-index: 2;
 `;
 
 export const SocialMenuTriggerStyled = styled(SVGIcon)`
@@ -42,4 +43,5 @@ export const RoundIcon = `
   border-radius: 50%;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
   color: ${colorWhite};
+  overflow: hidden;
 `;
