@@ -12,8 +12,8 @@
     "scrap": 0
   },
   {
-    "value": "snow",
-    "name": "Снегоход",
+    "value": "atv",
+    "name": "ATV",
     "delivery": 1500,
     "scrap": 545
   }
