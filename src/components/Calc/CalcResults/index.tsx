@@ -32,11 +32,13 @@ export function CalcResults() {
 
   const seaDelivery = useMemo(() => {
     const v = getVehicle(calcData?.vehicle);
-    let res = v ? v.delivery : 0;
-    if (calcData?.suv) res += 400;
+    let over = 0;
+    const res = v ? v.delivery : 0;
+    if (calcData?.suv || calcData?.bigSuv) over = 100;
+    if (calcData?.electro) over = 175;
 
-    return res;
-  }, [calcData?.vehicle, calcData?.suv]);
+    return res + over;
+  }, [calcData?.vehicle, calcData?.suv, calcData?.bigSuv, calcData?.electro]);
 
   const [ourPrice] = useState(getOurPrice());
 
