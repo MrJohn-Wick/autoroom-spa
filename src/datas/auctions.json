@@ -5,7 +5,7 @@
     "fee": 350,
     "car": 375,
     "moto": 300,
-    "snow": 300
+    "atv": 300
   },
   {
     "auction": "IAAI",
@@ -13,7 +13,7 @@
     "fee": 200,
     "car": 275,
     "moto": 275,
-    "snow": 275
+    "atv": 275
   },
   {
     "auction": "Copart",
@@ -21,7 +21,7 @@
     "fee": 250,
     "car": 375,
     "moto": 300,
-    "snow": 300
+    "atv": 300
   },
   {
     "auction": "Copart",
@@ -29,6 +29,6 @@
     "fee": 300,
     "car": 275,
     "moto": 250,
-    "snow": 250
+    "atv": 250
   }
 ]

@@ -32,11 +32,13 @@ export function CalcResults() {
 
   const seaDelivery = useMemo(() => {
     const v = getVehicle(calcData?.vehicle);
-    let res = v ? v.delivery : 0;
-    if (calcData?.suv) res += 400;
+    let over = 0;
+    const res = v ? v.delivery : 0;
+    if (calcData?.suv || calcData?.bigSuv) over = 100;
+    if (calcData?.electro) over = 175;
 
-    return res;
-  }, [calcData?.vehicle, calcData?.suv]);
+    return res + over;
+  }, [calcData?.vehicle, calcData?.suv, calcData?.bigSuv, calcData?.electro]);
 
   const [ourPrice] = useState(getOurPrice());
 
@@ -54,12 +56,19 @@ export function CalcResults() {
     if (calcData?.benefit) {
       d = d / 2;
     }
-    if (calcData?.electro) {
+    if (calcData?.electro && !calcData?.bigSuv) {
       d = 0;
     }
 
     return Math.round(d);
-  }, [calcData?.age, calcData?.volume, calcData?.price, calcData?.benefit, calcData?.electro]);
+  }, [
+    calcData?.age,
+    calcData?.volume,
+    calcData?.price,
+    calcData?.benefit,
+    calcData?.electro,
+    calcData?.bigSuv,
+  ]);
 
   const tax = useMemo(() => {
     let res = getTax();
@@ -70,9 +79,22 @@ export function CalcResults() {
 
   const scrap = useMemo(() => {
     const v = getVehicle(calcData?.vehicle);
+    if (!v) return 0;
+    let scrap = 0;
+    switch (calcData?.age) {
+      case 'a1':
+        scrap = v.scrap[0];
+        break;
+      case 'a2':
+        scrap = v.scrap[1];
+        break;
+      case 'a3':
+        scrap = v.scrap[2];
+        break;
+    }
 
-    return v ? v.scrap : 0;
-  }, [calcData?.vehicle]);
+    return scrap;
+  }, [calcData?.vehicle, calcData?.age]);
 
   const [svh] = useState(getSVH());
 
@@ -102,7 +124,7 @@ export function CalcResults() {
               <span>Стоимость авто</span>$ {calcData?.price}
             </li>
             <li>
-              <span>Аукционный сбор</span>$ {fee}
+              <span>Аукционный сбор</span>~ $ {fee}
             </li>
             <li>
               <span>Транспортировка в порт</span>$ {seasideDelivery}
@@ -135,7 +157,7 @@ export function CalcResults() {
               {scrap} BYN
             </li>
             <li>
-              <span>Расходы на СВХ</span>$ {svh}
+              <span>Расходы на СВХ</span>~ $ {svh}
             </li>
           </ul>
         </OverviewContentStyled>

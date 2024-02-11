@@ -48,7 +48,7 @@ export function getTax(): number {
 }
 
 export function getSVH(): number {
-  return 400; //BYN
+  return 300; //BYN
 }
 
 export function getA1Duty(price: number, volume: number): number {
