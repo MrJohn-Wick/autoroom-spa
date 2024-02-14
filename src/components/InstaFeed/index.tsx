@@ -1,7 +1,10 @@
+import { Col, Container, Row } from '@autrm/common/components/grid';
+import { Image } from '@autrm/common/components/image';
 import { useEffect, useState } from 'react';
+import { ImageWrapperStyled, SectionStyled } from './styled';
 
 export type InstaItem = {
-  permalink: string;
+  id: string;
   medialUrl: string;
 };
 
@@ -11,30 +14,42 @@ export type InstaFeedProps = {
 
 export function InstaGrid({ items }: InstaFeedProps) {
   return (
-    <div>
-      {items.map((item) => (
-        <img src={item.medialUrl} />
-      ))}
-    </div>
+    <SectionStyled>
+      <Container>
+        <Row>
+          {items.map((item, key) => (
+            <Col
+              key={key}
+              lg={2}
+              md={4}
+            >
+              <ImageWrapperStyled>
+                <Image src={item.medialUrl} />
+              </ImageWrapperStyled>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </SectionStyled>
   );
 }
 
 export function InstaFeed() {
   const [instaItems, setInstaItems] = useState<InstaItem[]>([]);
 
-  const instaUserId = '';
-  const instaToken = '';
-  const instaUrl = `https://graph.instagram.com/${instaUserId}/media?access_token=${instaItems}`;
+  const instaUserId = process.env.REACT_APP_INSTA_USER_ID;
+  const instaToken = process.env.REACT_APP_INSTA_ACCESS_TOKEN;
+  const instaUrl = `https://graph.instagram.com/me/media?fields=id,caption&access_token=${instaToken}`;
 
   useEffect(() => {
     const fetchMedia = async (id: string) => {
-      const mediaUrl = `https://graph.instagam.com/${id}?access_token=${instaToken}&fields=media_url,permalink`;
+      const mediaUrl = `https://graph.instagram.com/${id}?fields=id,media_type,media_url&access_token=${instaToken}`;
 
       const res = await fetch(mediaUrl);
       const json = await res.json();
 
       const instaItem: InstaItem = {
-        permalink: json.permalink,
+        id: json.id,
         medialUrl: json.media_url,
       };
 
@@ -52,9 +67,10 @@ export function InstaFeed() {
       const json = (await res.json()).data;
 
       const fetchedItems: InstaItem[] = [];
-      for (let i = 0; i < json.length && i < 9; i++) {
+      for (let i = 0; i < json.length && i < 12; i++) {
         const item = json[i];
         const itemId = item.id;
+
         const instaItem = await fetchMedia(itemId);
         fetchedItems.push(instaItem);
       }

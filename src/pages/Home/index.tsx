@@ -7,9 +7,9 @@ export function Home() {
   return (
     <>
       <HeroSection />
-      <InstaFeed />
       <Cases />
       <HowItWork />
+      <InstaFeed />
     </>
   );
 }
