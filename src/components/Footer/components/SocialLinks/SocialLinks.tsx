@@ -8,7 +8,7 @@ import InstagramIcon from '@autrm/assets/icons/social/instagram.svg';
 export function SocialLinks() {
   return (
     <SocialLinksStyled>
-      <SocialListksTitleStyled>Follow Drivco:</SocialListksTitleStyled>
+      <SocialListksTitleStyled>Follow as:</SocialListksTitleStyled>
       <IconsListStyled>
         <li>
           <a href="https://www.facebook.com/">
