@@ -1,5 +1,6 @@
 import auctions from '@autrm/datas/auctions.json';
 import vehicles from '@autrm/datas/vehicles.json';
+import delivery from '@autrm/datas/delivery.json';
 import _ from 'lodash';
 import type { Vehicle } from './types';
 
@@ -37,6 +38,13 @@ export function getVehicle(v: string | undefined): Vehicle | undefined {
   return _.find(vehicles, {
     value: v,
   });
+}
+
+export function getSeaDelivery(c: string): number {
+  if (!c) return 0;
+  const d = _.find(delivery, (i) => i.city == c);
+
+  return d ? d.value : 0;
 }
 
 export function getOurPrice(): number {
