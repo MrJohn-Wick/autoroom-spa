@@ -5,8 +5,8 @@ import { colorPrimary, colorWhite } from '@autrm/common/tokens/colors';
 
 export const SocialMenuStyled = styled.div`
   position: fixed;
-  bottom: 50px;
-  right: 70px;
+  bottom: 120px;
+  right: 30px;
   z-index: 2;
 `;
 

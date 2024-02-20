@@ -16,6 +16,9 @@ export const MainMenuStyled = styled.div<{ isMenuShowed: boolean }>`
   transform: ${({ isMenuShowed }) => (isMenuShowed ? 'translateX(0%)' : 'translateX(-100%)')};
   transition: transform 0.3s ease-in;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
+
+  display: flex;
+  flex-direction: column;
 `;
 
 export const MenuListStyled = styled.ul`
@@ -50,4 +53,12 @@ export const MenuListStyled = styled.ul`
       }
     }
   }
+`;
+
+export const SocialIconsStyled = styled.div`
+  display: flex;
+  justify-content: center;
+  display: flex;
+  margin-top: auto;
+  gap: 16px;
 `;
