@@ -1,5 +1,6 @@
-import { colorPrimary, colorTitle } from '@autrm/common/tokens/colors';
 import styled from 'styled-components';
+
+import { colorPrimary, colorTitle } from '@autrm/common/tokens/colors';
 
 export const MainMenuStyled = styled.div<{ isMenuShowed: boolean }>`
   position: fixed;
@@ -43,6 +44,10 @@ export const MenuListStyled = styled.ul`
     a {
       text-decoration: none;
       color: ${colorTitle};
+
+      &.active {
+        color: ${colorPrimary};
+      }
     }
   }
 `;

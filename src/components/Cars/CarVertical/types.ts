@@ -3,5 +3,8 @@ export type CarVerticalProps = {
   image: string;
   location: string;
   title: string;
-  href: string;
-}
+  detailsLink: string;
+  odometer: string;
+  transmission: string;
+  fuelType: string;
+};

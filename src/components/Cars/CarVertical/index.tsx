@@ -1,4 +1,15 @@
+import fuel from '@autrm/assets/icons/features/fuel.svg';
+import menual from '@autrm/assets/icons/features/menual.svg';
+import miles from '@autrm/assets/icons/features/miles.svg';
+import HeartIcon from '@autrm/assets/icons/heart.svg';
+import { Image } from '@autrm/common/components/image';
 import { SVGIcon } from '@autrm/common/components/svg-icon';
+
+import { ContentButtom } from '../common/ContentButtom';
+import { Feature, Features } from '../common/Features';
+import { Location } from '../common/Location';
+import { Title } from '../common/Title';
+
 import {
   CardContentStyled,
   CardFavStyled,
@@ -6,24 +17,23 @@ import {
   CardPriceStyled,
   CardStyled,
 } from './styled';
-import HeartIcon from '@autrm/assets/icons/heart.svg';
-import { Image } from '@autrm/common/components/image';
-import miles from '@autrm/assets/icons/features/miles.svg';
-import menual from '@autrm/assets/icons/features/menual.svg';
-import fuel from '@autrm/assets/icons/features/fuel.svg';
-import electric from '@autrm/assets/icons/features/electric.svg';
-import { Feature, Features } from '../common/Features';
-import { Location } from '../common/Location';
-import { ContentButtom } from '../common/ContentButtom';
-import { Title } from '../common/Title';
 import type { CarVerticalProps } from './types';
 
-export function CarVertical(props: CarVerticalProps) {
+export function CarVertical({
+  image,
+  price,
+  location,
+  title,
+  odometer,
+  transmission,
+  detailsLink,
+  fuelType,
+}: CarVerticalProps) {
   return (
     <CardStyled>
       <CardImgStyled>
         <CardPriceStyled>
-          <span>{props.price}</span>
+          <span>{price}</span>
         </CardPriceStyled>
         <CardFavStyled
           href="#"
@@ -37,18 +47,21 @@ export function CarVertical(props: CarVerticalProps) {
             }}
           />
         </CardFavStyled>
-        <Image src={props.image} />
+        <Image
+          src={image}
+          height={165}
+          objectFit="cover"
+        />
       </CardImgStyled>
       <CardContentStyled>
-        <Location>{props.location}</Location>
-        <Title href={props.href}>{props.title}</Title>
+        <Location>{location}</Location>
+        <Title href={detailsLink}>{title}</Title>
         <Features>
-          <Feature icon={miles}>2500 miles</Feature>
-          <Feature icon={menual}>Automatic</Feature>
-          <Feature icon={fuel}>Petrol</Feature>
-          <Feature icon={electric}>Electric</Feature>
+          <Feature icon={miles}>{odometer}</Feature>
+          <Feature icon={menual}>{transmission}</Feature>
+          <Feature icon={fuel}>{fuelType}</Feature>
         </Features>
-        <ContentButtom href={props.href}>View Details</ContentButtom>
+        <ContentButtom href={detailsLink} />
       </CardContentStyled>
     </CardStyled>
   );

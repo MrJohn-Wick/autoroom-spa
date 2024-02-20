@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import LogoImage from '@autrm/assets/light-logo.svg';
 import type { NavProps } from '@autrm/common/types/nav';
@@ -27,7 +27,12 @@ export function MobileMenu({
               key={`${title}-${index}`}
               onClick={() => clickCb(false)}
             >
-              <Link to={link}>{title}</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                to={link}
+              >
+                {title}
+              </NavLink>
             </li>
           ),
         )}

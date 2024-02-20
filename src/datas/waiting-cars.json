@@ -1,0 +1,58 @@
+[
+  {
+    "price": "$7,656.00",
+    "image": "https://drivco-nextjs.vercel.app/assets/img/home5/feature-car-01.png",
+    "location": "Panama City",
+    "title": "Mercedes-Benz Class-2023",
+    "detailsLink": "/car-deatils",
+    "odometer": "43242",
+    "transmission": "АКПП",
+    "fuelType": "Бензин"
+  },
+  {
+    "price": "$7,656.00",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWxzK_21IXUI2vr1Ueo6UlD4V6wbGYc81Wlw&usqp=CAU",
+    "location": "Panama City",
+    "title": "Mercedes-Benz Class-2023",
+    "detailsLink": "/car-deatils",
+    "odometer": "43242",
+    "transmission": "АКПП",
+    "fuelType": "Бензин"
+  },  {
+    "price": "$7,656.00",
+    "image": "https://a.d-cd.net/qG_yJyh-Jdq2aY6FnfbzmoPWMNY-480.jpg",
+    "location": "Panama City",
+    "title": "Mercedes-Benz Class-2023",
+    "detailsLink": "/car-deatils",
+    "odometer": "43242",
+    "transmission": "АКПП",
+    "fuelType": "Бензин"
+  },  {
+    "price": "$7,656.00",
+    "image": "https://avcdn.av.by/advertpreview/0001/1923/2783.jpg",
+    "location": "Panama City",
+    "title": "Mercedes-Benz Class-2023",
+    "detailsLink": "/car-deatils",
+    "odometer": "43242",
+    "transmission": "АКПП",
+    "fuelType": "Бензин"
+  },  {
+    "price": "$7,656.00",
+    "image": "https://drivco-nextjs.vercel.app/assets/img/home5/feature-car-01.png",
+    "location": "Panama City",
+    "title": "Mercedes-Benz Class-2023",
+    "detailsLink": "/car-deatils",
+    "odometer": "43242",
+    "transmission": "АКПП",
+    "fuelType": "Бензин"
+  },  {
+    "price": "$7,656.00",
+    "image": "https://drivco-nextjs.vercel.app/assets/img/home5/feature-car-01.png",
+    "location": "Panama City",
+    "title": "Mercedes-Benz Class-2023",
+    "detailsLink": "/car-deatils",
+    "odometer": "43242",
+    "transmission": "АКПП",
+    "fuelType": "Бензин"
+  }
+]
