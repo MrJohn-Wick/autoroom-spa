@@ -2,19 +2,16 @@
   {
     "value": "auto",
     "name": "Автомобиль",
-    "delivery": 1300,
     "scrap": [545, 817, 1225]
   },
   {
     "value": "moto",
     "name": "Мотоцикл",
-    "delivery": 690,
     "scrap": [0, 0, 0]
   },
   {
     "value": "atv",
     "name": "ATV",
-    "delivery": 1500,
     "scrap": [0, 0, 0]
   }
 ]

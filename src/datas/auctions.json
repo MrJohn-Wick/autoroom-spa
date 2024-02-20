@@ -5,7 +5,8 @@
     "fee": 350,
     "car": 375,
     "moto": 300,
-    "atv": 300
+    "atv": 300,
+    "delivery": "Houston"
   },
   {
     "auction": "IAAI",
@@ -13,7 +14,17 @@
     "fee": 200,
     "car": 275,
     "moto": 275,
-    "atv": 275
+    "atv": 275,
+    "delivery": "L.Angeles"
+  },
+  {
+    "auction": "IAAI",
+    "location": "ACE-Carson",
+    "fee": 200,
+    "car": 160,
+    "moto": 160,
+    "atv": 160,
+    "delivery": "L.Angeles"
   },
   {
     "auction": "Copart",
@@ -21,7 +32,8 @@
     "fee": 250,
     "car": 375,
     "moto": 300,
-    "atv": 300
+    "atv": 300,
+    "delivery": "Houston"
   },
   {
     "auction": "Copart",
@@ -29,6 +41,16 @@
     "fee": 300,
     "car": 275,
     "moto": 250,
-    "atv": 250
+    "atv": 250,
+    "delivery": "L.Angeles"
+  },
+  {
+    "auction": "Copart",
+    "location": "ADP TOWING MAUI-Hawaii-Copart",
+    "fee": 300,
+    "car": 2100,
+    "moto": 0,
+    "atv": 0,
+    "delivery": "L.Angeles"
   }
 ]

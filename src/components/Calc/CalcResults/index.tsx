@@ -12,6 +12,7 @@ import {
   getTax,
   getVehicle,
   getAuction,
+  getSeaDelivery,
 } from '../utils';
 import { OverviewContentStyled, OverviewStyled, ResultStyled } from './styled';
 
@@ -31,14 +32,15 @@ export function CalcResults() {
   }, [calcData?.auction, calcData?.location]);
 
   const seaDelivery = useMemo(() => {
-    const v = getVehicle(calcData?.vehicle);
+    const auction = getAuction(calcData?.auction, calcData?.location);
+    const delivery = getSeaDelivery(auction?.delivery);
+    console.log(delivery);
     let over = 0;
-    const res = v ? v.delivery : 0;
     if (calcData?.suv || calcData?.bigSuv) over = 100;
     if (calcData?.electro) over = 175;
 
-    return res + over;
-  }, [calcData?.vehicle, calcData?.suv, calcData?.bigSuv, calcData?.electro]);
+    return delivery + over;
+  }, [calcData?.auction, calcData?.location, calcData?.suv, calcData?.bigSuv, calcData?.electro]);
 
   const [ourPrice] = useState(getOurPrice());
 
