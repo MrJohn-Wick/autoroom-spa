@@ -1,70 +1,19 @@
-import InstaIcon from '@autrm/assets/icons/instagram.svg';
-import { Button } from '@autrm/common/components/button';
-import { Col, Container, Row } from '@autrm/common/components/grid';
 import { Image } from '@autrm/common/components/image';
-import { SVGIcon } from '@autrm/common/components/svg-icon';
-import { HeadingLevel2 } from '@autrm/common/tokens/typography';
 import { useEffect, useState } from 'react';
-import { FollowStyled, ImageWrapperStyled, SectionStyled, TitleStyled } from './styled';
+import { GridStyled, GridWrapperStyled, ImageWrapperStyled } from './styled';
+import type { InstaFeedProps, InstaItem } from './types';
 
-export type InstaItem = {
-  id: string;
-  mediaType: string;
-  medialUrl: string;
-};
-
-export type InstaFeedProps = {
-  items: InstaItem[];
-};
-
-export function InstaGrid({ items }: InstaFeedProps) {
+function InstaGrid({ items }: InstaFeedProps) {
   const images = items.map((item, key) => (
-    <Col
-      key={key}
-      lg={2}
-      md={4}
-    >
-      <ImageWrapperStyled>
-        <Image src={item.medialUrl} />
-      </ImageWrapperStyled>
-    </Col>
+    <ImageWrapperStyled key={key}>
+      <Image src={item.medialUrl} />
+    </ImageWrapperStyled>
   ));
 
   return (
-    <SectionStyled>
-      <Container>
-        <Row>
-          <Col>
-            <TitleStyled>
-              <HeadingLevel2>Наш Instagram</HeadingLevel2>
-              <p>
-                Следите за нашим Instagram, чтобы узнать о последних поступлениях автомобилей из США
-                и специальных предложениях!
-              </p>
-            </TitleStyled>
-          </Col>
-        </Row>
-        <Row>{images.length ? images : 'No images'}</Row>
-        <Row>
-          <Col>
-            <FollowStyled>
-              <a href="https://instagram.com">
-                <Button>
-                  <SVGIcon
-                    type={InstaIcon}
-                    sizes={{
-                      w: '15px',
-                      h: '15px',
-                    }}
-                  />
-                  <span>Подписывайся</span>
-                </Button>
-              </a>
-            </FollowStyled>
-          </Col>
-        </Row>
-      </Container>
-    </SectionStyled>
+    <GridWrapperStyled>
+      <GridStyled>{images.length ? images : 'No images'}</GridStyled>
+    </GridWrapperStyled>
   );
 }
 
@@ -104,13 +53,15 @@ export function InstaFeed() {
 
       const fetchedItems: InstaItem[] = [];
       let i = 0;
-      while (i < json.length && i < 12) {
+      let pos = 0;
+      while (i < json.length && pos < 6) {
         const item = json[i];
         const itemId = item.id;
 
         const instaItem = await fetchMedia(itemId);
         if (instaItem.mediaType !== 'VIDEO') {
           fetchedItems.push(instaItem);
+          pos++;
         }
         i++;
       }
