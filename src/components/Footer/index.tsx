@@ -1,6 +1,7 @@
 import DarkLogo from '@autrm/assets/dark-logo.svg';
 import EmailIcon from '@autrm/assets/icons/email.svg';
 import PhoneIcon from '@autrm/assets/icons/phone.svg';
+import { useWindowSize } from '@autrm/common/hooks/useWindowSize';
 
 import { Logo } from '../Logo';
 
@@ -10,7 +11,7 @@ import { Copyright } from './components/Copyright/Copyright';
 import { Hotline } from './components/Hotline';
 import { SocialLinks } from './components/SocialLinks/SocialLinks';
 import {
-  BottomMenuStyled,
+  // BottomMenuStyled,
   // ColStyled,
   ContactsStyled,
   FooterBottomStyled,
@@ -22,6 +23,8 @@ import {
 } from './styled';
 
 export function Footer() {
+  const { isMobileView } = useWindowSize();
+
   // const company_links = [
   //   {
   //     title: 'About us',
@@ -101,18 +104,18 @@ export function Footer() {
               link="info@gmail.com"
             />
           </ContactsStyled>
-          <div>
+          {/* <div>
             <BottomMenuStyled>
               <li>
                 <a href="#">Our Sitemap</a>
               </li>
             </BottomMenuStyled>
-          </div>
+          </div> */}
         </FooterCenterStyled>
         {/* Footer bottom */}
         <FooterBottomStyled>
           <Copyright />
-          <SocialLinks />
+          {!isMobileView && <SocialLinks />}
         </FooterBottomStyled>
       </FooterContainerStyled>
     </FooterStyled>

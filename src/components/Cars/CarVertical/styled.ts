@@ -62,6 +62,10 @@ export const CardPriceStyled = styled.div`
     padding: 4px 23px;
     transition: 0.35s;
   }
+
+  & span:hover {
+    color: ${colorWhite};
+  }
 `;
 
 export const CardContentStyled = styled.div`
@@ -77,10 +81,12 @@ export const CardStyled = styled.div`
 
   &:hover {
     border-color: ${colorPrimary};
+    cursor: pointer;
   }
 
   &:hover ${CardPriceStyled} span {
     background-color: ${colorPrimary};
+    color: ${colorWhite};
   }
 
   &:hover ${CardImgStyled}::after {

@@ -1,16 +1,18 @@
+import InstagramIcon from '@autrm/assets/icons/social/instagram-vector-2.svg';
+import TelegramIcon from '@autrm/assets/icons/social/telegram-vector.svg';
 import { SVGIcon } from '@autrm/common/components/svg-icon';
+
 import { SocialLinksStyled, SocialListksTitleStyled, IconsListStyled } from './styled';
-import FacebookIcon from '@autrm/assets/icons/social/facebook.svg';
-import TwitterIcon from '@autrm/assets/icons/social/twitter.svg';
-import LinkedinIcon from '@autrm/assets/icons/social/linkedin.svg';
-import InstagramIcon from '@autrm/assets/icons/social/instagram.svg';
+// import FacebookIcon from '@autrm/assets/icons/social/facebook.svg';
+// import TwitterIcon from '@autrm/assets/icons/social/twitter.svg';
+// import LinkedinIcon from '@autrm/assets/icons/social/linkedin.svg';
 
 export function SocialLinks() {
   return (
     <SocialLinksStyled>
-      <SocialListksTitleStyled>Follow Drivco:</SocialListksTitleStyled>
+      <SocialListksTitleStyled>Наши соцсети:</SocialListksTitleStyled>
       <IconsListStyled>
-        <li>
+        {/* <li>
           <a href="https://www.facebook.com/">
             <SVGIcon
               type={FacebookIcon}
@@ -31,8 +33,8 @@ export function SocialLinks() {
               }}
             />
           </a>
-        </li>
-        <li>
+        </li> */}
+        {/* <li>
           <a href="https://www.linkedin.com/">
             <SVGIcon
               type={LinkedinIcon}
@@ -42,14 +44,25 @@ export function SocialLinks() {
               }}
             />
           </a>
-        </li>
+        </li> */}
         <li>
           <a href="https://www.instagram.com/">
             <SVGIcon
               type={InstagramIcon}
               sizes={{
-                w: '16px',
-                h: '16px',
+                w: '36px',
+                h: '36px',
+              }}
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/">
+            <SVGIcon
+              type={TelegramIcon}
+              sizes={{
+                w: '36px',
+                h: '36px',
               }}
             />
           </a>

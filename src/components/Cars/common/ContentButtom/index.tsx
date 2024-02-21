@@ -2,7 +2,7 @@ import details from '@autrm/assets/icons/details.svg';
 import { SVGIcon } from '@autrm/common/components/svg-icon';
 import { ContentBottomStyled } from './styled';
 
-export function ContentButtom({ href }: { href: string; children: any }) {
+export function ContentButtom({ href }: { href: string }) {
   return (
     <ContentBottomStyled>
       <a href={href}>
@@ -13,7 +13,7 @@ export function ContentButtom({ href }: { href: string; children: any }) {
             h: '21px',
           }}
         />
-        View Details
+        Детали
       </a>
     </ContentBottomStyled>
   );
