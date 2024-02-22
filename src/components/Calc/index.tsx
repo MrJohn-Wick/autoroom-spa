@@ -1,10 +1,12 @@
 import { createContext, useState } from 'react';
 import type { Dispatch, SetStateAction, PropsWithChildren } from 'react';
+
+import _ from 'lodash';
+
 import { CalcForm } from './CalcForm';
 import { CalcResults } from './CalcResults';
 import { CalcWrapperStyled } from './styled';
 import { getAuctions, getVehicles } from './utils';
-import _ from 'lodash';
 
 export type CalcContextType = {
   vehicle: string | undefined;
@@ -27,6 +29,10 @@ export type CalcContextType = {
   setBigSUV: Dispatch<SetStateAction<boolean>>;
   benefit: boolean;
   setBenefit: Dispatch<SetStateAction<boolean>>;
+  suvTypeOptionsActive: boolean;
+  setSuvTypeOptionsActive: Dispatch<SetStateAction<boolean>>;
+  suvSelectedOption: number;
+  setSuvSelectedOption: Dispatch<SetStateAction<number>>;
 };
 
 export const CalcContext = createContext<CalcContextType | undefined>(undefined);
@@ -46,6 +52,8 @@ export const CalcProvider = ({ children }: PropsWithChildren<object>) => {
   const [suv, setSUV] = useState(false);
   const [bigSuv, setBigSUV] = useState(false);
   const [benefit, setBenefit] = useState(false);
+  const [suvTypeOptionsActive, setSuvTypeOptionsActive] = useState(false);
+  const [suvSelectedOption, setSuvSelectedOption] = useState(0);
 
   return (
     <CalcContext.Provider
@@ -70,6 +78,10 @@ export const CalcProvider = ({ children }: PropsWithChildren<object>) => {
         setBigSUV,
         benefit,
         setBenefit,
+        suvTypeOptionsActive,
+        setSuvTypeOptionsActive,
+        suvSelectedOption,
+        setSuvSelectedOption,
       }}
     >
       {children}
