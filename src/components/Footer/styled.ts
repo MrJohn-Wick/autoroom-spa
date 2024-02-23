@@ -55,7 +55,7 @@ export const ColStyled = styled.div`
       justify-content: flex-end !important;
       padding-right: 0;
     }
-  } 
+  }
 
   ${ADAPTIVE.minWidth.desktop} {
     width: 20%;
@@ -67,19 +67,37 @@ export const ColStyled = styled.div`
       justify-content: flex-end;
       padding-right: 0;
     }
+  }
 `;
 
 export const FooterCenterStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 8% 35px;
+  padding: 0 8% 15px;
 
   ${ADAPTIVE.maxWidth.tablet} {
     padding: 0 3% 35px;
     flex-direction: column;
     gap: 40px;
   }
+`;
+
+export const FooterPaysStyled = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 0 8% 15px;
+
+  flex-wrap: wrap;
+
+  img {
+    height: 44px;
+    display: block;
+  }
+`;
+
+export const PayStyled = styled.div`
+  display: block;
 `;
 
 export const ContactsStyled = styled.div`
