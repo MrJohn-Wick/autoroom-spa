@@ -1,5 +1,7 @@
-import { Checkbox } from 'antd';
 import { useContext } from 'react';
+
+import { Checkbox } from 'antd';
+
 import { CalcContext } from '../..';
 
 export function Electro() {
@@ -14,9 +16,7 @@ export function Electro() {
         >
           Электромобиль (Гибрид)
         </Checkbox>
-      ) : (
-        <></>
-      )}
+      ) : null}
     </div>
   );
 }

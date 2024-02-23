@@ -1,4 +1,5 @@
 import { useContext, useMemo, useState } from 'react';
+
 import { CalcContext } from '..';
 import { CalcTitleStyled } from '../styled';
 import {
@@ -14,6 +15,7 @@ import {
   getAuction,
   getSeaDelivery,
 } from '../utils';
+
 import { OverviewContentStyled, OverviewStyled, ResultStyled } from './styled';
 
 export function CalcResults() {
@@ -26,21 +28,47 @@ export function CalcResults() {
   }, [calcData?.auction, calcData?.location]);
 
   const seasideDelivery = useMemo(() => {
+    let additionalPrice = 0;
     const auction = getAuction(calcData?.auction, calcData?.location);
 
-    return auction ? auction.car : 0;
-  }, [calcData?.auction, calcData?.location]);
+    if (calcData?.suvTypeOptionsActive) {
+      // Suv
+      if (calcData?.suvSelectedOption === 0) {
+        additionalPrice = 100;
+      }
+
+      // or
+
+      // Big SUV
+      if (calcData?.suvSelectedOption === 1) {
+        additionalPrice = 250;
+      }
+    }
+
+    // + Electro
+    if (calcData?.electro) {
+      additionalPrice = additionalPrice + 175;
+    }
+
+    return auction ? auction.car + additionalPrice : 0;
+  }, [
+    calcData?.auction,
+    calcData?.electro,
+    calcData?.location,
+    calcData?.suvSelectedOption,
+    calcData?.suvTypeOptionsActive,
+  ]);
 
   const seaDelivery = useMemo(() => {
     const auction = getAuction(calcData?.auction, calcData?.location);
     const delivery = getSeaDelivery(auction?.delivery);
-    console.log(delivery);
-    let over = 0;
-    if (calcData?.suv || calcData?.bigSuv) over = 100;
-    if (calcData?.electro) over = 175;
 
-    return delivery + over;
-  }, [calcData?.auction, calcData?.location, calcData?.suv, calcData?.bigSuv, calcData?.electro]);
+    // let over = 0;
+    // if (calcData?.suv || calcData?.bigSuv) over = 100;
+    // if (calcData?.electro) over = 175;
+
+    return delivery; /* + over;*/
+  }, [calcData?.auction, calcData?.location]);
 
   const [ourPrice] = useState(getOurPrice());
 

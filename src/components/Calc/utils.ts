@@ -48,7 +48,7 @@ export function getSeaDelivery(c: string): number {
 }
 
 export function getOurPrice(): number {
-  return 900; //BYN
+  return 700; //BYN
 }
 
 export function getTax(): number {
