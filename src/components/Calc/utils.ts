@@ -1,10 +1,12 @@
-import auctions from '@autrm/datas/auctions.json';
-import vehicles from '@autrm/datas/vehicles.json';
-import delivery from '@autrm/datas/delivery.json';
 import _ from 'lodash';
+
+import auctions from '@autrm/datas/auctions.json';
+import delivery from '@autrm/datas/delivery.json';
+import vehicles from '@autrm/datas/vehicles.json';
+
 import type { Vehicle } from './types';
 
-export const USD_EUR = 0.93;
+export const USD_EUR = 0.92;
 export const USD_BYN = 3.27;
 
 export function getAuctions(): Array<string> {
