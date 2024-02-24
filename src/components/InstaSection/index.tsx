@@ -1,4 +1,4 @@
-import { InstaFeed } from '../InstaFeed';
+import { InstaFeed } from './InstaFeed';
 import { HeadingLevel2 } from '@autrm/common/tokens/typography';
 import { Col, Container, Row } from '@autrm/common/components/grid';
 import { LayoutStyled, SectionStyled, TitleStyled } from './styled';
