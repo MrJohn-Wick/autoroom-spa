@@ -8,6 +8,7 @@ export function AuctionLocation() {
   const calcData = useContext(CalcContext);
   const auctionsOptions = getAuctions();
   const [locationsOptions, setLocationsOptions] = useState<string[]>([]);
+  const [location, setLocation] = useState<string>('');
 
   useEffect(() => {
     const locations = getLocations(calcData?.auction);
@@ -15,8 +16,12 @@ export function AuctionLocation() {
   }, [calcData?.auction]);
 
   useEffect(() => {
-    calcData?.setLocation(locationsOptions[0]);
-  }, [locationsOptions, calcData?.location, calcData]);
+    setLocation(locationsOptions[0]);
+  }, [locationsOptions]);
+
+  useEffect(() => {
+    calcData?.setLocation(location);
+  }, [location, calcData]);
 
   return (
     <FormFieldStyled>
@@ -36,9 +41,9 @@ export function AuctionLocation() {
       <div>
         <div id="location-label">Площадка</div>
         <Select
-          value={calcData?.location}
+          value={location}
           size="large"
-          onChange={(l) => calcData?.setLocation(l)}
+          onChange={(l) => setLocation(l)}
         >
           {locationsOptions.map((l) => (
             <Select.Option value={l}>{l}</Select.Option>

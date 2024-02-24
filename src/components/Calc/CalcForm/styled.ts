@@ -23,3 +23,15 @@ export const HorizontalElementStyled = styled.div`
 export const FormFieldStyled = styled.div`
   margin-bottom: 20px;
 `;
+
+export const SUVTypeListStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+
+  label {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+`;

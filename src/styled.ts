@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { ADAPTIVE } from './common/tokens/screen';
+
 export const GlobalStyled = createGlobalStyle`
 
   /* :root {
@@ -86,7 +88,16 @@ export const GlobalStyled = createGlobalStyle`
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    padding: 0px 6.3%;
+
+    padding: 0px;
+
+    ${ADAPTIVE.minWidth.tablet} {
+      padding: 0px 24px;
+    }
+
+    ${ADAPTIVE.minWidth.desktop} {
+      padding: 0px 48px;
+    }
   }
 
   #root {

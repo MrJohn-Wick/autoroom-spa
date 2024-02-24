@@ -1,33 +1,41 @@
 import styled from 'styled-components';
 
-import { colorGrey300 } from '@autrm/common/tokens/colors';
+import { colorGrey300, colorWhite } from '@autrm/common/tokens/colors';
 import { ADAPTIVE } from '@autrm/common/tokens/screen';
 import { HeadingLevel1, RegularTextLevel1 } from '@autrm/common/tokens/typography';
 import { getTextStyles } from '@autrm/common/utils/styles';
 
 export const HeroSectionStyled = styled.div`
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(238, 241, 251, 1) 10%,
-    rgba(238, 241, 251, 1) 90%,
-    rgba(255, 255, 255, 1) 100%
-  );
-
   min-height: 400px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-bottom: 200px;
+  background-color: #eef1fb;
+
+  ${ADAPTIVE.maxWidth.tablet} {
+    justify-content: flex-start;
+    padding: 0 16px;
+    margin-bottom: 0;
+  }
 
   ${ADAPTIVE.minWidth.tablet} {
+    background: rgb(255, 255, 255);
     justify-content: flex-end;
     min-height: 600px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(238, 241, 251, 1) 10%,
+      rgba(238, 241, 251, 1) 90%,
+      rgba(255, 255, 255, 1) 100%
+    );
   }
 
   ${ADAPTIVE.minWidth.desktop} {
+    /* background: rgb(255, 255, 255); */
     justify-content: flex-end;
     min-height: 700px;
   }
@@ -53,6 +61,11 @@ export const HeroSectionStyled = styled.div`
   }
 
   img {
+    ${ADAPTIVE.maxWidth.tablet} {
+      margin-top: 60px;
+      margin-bottom: 0;
+    }
+
     margin-bottom: -100px;
     height: auto;
     max-width: 100%;
@@ -83,7 +96,11 @@ export const HeroSectionStyled = styled.div`
   }
 `;
 export const HeadingLevel1Styled = styled(HeadingLevel1)`
-  margin-top: 0px;
+  margin-top: 54px;
+
+  ${ADAPTIVE.minWidth.tablet} {
+    margin-top: 0px;
+  }
 
   ${ADAPTIVE.minWidth.desktop} {
     text-transform: uppercase;
@@ -100,4 +117,11 @@ export const HeadingLevel1Styled = styled(HeadingLevel1)`
 export const RegularTextLevel1Styled = styled(RegularTextLevel1)`
   text-transform: uppercase;
   color: ${colorGrey300};
+`;
+
+// Mobile version
+export const MobileSearchSectionStyled = styled.div`
+  background-color: ${colorWhite};
+  width: 100%;
+  border-radius: 10px;
 `;

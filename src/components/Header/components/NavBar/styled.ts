@@ -53,6 +53,10 @@ export const MenuItemHasChildrenStyled = styled.li`
     position: relative;
     text-decoration: none;
     line-height: 2.5;
+
+    &.active {
+      color: ${colorPrimary};
+    }
   }
 
   &:first-child > a {
@@ -115,6 +119,10 @@ export const SubMenuStyled = styled.ul`
     transition: all 0.4s ease-out 0s;
     position: relative;
     border-bottom: 1px solid rgba(233, 228, 228, 0.5);
+
+    &.active {
+      color: ${colorPrimary};
+    }
 
     &::before {
       content: '';

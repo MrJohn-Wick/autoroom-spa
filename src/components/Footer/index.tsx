@@ -1,6 +1,20 @@
 import DarkLogo from '@autrm/assets/dark-logo.svg';
 import EmailIcon from '@autrm/assets/icons/email.svg';
+import BelcardInternetPass from '@autrm/assets/icons/pays/belcard-internet-pass.png';
+import Belcard from '@autrm/assets/icons/pays/belcard.png';
+import BePaid from '@autrm/assets/icons/pays/bepaid.png';
+import Erip from '@autrm/assets/icons/pays/erip.png';
+import GPay from '@autrm/assets/icons/pays/g-pay.png';
+import MastercardIDCheck from '@autrm/assets/icons/pays/mastercard-idcheck.png';
+import Mastercard from '@autrm/assets/icons/pays/mastercard.png';
+import MirAccept from '@autrm/assets/icons/pays/mir-accept.png';
+import Mir from '@autrm/assets/icons/pays/mir.png';
+import SamsungPay from '@autrm/assets/icons/pays/samsung-pay.png';
+import VisaSecure from '@autrm/assets/icons/pays/visa-secure.png';
+import Visa from '@autrm/assets/icons/pays/visa.png';
+import YaPay from '@autrm/assets/icons/pays/ya-pay.png';
 import PhoneIcon from '@autrm/assets/icons/phone.svg';
+import { useWindowSize } from '@autrm/common/hooks/useWindowSize';
 
 import { Logo } from '../Logo';
 
@@ -10,18 +24,22 @@ import { Copyright } from './components/Copyright/Copyright';
 import { Hotline } from './components/Hotline';
 import { SocialLinks } from './components/SocialLinks/SocialLinks';
 import {
-  BottomMenuStyled,
+  // BottomMenuStyled,
   // ColStyled,
   ContactsStyled,
   FooterBottomStyled,
   FooterCenterStyled,
   FooterContainerStyled,
+  FooterPaysStyled,
   FooterStyled,
+  PayStyled,
   // FooterTopStyled,
   // RowStyled,
 } from './styled';
 
 export function Footer() {
+  const { isMobileView } = useWindowSize();
+
   // const company_links = [
   //   {
   //     title: 'About us',
@@ -101,18 +119,98 @@ export function Footer() {
               link="info@gmail.com"
             />
           </ContactsStyled>
-          <div>
+          {/* <div>
             <BottomMenuStyled>
               <li>
                 <a href="#">Our Sitemap</a>
               </li>
             </BottomMenuStyled>
-          </div>
+          </div> */}
         </FooterCenterStyled>
+        <FooterPaysStyled>
+          <PayStyled>
+            <img
+              src={Visa}
+              alt=""
+            />
+          </PayStyled>
+          <PayStyled>
+            <img
+              src={VisaSecure}
+              alt=""
+            />
+          </PayStyled>
+          <PayStyled>
+            <img
+              src={Mastercard}
+              alt=""
+            />
+          </PayStyled>
+          <PayStyled>
+            <img
+              src={MastercardIDCheck}
+              alt=""
+            />
+          </PayStyled>
+          <PayStyled>
+            <img
+              src={Belcard}
+              alt=""
+            />
+          </PayStyled>
+          <PayStyled>
+            <img
+              src={BelcardInternetPass}
+              alt=""
+            />
+          </PayStyled>
+          <PayStyled>
+            <img
+              src={Mir}
+              alt=""
+            />
+          </PayStyled>
+          <PayStyled>
+            <img
+              src={MirAccept}
+              alt=""
+            />
+          </PayStyled>
+          <PayStyled>
+            <img
+              src={BePaid}
+              alt=""
+            />
+          </PayStyled>
+          <PayStyled>
+            <img
+              src={SamsungPay}
+              alt=""
+            />
+          </PayStyled>
+          <PayStyled>
+            <img
+              src={YaPay}
+              alt=""
+            />
+          </PayStyled>
+          <PayStyled>
+            <img
+              src={GPay}
+              alt=""
+            />
+          </PayStyled>
+          <PayStyled>
+            <img
+              src={Erip}
+              alt=""
+            />
+          </PayStyled>
+        </FooterPaysStyled>
         {/* Footer bottom */}
         <FooterBottomStyled>
           <Copyright />
-          <SocialLinks />
+          {!isMobileView && <SocialLinks />}
         </FooterBottomStyled>
       </FooterContainerStyled>
     </FooterStyled>

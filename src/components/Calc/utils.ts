@@ -1,9 +1,12 @@
-import auctions from '@autrm/datas/auctions.json';
-import vehicles from '@autrm/datas/vehicles.json';
 import _ from 'lodash';
+
+import auctions from '@autrm/datas/auctions.json';
+import delivery from '@autrm/datas/delivery.json';
+import vehicles from '@autrm/datas/vehicles.json';
+
 import type { Vehicle } from './types';
 
-export const USD_EUR = 0.93;
+export const USD_EUR = 0.92;
 export const USD_BYN = 3.27;
 
 export function getAuctions(): Array<string> {
@@ -39,8 +42,15 @@ export function getVehicle(v: string | undefined): Vehicle | undefined {
   });
 }
 
+export function getSeaDelivery(c: string): number {
+  if (!c) return 0;
+  const d = _.find(delivery, (i) => i.city == c);
+
+  return d ? d.value : 0;
+}
+
 export function getOurPrice(): number {
-  return 900; //BYN
+  return 700; //BYN
 }
 
 export function getTax(): number {
@@ -48,7 +58,7 @@ export function getTax(): number {
 }
 
 export function getSVH(): number {
-  return 400; //BYN
+  return 300; //BYN
 }
 
 export function getA1Duty(price: number, volume: number): number {

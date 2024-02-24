@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useEffect, useReducer } from 'react';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { Button } from '@autrm/common/components/button';
 import type { NavProps } from '@autrm/common/types/nav';
@@ -27,8 +27,6 @@ export function NavBar() {
     });
   };
 
-  // const currentRoute = useLocation().pathname;
-
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
@@ -43,7 +41,12 @@ export function NavBar() {
       <SubMenuStyled>
         {item?.subMenu?.map((props, index) => (
           <li key={index}>
-            <Link to={props.link}>{props.title}</Link>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'active' : '')}
+              to={props.link}
+            >
+              {props.title}
+            </NavLink>
           </li>
         ))}
       </SubMenuStyled>
@@ -59,7 +62,12 @@ export function NavBar() {
               getSubMenuItems(props, index)
             ) : (
               <MenuItemHasChildrenStyled key={index}>
-                <Link to={props.link}>{props.title}</Link>
+                <NavLink
+                  className={({ isActive }) => (isActive ? 'active' : '')}
+                  to={props.link}
+                >
+                  {props.title}
+                </NavLink>
               </MenuItemHasChildrenStyled>
             ),
           )}

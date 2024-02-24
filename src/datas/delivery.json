@@ -1,0 +1,34 @@
+[
+  {
+    "city": "Chicago",
+    "value": 1500
+  },
+  {
+    "city": "NY",
+    "value": 1340
+  },
+  {
+    "city": "Miami",
+    "value": 1340
+  },
+  {
+    "city": "Savannah",
+    "value": 1325
+  },
+  {
+    "city": "Norfolk",
+    "value": 1325
+  },
+  {
+    "city": "Houston",
+    "value": 1425
+  },
+  {
+    "city": "L.Angeles",
+    "value": 1950
+  },
+  {
+    "city": "Seattle",
+    "value": 2525
+  }
+]

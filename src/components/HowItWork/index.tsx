@@ -1,16 +1,16 @@
-import PlayIcon from '@autrm/assets/icons/play.svg';
+// import PlayIcon from '@autrm/assets/icons/play.svg';
 import AuctionIcon from '@autrm/assets/icons/steps/auction.svg';
 import DeliveryIcon from '@autrm/assets/icons/steps/delivery.svg';
 import LocationIcon from '@autrm/assets/icons/steps/location.svg';
 import ShipIcon from '@autrm/assets/icons/steps/ship.svg';
-import { Button } from '@autrm/common/components/button';
+// import { Button } from '@autrm/common/components/button';
 import { Col, Container, Row } from '@autrm/common/components/grid';
-import { SVGIcon } from '@autrm/common/components/svg-icon';
+// import { SVGIcon } from '@autrm/common/components/svg-icon';
 
 import { Work } from './Work';
 import {
   HeaderStyled,
-  PilotStyled,
+  // PilotStyled,
   RowStyled,
   SectionStyled,
   SubtitleStyled,
@@ -31,7 +31,7 @@ export function HowItWork() {
                   весь этап.
                 </SubtitleStyled>
               </div>
-              <div>
+              {/* <div>
                 <Button type="blacked">
                   <SVGIcon
                     type={PlayIcon}
@@ -42,7 +42,7 @@ export function HowItWork() {
                   />
                   <span>Watch video</span>
                 </Button>
-              </div>
+              </div> */}
             </HeaderStyled>
           </Col>
         </Row>
@@ -96,7 +96,7 @@ export function HowItWork() {
             />
           </Col>
         </RowStyled>
-        <Row>
+        {/* <Row>
           <Col
             lg={12}
             justifyContent="center"
@@ -119,7 +119,7 @@ export function HowItWork() {
               />
             </PilotStyled>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </SectionStyled>
   );
