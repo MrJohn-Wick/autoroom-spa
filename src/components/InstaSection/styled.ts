@@ -9,13 +9,14 @@ export const SectionStyled = styled.section`
 
 export const LayoutStyled = styled.div`
   display: flex;
-  /* ${ADAPTIVE.minWidth.tablet} {
-    width: 25%;
-    &:nth-child(4) {
-      justify-content: flex-end !important;
-      padding-right: 0;
-    }
-  }  */
+
+  ${ADAPTIVE.maxWidth.mobile} {
+    flex-direction: column;
+  }
+
+  ${ADAPTIVE.maxWidth.tablet} {
+    flex-direction: column;
+  }
 `;
 
 export const TitleStyled = styled.div`

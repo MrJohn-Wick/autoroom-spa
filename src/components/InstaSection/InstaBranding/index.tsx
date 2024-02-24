@@ -7,30 +7,34 @@ import { FollowStyled, LinkStyled, SubTitleStyled, TitleStyled } from './styled'
 export function InstaBranding() {
   return (
     <FollowStyled>
-      <SVGIcon
-        type={LogoImage}
-        sizes={{
-          w: '100%',
-          h: 'auto',
-        }}
-      />
-      <TitleStyled>@autoroom_by</TitleStyled>
-      <SubTitleStyled>
-        Автомобили и Мотоциклы со страховых аукционов США Copart, IAAI. Подберем, доставим, а также
-        окажем помощь в растаможке.
-      </SubTitleStyled>
-      <LinkStyled href="https://instagram.com/autoroom_by">
-        <Button>
-          <SVGIcon
-            type={InstaIcon}
-            sizes={{
-              w: '15px',
-              h: '15px',
-            }}
-          />
-          <span>Подписывайся</span>
-        </Button>
-      </LinkStyled>
+      <div>
+        <SVGIcon
+          type={LogoImage}
+          sizes={{
+            w: '100%',
+            h: 'auto',
+          }}
+        />
+      </div>
+      <div>
+        <TitleStyled>@autoroom_by</TitleStyled>
+        <SubTitleStyled>
+          Автомобили и Мотоциклы со страховых аукционов США Copart, IAAI. Подберем, доставим, а
+          также окажем помощь в растаможке.
+        </SubTitleStyled>
+        <LinkStyled href="https://instagram.com/autoroom_by">
+          <Button>
+            <SVGIcon
+              type={InstaIcon}
+              sizes={{
+                w: '15px',
+                h: '15px',
+              }}
+            />
+            <span>Подписывайся</span>
+          </Button>
+        </LinkStyled>
+      </div>
     </FollowStyled>
   );
 }
