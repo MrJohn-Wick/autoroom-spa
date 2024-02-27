@@ -15,12 +15,12 @@ export function Home() {
         list={waitingCars}
       />
       <HowItWork />
-      <InstaSection />
       <CardsCarousel
         title="Привезенные под заказ"
         description="Автомобили, которые заказывали у нас."
         list={deliveredCars}
       />
+      <InstaSection />
     </>
   );
 }

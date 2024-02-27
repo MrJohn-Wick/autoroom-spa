@@ -1,5 +1,7 @@
-import { Image } from '@autrm/common/components/image';
 import { useEffect, useState } from 'react';
+
+import { Image } from '@autrm/common/components/image';
+
 import { GridStyled, GridWrapperStyled, ImageWrapperStyled } from './styled';
 import type { InstaFeedProps, InstaItem } from './types';
 

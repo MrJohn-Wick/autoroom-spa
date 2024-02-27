@@ -1,5 +1,6 @@
-import { ADAPTIVE } from '@autrm/common/tokens/screen';
 import { styled } from 'styled-components';
+
+import { ADAPTIVE } from '@autrm/common/tokens/screen';
 
 export const GridWrapperStyled = styled.div`
   flex: 1 1 75%;

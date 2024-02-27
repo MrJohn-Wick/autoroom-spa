@@ -1,11 +1,11 @@
 [
   {
-    "price": "$7,656.00",
-    "image": "https://drivco-nextjs.vercel.app/assets/img/home5/feature-car-01.png",
-    "location": "Panama City",
-    "title": "Mercedes-Benz Class-2023",
+    "price": "$90,500.00",
+    "image": "https://auto-room.by/data/images/Lq3KPzduuscjeB9F3IuEeVZ9Wj8-960.jpg",
+    "location": "Витебск",
+    "title": "BMW X4M 2022",
     "detailsLink": "/car-deatils",
-    "odometer": "43242",
+    "odometer": "1230",
     "transmission": "АКПП",
     "fuelType": "Бензин"
   },

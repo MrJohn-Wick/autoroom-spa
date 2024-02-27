@@ -1,8 +1,9 @@
-import { InstaFeed } from './InstaFeed';
-import { HeadingLevel2 } from '@autrm/common/tokens/typography';
 import { Col, Container, Row } from '@autrm/common/components/grid';
-import { LayoutStyled, SectionStyled, TitleStyled } from './styled';
+import { HeadingLevel2 } from '@autrm/common/tokens/typography';
+
 import { InstaBranding } from './InstaBranding';
+import { InstaFeed } from './InstaFeed';
+import { LayoutStyled, SectionStyled, TitleStyled } from './styled';
 
 export function InstaSection() {
   return (
@@ -11,7 +12,7 @@ export function InstaSection() {
         <Row>
           <Col>
             <TitleStyled>
-              <HeadingLevel2>Follow as on Instagram</HeadingLevel2>
+              <HeadingLevel2>Подписывайтесь на наш Instagram</HeadingLevel2>
             </TitleStyled>
           </Col>
         </Row>
