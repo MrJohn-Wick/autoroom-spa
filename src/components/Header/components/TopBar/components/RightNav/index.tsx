@@ -6,6 +6,7 @@ import TelegramIcon from '@autrm/assets/icons/social/telegram-vector.svg';
 import { SVGIcon } from '@autrm/common/components/svg-icon';
 
 import { PhoneNumberStyled, PhoneTextStyled, RightNavStyled, SeparatorStyled } from './styled';
+import { getInstagramUrl, getPhone, getPhoneDisplay, getTelegramUrl } from '@autrm/datas/contacts';
 
 export function RightNav() {
   return (
@@ -13,7 +14,7 @@ export function RightNav() {
       {/* <PhoneIconStyled>
         
       </PhoneIconStyled> */}
-      <Link to="https://www.instagram.com/autoroom_by/">
+      <Link to={getInstagramUrl()}>
         <SVGIcon
           type={InstagramIcon}
           sizes={{
@@ -22,7 +23,7 @@ export function RightNav() {
           }}
         />
       </Link>
-      <Link to="https://t.me/autoroomby">
+      <Link to={getTelegramUrl()}>
         <SVGIcon
           type={TelegramIcon}
           sizes={{
@@ -34,7 +35,7 @@ export function RightNav() {
       <SeparatorStyled />
       <PhoneNumberStyled>
         <PhoneTextStyled>Свяжитесь с нами</PhoneTextStyled>
-        <a href="tel:+375291524415">+375 (29) 152-44-15</a>
+        <a href={'tel:' + getPhone()}>{getPhoneDisplay()}</a>
       </PhoneNumberStyled>
     </RightNavStyled>
   );
