@@ -1,4 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Link } from 'react-router-dom';
+
 import { LeftMenuStyled } from './styled';
 
 export function LeftNav() {
@@ -9,7 +11,7 @@ export function LeftNav() {
           <a href="#">Последнее</a>
         </li>
         <li>
-          <a href="#">Партнерам</a>
+          <Link to="/contract">Договор</Link>
         </li>
         <li>
           <a href="#">Предложения</a>

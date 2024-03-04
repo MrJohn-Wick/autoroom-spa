@@ -17,14 +17,16 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
 import { Col, Container, Row } from '@autrm/common/components/grid';
+import { useWindowSize } from '@autrm/common/hooks/useWindowSize';
 import { HeadingLevel1, RegularTextLevel1 } from '@autrm/common/tokens/typography';
 import { Spinner } from '@autrm/components/Spinner';
 
-import { ColStyled } from './styled';
+import { ColLabelStyled, ColStyled, ColValueStyled, RowStyled } from './styled';
 
 export function Tracking() {
   const [serverData, setServerData] = useState({});
   const { id } = useParams();
+  const { isMobileView, isTabletView } = useWindowSize();
 
   useEffect(() => {
     if (!isEmpty(id)) {
@@ -56,60 +58,199 @@ export function Tracking() {
               <RegularTextLevel1>Какой то текст.</RegularTextLevel1>
             </Col>
           </Row>
-          <Row lgMb="50px">
+          <Row
+            mb="36px"
+            mdMb="36px"
+            lgMb="50px"
+            style={
+              isMobileView || isTabletView
+                ? {
+                    gap: '36px',
+                  }
+                : {
+                    gap: 0,
+                  }
+            }
+          >
             <ColStyled lg={6}>
-              <ul>
-                <li>
-                  <span>Наименование: </span>
-                  {get(serverData, 'vehicleMake')} {get(serverData, 'vehicleModel')}
-                </li>
-                <li>
-                  <span>VIN номер: </span>
+              <RowStyled>
+                <ColLabelStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
+                  Наименование:{' '}
+                </ColLabelStyled>
+                <ColValueStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >{`${get(serverData, 'vehicleMake')} ${get(serverData, 'vehicleModel')}`}</ColValueStyled>
+              </RowStyled>
+              <RowStyled>
+                <ColLabelStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
+                  VIN номер:{' '}
+                </ColLabelStyled>
+                <ColValueStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
                   {get(serverData, 'vehicleVinNo')}
-                </li>
-                <li>
-                  <span>Аукцион: </span>
+                </ColValueStyled>
+              </RowStyled>
+              <RowStyled>
+                <ColLabelStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
+                  Аукцион:{' '}
+                </ColLabelStyled>
+                <ColValueStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
                   {get(serverData, 'auction')}
-                </li>
-                <li>
-                  <span>Город: </span>
+                </ColValueStyled>
+              </RowStyled>
+              <RowStyled>
+                <ColLabelStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
+                  Город:{' '}
+                </ColLabelStyled>
+                <ColValueStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
                   {get(serverData, 'auctionLocation')}
-                </li>
-                <li>
-                  <span>Номер лота: </span>
+                </ColValueStyled>
+              </RowStyled>
+              <RowStyled>
+                <ColLabelStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
+                  Номер лота:{' '}
+                </ColLabelStyled>
+                <ColValueStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
                   {get(serverData, 'lotNo')}
-                </li>
-              </ul>
+                </ColValueStyled>
+              </RowStyled>
             </ColStyled>
             <ColStyled lg={6}>
-              <ul>
-                <li>
-                  <span>Номер контейнера: </span>
+              <RowStyled>
+                <ColLabelStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
+                  Номер контейнера:{' '}
+                </ColLabelStyled>
+                <ColValueStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
                   {get(serverData, 'containerNumber')}
-                </li>
-                <li>
-                  <span>Дата загрузки/отправки: </span>
+                </ColValueStyled>
+              </RowStyled>
+              <RowStyled>
+                <ColLabelStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
+                  Дата загрузки/отправки:
+                </ColLabelStyled>
+                <ColValueStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
                   {get(serverData, 'containerFinishLoadDate')}
-                </li>
-                <li>
-                  <span>Номер фрахта: </span>
+                </ColValueStyled>
+              </RowStyled>
+              <RowStyled>
+                <ColLabelStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
+                  Номер фрахта:{' '}
+                </ColLabelStyled>
+                <ColValueStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
                   {get(serverData, 'bookingNumber')}
-                </li>
-                <li>
-                  <span>Порт доставки: </span>
+                </ColValueStyled>
+              </RowStyled>
+              <RowStyled>
+                <ColLabelStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
+                  Порт доставки:{' '}
+                </ColLabelStyled>
+                <ColValueStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
                   {get(serverData, 'finalDestinationPortTitle')}
-                </li>
-                <li>
-                  <span>Ориентировочная дата доставки: </span>
+                </ColValueStyled>
+              </RowStyled>
+              <RowStyled>
+                <ColLabelStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
+                  Ориентировочная дата доставки:{' '}
+                </ColLabelStyled>
+                <ColValueStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
                   {get(serverData, 'inttraDestinationEta')}
-                </li>
-                <li>
-                  <span>Ссылка для отслеживания: </span>
+                </ColValueStyled>
+              </RowStyled>
+              <RowStyled>
+                <ColLabelStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
+                  Ссылка для отслеживания:{' '}
+                </ColLabelStyled>
+                <ColValueStyled
+                  sm={4}
+                  md={4}
+                  lg={6}
+                >
                   <Link to={get(serverData, 'trackingUrl', '')}>
                     {get(serverData, 'trackingUrl')}
                   </Link>
-                </li>
-              </ul>
+                </ColValueStyled>
+              </RowStyled>
             </ColStyled>
           </Row>
           <Row>
