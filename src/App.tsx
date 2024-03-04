@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { SocialMenu } from './components/SocialMenu';
 import { Calculator } from './pages/Calculator';
 import { Contacts } from './pages/Contacts';
+import { Contract } from './pages/Contract';
 import { Home } from './pages/Home';
 import { Tracking } from './pages/Tracking';
 import { TrackingSearch } from './pages/TrackingSearch';
@@ -34,6 +35,10 @@ function App() {
           <Route
             path="/contacts"
             element={<Contacts />}
+          />
+          <Route
+            path="/contract"
+            element={<Contract />}
           />
         </Routes>
       </section>
