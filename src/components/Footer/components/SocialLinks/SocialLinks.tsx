@@ -1,6 +1,7 @@
 import InstagramIcon from '@autrm/assets/icons/social/instagram-vector-2.svg';
 import TelegramIcon from '@autrm/assets/icons/social/telegram-vector.svg';
 import { SVGIcon } from '@autrm/common/components/svg-icon';
+import { getInstagramUrl, getTelegramUrl } from '@autrm/datas/contacts';
 
 import { SocialLinksStyled, SocialListksTitleStyled, IconsListStyled } from './styled';
 // import FacebookIcon from '@autrm/assets/icons/social/facebook.svg';
@@ -46,7 +47,7 @@ export function SocialLinks() {
           </a>
         </li> */}
         <li>
-          <a href="https://www.instagram.com/">
+          <a href={getInstagramUrl()}>
             <SVGIcon
               type={InstagramIcon}
               sizes={{
@@ -57,7 +58,7 @@ export function SocialLinks() {
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/">
+          <a href={getTelegramUrl()}>
             <SVGIcon
               type={TelegramIcon}
               sizes={{

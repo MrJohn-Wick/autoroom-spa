@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { SocialMenu } from './components/SocialMenu';
@@ -8,6 +7,7 @@ import { Contacts } from './pages/Contacts';
 import { Home } from './pages/Home';
 import { Tracking } from './pages/Tracking';
 import { TrackingSearch } from './pages/TrackingSearch';
+import { CookieBanner } from './components/CookieBanner';
 
 function App() {
   return (
@@ -39,6 +39,7 @@ function App() {
       </section>
       <Footer />
       <SocialMenu />
+      <CookieBanner />
     </>
   );
 }

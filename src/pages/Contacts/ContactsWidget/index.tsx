@@ -1,4 +1,5 @@
 import { HeadingLevel3 } from '@autrm/common/tokens/typography';
+import { getEmail, getEmailDisplay, getPhone, getPhoneDisplay } from '@autrm/datas/contacts';
 import {
   ContactItemContent,
   ContactsItemDescriptionStyled,
@@ -13,12 +14,12 @@ export function ContactsWidget() {
       <ContactsItemStyled>
         <H4Styled>Телефон:</H4Styled>
         <ContactItemContent>
-          <a href="tel:+375291524415">+375 (29) 152-44-15</a>
+          <a href={'tel:' + getPhone()}>{getPhoneDisplay()}</a>
         </ContactItemContent>
       </ContactsItemStyled>
       <ContactsItemStyled>
         <H4Styled>Адрес:</H4Styled>
-        <ContactItemContent>г. Витебск, ул. Ленина, 1</ContactItemContent>
+        <ContactItemContent>ул. Петруся Бровки, 4Б</ContactItemContent>
         <ContactsItemDescriptionStyled>
           <span>
             Звоните и приходите
@@ -29,7 +30,7 @@ export function ContactsWidget() {
       <ContactsItemStyled>
         <H4Styled>Почта:</H4Styled>
         <ContactItemContent>
-          <a href="mailto:autoroomby@gmail.com">AutoroomBy@gmail.com</a>
+          <a href={'mailto:' + getEmail()}>{getEmailDisplay()}</a>
         </ContactItemContent>
       </ContactsItemStyled>
     </>

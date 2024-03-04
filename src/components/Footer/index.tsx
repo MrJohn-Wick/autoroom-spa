@@ -15,6 +15,7 @@ import Visa from '@autrm/assets/icons/pays/visa.png';
 import YaPay from '@autrm/assets/icons/pays/ya-pay.png';
 import PhoneIcon from '@autrm/assets/icons/phone.svg';
 import { useWindowSize } from '@autrm/common/hooks/useWindowSize';
+import { getEmail, getEmailDisplay, getPhone, getPhoneDisplay } from '@autrm/datas/contacts';
 
 import { Logo } from '../Logo';
 
@@ -109,14 +110,14 @@ export function Footer() {
             <Hotline
               icon={PhoneIcon}
               title="Позвонить"
-              href="tel:+375291524415"
-              link="+375 (29) 152-44-15"
+              href={'tel:' + getPhone()}
+              link={getPhoneDisplay()}
             />
             <Hotline
               icon={EmailIcon}
               title="Написать"
-              href="mailto:"
-              link="info@gmail.com"
+              href={'mailto:' + getEmail()}
+              link={getEmailDisplay()}
             />
           </ContactsStyled>
           {/* <div>

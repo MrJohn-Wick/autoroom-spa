@@ -18,7 +18,8 @@
       "odometer": "43242",
       "transmission": "АКПП",
       "fuelType": "Бензин"
-    },  {
+    },
+    {
       "price": "$7,656.00",
       "image": "https://www.stratstone.com/-/media/stratstone/bmw/new-cars/x5/phev/bmw-x5-phev-front-720x405px.ashx?mh=1440&la=en&h=405&w=720&mw=2560&hash=368267D1D409E2779BE7F16DB0790FC5",
       "location": "Panama City",
@@ -27,7 +28,8 @@
       "odometer": "43242",
       "transmission": "АКПП",
       "fuelType": "Бензин"
-    },  {
+    },
+    {
       "price": "$7,656.00",
       "image": "https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/d7eb22d5299b4325a0eb2d7b1a0243ad_ful.jpg",
       "location": "Panama City",
@@ -36,7 +38,8 @@
       "odometer": "43242",
       "transmission": "АКПП",
       "fuelType": "Бензин"
-    },  {
+    },
+    {
       "price": "$7,656.00",
       "image": "https://drivco-nextjs.vercel.app/assets/img/home5/feature-car-01.png",
       "location": "Panama City",
@@ -45,7 +48,8 @@
       "odometer": "43242",
       "transmission": "АКПП",
       "fuelType": "Бензин"
-    },  {
+    },
+    {
       "price": "$7,656.00",
       "image": "https://drivco-nextjs.vercel.app/assets/img/home5/feature-car-01.png",
       "location": "Panama City",
