@@ -1,4 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
+
+import { CookieBanner } from './components/CookieBanner';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { SocialMenu } from './components/SocialMenu';
@@ -6,9 +8,9 @@ import { Calculator } from './pages/Calculator';
 import { Contacts } from './pages/Contacts';
 import { Contract } from './pages/Contract';
 import { Home } from './pages/Home';
+import { Pay } from './pages/Pay';
 import { Tracking } from './pages/Tracking';
 import { TrackingSearch } from './pages/TrackingSearch';
-import { CookieBanner } from './components/CookieBanner';
 
 function App() {
   return (
@@ -39,6 +41,10 @@ function App() {
           <Route
             path="/contract"
             element={<Contract />}
+          />
+          <Route
+            path="/pay"
+            element={<Pay />}
           />
         </Routes>
       </section>
