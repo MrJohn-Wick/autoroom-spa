@@ -1,25 +1,19 @@
 import { Button } from '@autrm/common/components/button';
 import { Col, Container, Row } from '@autrm/common/components/grid';
-import { useEffect, useState } from 'react';
+import { useCookies } from 'react-cookie';
 import { OverlayStyled, WrapperStyled } from './styled';
 
 export function CookieBanner() {
   const key = 'autoroom_cookie';
-  const [cookie, setCookie] = useState<string | null>();
-
-  useEffect(() => {
-    const value = localStorage.getItem(key);
-    if (value) {
-      setCookie(value);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (cookie) localStorage.setItem(key, cookie);
-  }, [cookie]);
+  const [cookies, setCookies] = useCookies([key]);
 
   const onClick = () => {
-    setCookie('accepted');
+    const expires = new Date();
+    expires.setFullYear(expires.getFullYear() + 1);
+    setCookies(key, 'true', {
+      path: '/',
+      expires,
+    });
   };
 
   const banner = (
@@ -58,5 +52,5 @@ export function CookieBanner() {
     </OverlayStyled>
   );
 
-  return cookie ? null : banner;
+  return cookies[key] ? null : banner;
 }
