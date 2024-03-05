@@ -50,6 +50,7 @@ export function InstaFeed() {
       }
 
       const res = await fetch(instaUrl);
+      if (res.status !== 200) return;
       const json = (await res.json()).data;
       if (!json) return;
 
