@@ -43,18 +43,10 @@ export function InstaFeed() {
     };
 
     const fetchItems = async () => {
-      if (!instaUserId || !instaToken) {
-        console.log('userId or accessToken is undefined');
-
-        return;
-      }
+      if (!instaUserId || !instaToken) return;
 
       const res = await fetch(instaUrl);
-      if (res.status !== 200) {
-        console.log(res);
-
-        return;
-      }
+      if (res.status !== 200) return;
       const json = (await res.json()).data;
       if (!json) return;
 
