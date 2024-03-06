@@ -81,7 +81,7 @@ export const HeadingLevel2 = styled.h2<{ color?: string; width?: string; textAli
  * @builtin letterSpacing: 2%
  */
 export const HeadingLevel3 = styled.h3<{ color?: string }>`
-  ${HeadingStylesCommon}
+  /* ${HeadingStylesCommon} */
 
   ${getTextStyles('Montserrat', 700, 20, 30)}
 
