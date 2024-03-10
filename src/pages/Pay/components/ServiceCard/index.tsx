@@ -13,13 +13,20 @@ export function ServiceCard({
   title,
   amount,
   image,
+  isActive,
+  onClick,
 }: {
   title: string;
   amount: number;
   image?: string;
+  isActive: boolean;
+  onClick: () => void;
 }) {
   return (
-    <ServiceCardStyled>
+    <ServiceCardStyled
+      onClick={onClick}
+      isActive={isActive}
+    >
       <ServiceCardIconStyled>
         {image ? (
           <img

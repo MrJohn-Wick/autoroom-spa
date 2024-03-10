@@ -20,7 +20,7 @@ export const SumSectionStyled = styled.div`
 `;
 
 export const CompanyStyled = styled.div`
-  ${getTextStyles('Montserrat', 500, 16, 20)}
+  ${getTextStyles('Montserrat', 500, 14, 20)}
 `;
 
 export const LineStyled = styled.div`
@@ -50,4 +50,12 @@ export const CurrencyStyled = styled.span`
   ${getTextStyles('Montserrat', 500, 12, 16)}
   padding-left: 5px;
   color: ${colorBlack};
+`;
+
+export const ServiceTypeStyled = styled.div`
+  ${getTextStyles('Montserrat', 700, 16, 10)}
+`;
+
+export const ServiceLabelStyled = styled.div`
+  ${getTextStyles('Montserrat', 400, 14, 16)}
 `;

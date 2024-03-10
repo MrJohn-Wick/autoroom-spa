@@ -21,6 +21,21 @@ export function Home() {
         list={deliveredCars}
       />
       <InstaSection />
+      {/* <div
+        style={{
+          width: '100%',
+          height: '500px',
+        }}
+      >
+        <iframe
+          // id="telegram-post-telegram-3636"
+          src="https://t.me/autoroom_by/3636?embed=2&amp;userpic=true"
+          width="100%"
+          height="500"
+          frameBorder={0}
+          scrolling="no"
+        />
+      </div> */}
     </>
   );
 }
