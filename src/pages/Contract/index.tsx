@@ -1,23 +1,14 @@
 import { Container, Row, Col } from '@autrm/common/components/grid';
-import DocViewer, { MSDocRenderer, PNGRenderer } from '@cyntler/react-doc-viewer';
 
 export function Contract() {
-  const docs = [
-    {
-      uri: '/logo512.png',
-    },
-    {
-      uri: require('./test.docx'),
-    },
-  ];
-
   return (
     <Container>
       <Row>
         <Col>
-          <DocViewer
-            documents={docs}
-            pluginRenderers={[MSDocRenderer, PNGRenderer]}
+          <iframe
+            src="https://view.officeapps.live.com/op/embed.aspx?src=http%3A%2F%2Fieee802%2Eorg%3A80%2Fsecmail%2FdocIZSEwEqHFr%2Edoc"
+            width="100%"
+            height="700px"
           />
         </Col>
       </Row>
