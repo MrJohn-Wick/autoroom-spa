@@ -1,15 +1,16 @@
-import { Container, Row, Col } from '@autrm/common/components/grid';
+import { Row, Col, Container } from '@autrm/common/components/grid';
+// import { GoogleDocViewer } from './components/GoogleDocViewer';
+// import { DocViewer } from './components/DocViewer';
+import { PdfViewer } from './components/PdfViewer';
 
 export function Contract() {
   return (
     <Container>
       <Row>
         <Col>
-          <iframe
-            src="https://view.officeapps.live.com/op/embed.aspx?src=http://alexhornet.vh71.hosterby.com/contract.doc"
-            width="100%"
-            height="700px"
-          />
+          {/* <DocViewer /> */}
+          <PdfViewer />
+          {/* <GoogleDocViewer /> */}
         </Col>
       </Row>
     </Container>
