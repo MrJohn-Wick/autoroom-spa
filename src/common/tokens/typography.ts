@@ -109,7 +109,7 @@ export const HeadingLevel3 = styled.h3<{ color?: string }>`
  * @builtin letterSpacing: 2%
  */
 export const HeadingLevel4 = styled.h4<{ color?: string; alignSelf?: string; whiteSpace?: string }>`
-  ${getTextStyles('Roboto', 700, 20, 30)}
+  ${getTextStyles('Montserrat', 700, 18, 30)}
 
   align-self: ${({ alignSelf = 'flex-start' }) => alignSelf};
 
@@ -118,11 +118,11 @@ export const HeadingLevel4 = styled.h4<{ color?: string; alignSelf?: string; whi
   ${HeadingStylesCommon}
 
   ${ADAPTIVE.minWidth.tablet} {
-    ${getTextStyles(null, null, 20, 30)}
+    ${getTextStyles(null, null, 16, 30)}
   }
 
   ${ADAPTIVE.minWidth.desktop} {
-    ${getTextStyles(null, null, 20, 30)}
+    ${getTextStyles(null, null, 14, 30)}
   }
 `;
 
