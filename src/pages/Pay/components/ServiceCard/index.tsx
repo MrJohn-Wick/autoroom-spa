@@ -13,6 +13,7 @@ export function ServiceCard({
   title,
   amount,
   image,
+  imageSizes,
   isActive,
   onClick,
 }: {
@@ -20,6 +21,7 @@ export function ServiceCard({
   amount: number;
   image?: string;
   isActive: boolean;
+  imageSizes?: { w: string; h: string };
   onClick: () => void;
 }) {
   return (
@@ -31,15 +33,25 @@ export function ServiceCard({
         {image ? (
           <img
             src={image}
+            style={
+              imageSizes && {
+                width: `${imageSizes.w}px`,
+                height: `${imageSizes.h}px`,
+              }
+            }
             alt=""
           />
         ) : (
           <SVGIcon
             type={DollarIcon}
-            sizes={{
-              w: '48',
-              h: '48',
-            }}
+            sizes={
+              imageSizes
+                ? imageSizes
+                : {
+                    w: '48',
+                    h: '48',
+                  }
+            }
           />
         )}
       </ServiceCardIconStyled>

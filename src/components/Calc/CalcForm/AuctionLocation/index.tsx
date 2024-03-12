@@ -1,5 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
+
 import { Select } from 'antd';
+
 import { CalcContext } from '../..';
 import { getAuctions, getLocations } from '../../utils';
 import { FormFieldStyled } from '../styled';

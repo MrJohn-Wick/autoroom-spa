@@ -11,8 +11,12 @@ export const SearchStyled = styled.div`
     width: 70%;
   }
 
+  ${ADAPTIVE.minWidth.desktop} {
+    width: 600px;
+  }
+
   ${ADAPTIVE.minWidth.desktopLg} {
-    width: 40%;
+    width: 670px;
   }
 
   input:focus {

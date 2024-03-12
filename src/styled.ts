@@ -40,14 +40,16 @@ export const GlobalStyled = createGlobalStyle`
     font-optical-sizing: auto;
     font-style: normal;
 
+    background: rgb(247, 247, 245);
+
     padding: 0px;
 
     ${ADAPTIVE.minWidth.tablet} {
-      padding: 0px 24px;
+      /* padding: 0px 24px; */
     }
 
     ${ADAPTIVE.minWidth.desktop} {
-      padding: 0px 48px;
+      /* padding: 0px 48px; */
     }
   }
 

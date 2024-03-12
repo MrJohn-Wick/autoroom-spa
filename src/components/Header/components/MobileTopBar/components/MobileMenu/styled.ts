@@ -62,3 +62,7 @@ export const SocialIconsStyled = styled.div`
   margin-top: auto;
   gap: 16px;
 `;
+
+export const PayButtonSectionStyled = styled.div`
+  margin: 24px 0 0;
+`;

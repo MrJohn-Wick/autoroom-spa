@@ -99,7 +99,8 @@ export function Pay() {
         <Col lg={8}>{getStep(currentStep)}</Col>
         <Col
           lg={4}
-          smMargin="12px 0"
+          smMargin="48px 0"
+          mdMargin="0"
         >
           <SumSection formState={formState} />
         </Col>

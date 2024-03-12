@@ -1,4 +1,5 @@
 import { SVGIcon } from '@autrm/common/components/svg-icon';
+
 import { ContentStyled, IconStyled, StepStyled, TitleStyled, WorkStyled } from './styled';
 import type { WorkProps } from './tyles';
 

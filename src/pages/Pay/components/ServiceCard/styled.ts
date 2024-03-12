@@ -1,6 +1,6 @@
 import { css, styled } from 'styled-components';
 
-import { colorBlack, colorPrimary } from '@autrm/common/tokens/colors';
+import { colorBlack, colorGrey200, colorPrimary } from '@autrm/common/tokens/colors';
 import { getTextStyles } from '@autrm/common/utils/styles';
 
 export const ServiceCardStyled = styled.div<{ isActive: boolean }>`
@@ -14,7 +14,7 @@ export const ServiceCardStyled = styled.div<{ isActive: boolean }>`
   background-color: #fff; */
 
   background-color: #fff;
-  border-radius: 18px;
+  border-radius: 8px;
   justify-content: space-between;
   overflow: hidden;
   position: relative;
@@ -22,16 +22,17 @@ export const ServiceCardStyled = styled.div<{ isActive: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 24px;
+  row-gap: 12px;
   padding: 24px;
-  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+  /* box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1); */
+  /* border: 1px solid ${colorGrey200}; */
 
   cursor: pointer;
 
-  box-shadow: 1px -1px 11px -1px rgba(156, 156, 156, 0.36);
+  /* box-shadow: 1px -1px 11px -1px rgba(156, 156, 156, 0.36);
   -webkit-box-shadow: 1px -1px 11px -1px rgba(156, 156, 156, 0.36);
-  -moz-box-shadow: 1px -1px 11px -1px rgba(156, 156, 156, 0.36);
+  -moz-box-shadow: 1px -1px 11px -1px rgba(156, 156, 156, 0.36); */
 
   &:hover {
     /* border-color: ${colorPrimary};
@@ -49,16 +50,18 @@ export const ServiceCardStyled = styled.div<{ isActive: boolean }>`
           border: 1px solid ${colorPrimary};
         `
       : css`
-          border: 1px solid transparent;
+          /* border: 1px solid transparent; */
+          border: 1px solid ${colorGrey200};
         `};
 
   img {
-    max-height: 72px;
+    /* max-height: 72px; */
   }
 `;
 
 export const TitleStyled = styled.div`
   ${getTextStyles('Montserrat', 500, 20, 24)}
+  text-align: center;
 `;
 
 export const PriceStyled = styled.div`
