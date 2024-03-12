@@ -2,7 +2,9 @@ import { Checkbox, Form, Input } from 'antd';
 
 import { Col, Container, Row } from '@autrm/common/components/grid';
 
-export function UserDetails() {
+import { getNewState } from '../../helpers';
+
+export function UserDetails({ formState, setFormState }: any) {
   const layout = {
     labelCol: {
       span: 8,
@@ -12,20 +14,15 @@ export function UserDetails() {
     },
   };
 
-  const [form] = Form.useForm();
-
-  const onFinish = (values: any) => {
-    console.log(values);
-  };
+  // const [form] = Form.useForm();
 
   return (
     <Container>
       <Form
         {...layout}
-        form={form}
+        // form={form}
         layout="vertical"
         name="control-hooks"
-        onFinish={onFinish}
       >
         <Row rowGap="24px">
           <Col lg={6}>
@@ -39,7 +36,18 @@ export function UserDetails() {
                 },
               ]}
             >
-              <Input placeholder="Введите свою фамилию" />
+              <Input
+                placeholder="Введите свою фамилию"
+                defaultValue={formState.secondName}
+                onChange={(e: any) =>
+                  setFormState(
+                    getNewState(formState, {
+                      secondName: e.target.value,
+                    }),
+                  )
+                }
+                // value={formState.secondName}
+              />
             </Form.Item>
           </Col>
           <Col lg={6}>
@@ -53,7 +61,18 @@ export function UserDetails() {
                 },
               ]}
             >
-              <Input placeholder="Введите свое имя" />
+              <Input
+                placeholder="Введите свое имя"
+                defaultValue={formState.firstName}
+                onChange={(e: any) =>
+                  setFormState(
+                    getNewState(formState, {
+                      firstName: e.target.value,
+                    }),
+                  )
+                }
+                // value={formState.firstName}
+              />
             </Form.Item>
           </Col>
         </Row>
@@ -69,7 +88,18 @@ export function UserDetails() {
                 },
               ]}
             >
-              <Input placeholder="Введите свое отчество" />
+              <Input
+                placeholder="Введите свое отчество"
+                defaultValue={formState.subName}
+                onChange={(e: any) =>
+                  setFormState(
+                    getNewState(formState, {
+                      subName: e.target.value,
+                    }),
+                  )
+                }
+                // value={formState.subName}
+              />
             </Form.Item>
           </Col>
           <Col lg={6}>
@@ -83,15 +113,26 @@ export function UserDetails() {
                 },
               ]}
             >
-              <Input placeholder="Введите свой номер телефона" />
+              <Input
+                placeholder="Введите свой номер телефона"
+                defaultValue={formState.phone}
+                onChange={(e: any) =>
+                  setFormState(
+                    getNewState(formState, {
+                      phone: e.target.value,
+                    }),
+                  )
+                }
+                // value={formState.phone}
+              />
             </Form.Item>
           </Col>
         </Row>
         <Row>
           <Col lg={6}>
             <Form.Item
-              name="secondName"
-              label="Фамилия"
+              name="email"
+              label="Email"
               rules={[
                 {
                   required: true,
@@ -99,7 +140,18 @@ export function UserDetails() {
                 },
               ]}
             >
-              <Input placeholder="Введите свой email" />
+              <Input
+                placeholder="Введите свой email"
+                defaultValue={formState.email}
+                onChange={(e: any) =>
+                  setFormState(
+                    getNewState(formState, {
+                      email: e.target.value,
+                    }),
+                  )
+                }
+                // value={formState.email}
+              />
             </Form.Item>
           </Col>
           <Col lg={6} />
@@ -107,7 +159,16 @@ export function UserDetails() {
       </Form>
       <Row>
         <Col lg={8}>
-          <Checkbox onChange={() => null}>
+          <Checkbox
+            onChange={() =>
+              setFormState(
+                getNewState(formState, {
+                  isConsentApproved: !formState.isConsentApproved,
+                }),
+              )
+            }
+            checked={formState.isConsentApproved}
+          >
             Я согласен(на) на обработку моих персональных данных.
           </Checkbox>
         </Col>

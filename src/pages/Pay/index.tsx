@@ -10,6 +10,7 @@ import { Contract } from './components/steps/Contract';
 import { Payment } from './components/steps/Payment';
 import { Services } from './components/steps/Services';
 import { UserDetails } from './components/steps/UserDetails';
+import { ColButtonsStyled } from './styled';
 
 export function Pay() {
   const [currentStep, setStep] = useState(0);
@@ -42,11 +43,21 @@ export function Pay() {
           />
         );
       case 2:
-        return <UserDetails />;
+        return (
+          <UserDetails
+            formState={formState}
+            setFormState={setFormState}
+          />
+        );
       case 3:
         return <Payment />;
       default:
-        return <Services />;
+        return (
+          <Services
+            formState={formState}
+            setFormState={setFormState}
+          />
+        );
     }
   };
 
@@ -66,19 +77,19 @@ export function Pay() {
             items={[
               {
                 title: 'Выбор услуги',
-                description: 'sfsdfsdfsdf',
+                description: 'Выберите услугу для оплаты',
               },
               {
                 title: 'Договор аферты',
-                description: 'dasdasgs fsdfsd',
+                description: 'Ознакомьтесь с договором',
               },
               {
                 title: 'Данные клиента',
-                description: 'fs sss sss',
+                description: 'Заполните поля',
               },
               {
                 title: 'Оплата',
-                description: 'fs sss sss',
+                description: 'Выберите способ оплаты',
               },
             ]}
           />
@@ -86,7 +97,10 @@ export function Pay() {
       </Row>
       <Row>
         <Col lg={8}>{getStep(currentStep)}</Col>
-        <Col lg={4}>
+        <Col
+          lg={4}
+          smMargin="12px 0"
+        >
           <SumSection formState={formState} />
         </Col>
       </Row>
@@ -94,7 +108,7 @@ export function Pay() {
         lgMt="56px"
         lgMb="56px"
       >
-        <Col>
+        <ColButtonsStyled>
           {currentStep >= 1 && (
             <Button
               type="default"
@@ -112,7 +126,7 @@ export function Pay() {
           >
             Далее
           </Button>
-        </Col>
+        </ColButtonsStyled>
       </Row>
     </Container>
   );

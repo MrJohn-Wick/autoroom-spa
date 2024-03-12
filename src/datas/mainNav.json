@@ -12,16 +12,6 @@
     "link": "/tracking"
   },
   {
-    "title": "Услуги",
-    "link": "#",
-    "subMenu": [
-      {
-        "title": "Получить отчет CarFax",
-        "link": "/"
-      }
-    ]
-  },
-  {
     "title": "Контакты",
     "link": "/contacts"
   }

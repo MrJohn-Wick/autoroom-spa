@@ -7,15 +7,15 @@ export function LeftNav() {
   return (
     <LeftMenuStyled>
       <ul>
-        <li>
+        {/* <li>
           <a href="#">Последнее</a>
-        </li>
+        </li> */}
         <li>
           <Link to="/contract">Договор</Link>
         </li>
-        <li>
+        {/* <li>
           <a href="#">Предложения</a>
-        </li>
+        </li> */}
       </ul>
     </LeftMenuStyled>
   );
