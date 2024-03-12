@@ -1,32 +1,5 @@
 [
   {
-    "auction": "IAAI",
-    "location": "Abilene",
-    "fee": 350,
-    "car": 350,
-    "moto": 300,
-    "atv": 0,
-    "delivery": "Houston"
-  },
-  {
-    "auction": "IAAI",
-    "location": "ACE-Perris",
-    "fee": 200,
-    "car": 250,
-    "moto": 250,
-    "atv": 0,
-    "delivery": "L.Angeles"
-  },
-  {
-    "auction": "IAAI",
-    "location": "ACE-Carson",
-    "fee": 200,
-    "car": 160,
-    "moto": 160,
-    "atv": 0,
-    "delivery": "L.Angeles"
-  },
-  {
     "auction": "Copart",
     "location": "Abilene-TX",
     "fee": 250,
@@ -50,6 +23,33 @@
     "fee": 300,
     "car": 2250,
     "moto": 0,
+    "atv": 0,
+    "delivery": "L.Angeles"
+  },
+  {
+    "auction": "IAAI",
+    "location": "Abilene",
+    "fee": 350,
+    "car": 350,
+    "moto": 300,
+    "atv": 0,
+    "delivery": "Houston"
+  },
+  {
+    "auction": "IAAI",
+    "location": "ACE-Perris",
+    "fee": 200,
+    "car": 250,
+    "moto": 250,
+    "atv": 0,
+    "delivery": "L.Angeles"
+  },
+  {
+    "auction": "IAAI",
+    "location": "ACE-Carson",
+    "fee": 200,
+    "car": 160,
+    "moto": 160,
     "atv": 0,
     "delivery": "L.Angeles"
   }
