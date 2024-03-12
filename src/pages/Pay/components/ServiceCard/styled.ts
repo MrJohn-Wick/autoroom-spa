@@ -1,9 +1,9 @@
-import { styled } from 'styled-components';
+import { css, styled } from 'styled-components';
 
 import { colorBlack, colorPrimary } from '@autrm/common/tokens/colors';
 import { getTextStyles } from '@autrm/common/utils/styles';
 
-export const ServiceCardStyled = styled.div`
+export const ServiceCardStyled = styled.div<{ isActive: boolean }>`
   /* padding: 24px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -42,6 +42,15 @@ export const ServiceCardStyled = styled.div`
     box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.16);
     transform: scale3d(1.01, 1.01, 1.01);
   }
+
+  ${({ isActive }) =>
+    isActive
+      ? css`
+          border: 1px solid ${colorPrimary};
+        `
+      : css`
+          border: 1px solid transparent;
+        `};
 
   img {
     max-height: 72px;

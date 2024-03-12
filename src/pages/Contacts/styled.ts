@@ -1,6 +1,7 @@
+import { styled } from 'styled-components';
+
 import { Container } from '@autrm/common/components/grid';
 import { HeadingLevel1 } from '@autrm/common/tokens/typography';
-import { styled } from 'styled-components';
 
 export const ContainerStyled = styled(Container)`
   margin-top: 50px;

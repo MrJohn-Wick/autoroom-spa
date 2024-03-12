@@ -1,9 +1,32 @@
+import { styled } from 'styled-components';
+
 import { colorPrimary } from '@autrm/common/tokens/colors';
 import { getTextStyles } from '@autrm/common/utils/styles';
-import { styled } from 'styled-components';
 
 export const SectionStyled = styled.section`
   margin: 100px 0;
+  -webkit-animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+      transform: translateY(-100px);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+      transform: translateY(-100px);
+    }
+  }
 `;
 
 export const TitleWrapperStyled = styled.div`
