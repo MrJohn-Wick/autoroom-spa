@@ -5,8 +5,12 @@ export function HtmlContract() {
     <ContractStyled>
       <h2>ДОГОВОР №_______</h2>
       <div>
-        <span>г. Витебск, Республика Беларусь</span>
-        <span>«22» февраля 2024г.</span>
+        <span>
+          <strong>г. Витебск, Республика Беларусь</strong>
+        </span>
+        <span>
+          <strong>«22» февраля 2024г.</strong>
+        </span>
       </div>
       <p>
         <strong>
