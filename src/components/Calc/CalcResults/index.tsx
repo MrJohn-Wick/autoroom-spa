@@ -86,7 +86,7 @@ export function CalcResults() {
     if (calcData?.benefit) {
       d = d / 2;
     }
-    if (calcData?.electro && !calcData?.bigSuv) {
+    if (calcData?.electro && calcData?.electroOption == 1) {
       d = 0;
     }
 
@@ -97,7 +97,7 @@ export function CalcResults() {
     calcData?.price,
     calcData?.benefit,
     calcData?.electro,
-    calcData?.bigSuv,
+    calcData?.electroOption,
   ]);
 
   const tax = useMemo(() => {
