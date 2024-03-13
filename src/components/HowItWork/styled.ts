@@ -3,13 +3,20 @@ import { styled } from 'styled-components';
 import { Button } from '@autrm/common/components/button';
 import { Row } from '@autrm/common/components/grid';
 import { colorTitle, colorWhite } from '@autrm/common/tokens/colors';
+import { ADAPTIVE } from '@autrm/common/tokens/screen';
 import { getTextStyles } from '@autrm/common/utils/styles';
 
 export const SectionStyled = styled.section`
   border-radius: 30px;
-  background: #f6f6f6;
-  padding: 90px 0;
-  margin-bottom: 100px;
+  background: ${colorWhite};
+  padding: 24px 0;
+
+  margin: 0 16px 100px 16px;
+
+  ${ADAPTIVE.minWidth.desktop} {
+    padding: 90px 0;
+    margin: 0 48px 100px 48px;
+  }
 `;
 
 export const HeaderStyled = styled.div`
@@ -38,17 +45,6 @@ export const RowStyled = styled(Row)`
   position: relative;
   border-bottom: 1px solid #eee;
   padding-bottom: 40px;
-
-  &::before {
-    content: '';
-    display: block;
-    height: 1px;
-    width: 100%;
-    background-color: #eee;
-    position: absolute;
-    top: 17px;
-    left: 0;
-  }
 `;
 
 export const PilotStyled = styled.div`

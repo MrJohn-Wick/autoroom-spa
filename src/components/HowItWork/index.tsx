@@ -51,6 +51,7 @@ export function HowItWork() {
             lg={3}
             md={4}
             sm={4}
+            smMargin="0 0 24px"
           >
             <Work
               step="01"
@@ -63,6 +64,7 @@ export function HowItWork() {
             lg={3}
             md={4}
             sm={4}
+            smMargin="0 0 24px"
           >
             <Work
               step="02"
@@ -75,6 +77,7 @@ export function HowItWork() {
             lg={3}
             md={4}
             sm={4}
+            smMargin="0 0 24px"
           >
             <Work
               step="03"
@@ -87,6 +90,7 @@ export function HowItWork() {
             lg={3}
             md={4}
             sm={4}
+            smMargin="0 0 24px"
           >
             <Work
               step="04"

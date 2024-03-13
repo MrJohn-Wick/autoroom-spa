@@ -5,7 +5,7 @@ import { getTextStyles } from '@autrm/common/utils/styles';
 
 export const SumSectionStyled = styled.div`
   background-color: #fff;
-  border-radius: 18px;
+  border-radius: 8px;
   justify-content: space-between;
   overflow: hidden;
   position: relative;
@@ -14,8 +14,8 @@ export const SumSectionStyled = styled.div`
   flex-direction: column;
   row-gap: 24px;
   padding: 24px;
-  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+  /* box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1); */
   border: 1px solid #ebebeb;
 `;
 

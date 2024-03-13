@@ -1,6 +1,7 @@
-import { colorGrey200, colorTitle } from '@autrm/common/tokens/colors';
-import { getTextStyles } from '@autrm/common/utils/styles';
 import { styled } from 'styled-components';
+
+import { colorGrey200, colorTitle, colorWhite } from '@autrm/common/tokens/colors';
+import { getTextStyles } from '@autrm/common/utils/styles';
 
 export const OverviewStyled = styled.div`
   margin-bottom: 50px;
@@ -12,6 +13,7 @@ export const OverviewContentStyled = styled.div`
   border-radius: 10px;
   border: 1px solid ${colorGrey200};
   padding: 30px 20px;
+  background-color: ${colorWhite};
 
   & ul {
     list-style: none;
