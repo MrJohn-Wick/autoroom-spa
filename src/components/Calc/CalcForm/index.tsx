@@ -47,6 +47,17 @@ export function CalcForm() {
         </HorizontalWrapperStyled>
         <AuctionLocation />
         <Electro />
+        {calcContext?.electro && (
+          <SUVTypeListStyled>
+            <Radio.Group
+              onChange={(e) => calcContext?.setElectroOption(e.target.value)}
+              value={calcContext?.electroOption}
+            >
+              <Radio value={1}>Электромобиль</Radio>
+              <Radio value={2}>Гибрид</Radio>
+            </Radio.Group>
+          </SUVTypeListStyled>
+        )}
         {/* <SUV /> */}
         <Benefit />
         <Checkbox
