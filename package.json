@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.2.18",
     "@types/styled-components": "^5.1.34",
     "antd": "^5.13.3",
+    "antd-mask-input": "^2.0.7",
     "lightgallery": "^2.7.2",
     "react": "^18.2.0",
     "react-cookie": "^7.1.0",
