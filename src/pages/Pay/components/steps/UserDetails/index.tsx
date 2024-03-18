@@ -3,6 +3,7 @@ import { Checkbox, Form, Input } from 'antd';
 import { Col, Container, Row } from '@autrm/common/components/grid';
 
 import { getNewState } from '../../helpers';
+import { MaskedInput } from 'antd-mask-input';
 
 export function UserDetails({ formState, setFormState }: any) {
   const layout = {
@@ -13,7 +14,6 @@ export function UserDetails({ formState, setFormState }: any) {
       span: 16,
     },
   };
-
   // const [form] = Form.useForm();
 
   return (
@@ -113,7 +113,8 @@ export function UserDetails({ formState, setFormState }: any) {
                 },
               ]}
             >
-              <Input
+              <MaskedInput
+                mask={'+375(00)000-00-00'}
                 placeholder="Введите свой номер телефона"
                 defaultValue={formState.phone}
                 onChange={(e: any) =>
@@ -136,6 +137,7 @@ export function UserDetails({ formState, setFormState }: any) {
               rules={[
                 {
                   required: true,
+                  type: 'email',
                   message: 'Пожалуйста введите email',
                 },
               ]}
