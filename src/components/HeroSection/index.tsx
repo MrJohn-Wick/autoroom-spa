@@ -62,7 +62,6 @@ export function HeroSection() {
             width="1166"
             height="356"
             src="https://demoapus1.com/boxcar/wp-content/uploads/2023/11/slider51.png"
-            class="attachment-full size-full wp-image-5583"
             alt=""
             srcset="https://demoapus1.com/boxcar/wp-content/uploads/2023/11/slider51.png 1166w, https://demoapus1.com/boxcar/wp-content/uploads/2023/11/slider51-300x92.png 300w, https://demoapus1.com/boxcar/wp-content/uploads/2023/11/slider51-1024x313.png 1024w, https://demoapus1.com/boxcar/wp-content/uploads/2023/11/slider51-768x234.png 768w, https://demoapus1.com/boxcar/wp-content/uploads/2023/11/slider51-600x183.png 600w"
             sizes="(max-width: 1166px) 100vw, 1166px"

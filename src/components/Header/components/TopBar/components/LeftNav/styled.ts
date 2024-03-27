@@ -21,6 +21,7 @@ export const LeftMenuStyled = styled.div`
     color: ${colorText};
     ${getTextStyles('Open Sans', 600, 13, null)}
     transition: .35s;
+    white-space: nowrap;
 
     &:hover {
       color: ${colorPrimary};

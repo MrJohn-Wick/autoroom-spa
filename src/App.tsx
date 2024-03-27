@@ -8,6 +8,7 @@ import { Calculator } from './pages/Calculator';
 import { Contacts } from './pages/Contacts';
 import { Contract } from './pages/Contract';
 import { Home } from './pages/Home';
+import { Info } from './pages/Info';
 import { Pay } from './pages/Pay';
 import { Tracking } from './pages/Tracking';
 import { TrackingSearch } from './pages/TrackingSearch';
@@ -45,6 +46,10 @@ function App() {
           <Route
             path="/pay"
             element={<Pay />}
+          />
+          <Route
+            path="/info"
+            element={<Info />}
           />
         </Routes>
       </section>
