@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Steps, Button } from 'antd';
 
 import { Col, Container, Row } from '@autrm/common/components/grid';
+import { usePayment } from '@autrm/common/hooks/index';
 
 import { SumSection } from './components/SumSection';
 import { getButtonState } from './components/helpers';
@@ -14,6 +15,7 @@ import { ColButtonsStyled } from './styled';
 
 export function Pay() {
   const [currentStep, setStep] = useState(0);
+  const [paymentButtonDisabled, setPaymentButtonDisabled] = useState(false);
   const [formState, setFormState] = useState({
     service: null,
     price: 0,
@@ -25,6 +27,12 @@ export function Pay() {
     email: '',
     isConsentApproved: false,
   });
+
+  const { postData } = usePayment();
+
+  useEffect(() => {
+    return setPaymentButtonDisabled(getButtonState(currentStep, formState) || false);
+  }, [currentStep, formState]);
 
   const getStep = (step: number) => {
     switch (step) {
@@ -84,13 +92,13 @@ export function Pay() {
                 description: 'Ознакомьтесь с договором',
               },
               {
-                title: 'Данные клиента',
-                description: 'Заполните поля',
+                title: 'Данные клиента и оплата',
+                description: 'Заполните поля, чтобы оплатить',
               },
-              {
-                title: 'Оплата',
-                description: 'Выберите способ оплаты',
-              },
+              // {
+              //   title: 'Оплата',
+              //   description: 'Выберите способ оплаты',
+              // },
             ]}
           />
         </Col>
@@ -119,14 +127,26 @@ export function Pay() {
               Назад
             </Button>
           )}
-          <Button
-            type="primary"
-            size="large"
-            disabled={getButtonState(currentStep, formState) || false}
-            onClick={() => setStep(currentStep + 1)}
-          >
-            Далее
-          </Button>
+          {currentStep <= 1 && (
+            <Button
+              type="primary"
+              size="large"
+              disabled={getButtonState(currentStep, formState) || false}
+              onClick={() => setStep(currentStep + 1)}
+            >
+              Далее
+            </Button>
+          )}
+          {currentStep === 2 && (
+            <Button
+              type="primary"
+              size="large"
+              disabled={paymentButtonDisabled || false}
+              onClick={() => postData(undefined, formState)}
+            >
+              Оплатить
+            </Button>
+          )}
         </ColButtonsStyled>
       </Row>
     </Container>

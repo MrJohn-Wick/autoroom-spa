@@ -114,7 +114,7 @@ export function Services({ formState, setFormState }: any) {
         </Col>
         <Col lg={6}>
           <ServiceCard
-            title="Обеспечительный платеж"
+            title="Расширенный отчет Copart"
             amount={10}
             image={AutoCheckIcon}
             imageSizes={{

@@ -21,6 +21,9 @@ export const NavBarStyled = styled.header`
   ${ADAPTIVE.minWidth.desktop} {
     padding: 0px 8%;
   }
+
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
 `;
 
 export const MainMenuStyled = styled.div`
